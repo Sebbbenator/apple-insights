@@ -1,0 +1,23 @@
+.card {
+  overflow: hidden;
+  list-style: none;
+  background-color: var(--app-settings-card-bg);
+  border-radius: var(--app-settings-card-corner-radius);
+}
+
+.item {
+  position: relative;
+}
+
+.item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: var(--app-settings-divider-inset);
+  height: 1px;
+  background-color: var(--app-settings-divider);
+  transform: scaleY(0.5);
+  transform-origin: bottom;
+  pointer-events: none;
+}
