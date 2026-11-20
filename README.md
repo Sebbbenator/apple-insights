@@ -2,7 +2,9 @@
 
 Et årligt "Wrapped" for iPhone: dit år med skærmtid, fotos og sundhed, fortalt som en historie. Eksamensprojekt i Dynamic User Interface på Multimediedesign, Erhvervsakademi Aarhus.
 
-**Studieprojekt. Ikke tilknyttet Apple.** Alle data er testdata, ikke rigtige data fra en iPhone.
+> **Studieprojekt, Multimediedesign, Erhvervsakademi Aarhus. Ikke tilknyttet Apple.**
+>
+> Apple Insights 2026 er et eksamensprojekt lavet af studerende. Det er ikke et produkt fra Apple, og det er hverken godkendt, sponsoreret eller støttet af Apple Inc. Navne som iPhone, FaceTime og App Store samt app-ikonerne tilhører Apple og bruges kun for at gøre prototypen genkendelig. Alle data i appen er testdata og ikke rigtige data fra en iPhone.
 
 Projektet er bygget op som [nextjs-supabase-posts](https://github.com/cederdorff/nextjs-supabase-posts): Next.js 16 med App Router, JavaScript, CSS Modules og login med Supabase Auth.
 
@@ -50,14 +52,24 @@ I komponenter bruger I helst roller til farver og Figma-navnene til resten. Skri
 app/
   styles/variables.css   Designsystemet: alle værdier fra Figma
   globals.css            Base, text styles, effekter og forms
-  layout.js              Header, sider og studie-notits
-  page.js                Forsiden
-  insights/page.js       Historien · kun logget ind
-  login/page.js          Log ind
-  signup/page.js         Opret bruger
-  profile/page.js        Din række i users og log ud · kun logget ind
+  layout.js              Root layout for hele appen
+  page.js                Forsiden: iPhone Home screen
+  not-found.js           404, som alle apps undtagen Indstillinger fører til
+  indstillinger/page.js  Indstillinger · åbnes fra Home screen
+  (site)/                Route group: sider med Header (påvirker ikke URL'en)
+    layout.js            Viser Header
+    insights/page.js     Historien · kun logget ind
+    login/page.js        Log ind
+    signup/page.js       Opret bruger
+    profile/page.js      Din række i users og log ud · kun logget ind
 components/              Genbrugelige komponenter, hver med sin .module.css
+  HomeScreen.js          Samler statusbar, widgets, app-grid og dock
+  AppIcon.js             Én app som link med ikon og navn
+  Clock.js               Client Component med den rigtige tid
+  ImageWidget.js         Widget med et billede, der kan skiftes via src
+public/homescreen/       Wallpaper, app-ikoner (SVG), statusbar-ikoner og widgetbilleder
 lib/
+  apps.js                Listen over apps på Home screen og i docken
   supabase/server.js     Supabase-klienten til serveren
   auth.js                getCurrentUser() og getCurrentProfile()
   actions.js             signOut()

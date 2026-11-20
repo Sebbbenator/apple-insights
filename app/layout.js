@@ -22,9 +22,6 @@ export default function RootLayout({ children }) {
       <body>
         <div className={styles.app}>
           {children}
-          <footer className="study-notice">
-            Studieprojekt, Multimediedesign, Erhvervsakademi Aarhus. Ikke tilknyttet Apple.
-          </footer>
         </div>
       </body>
     </html>

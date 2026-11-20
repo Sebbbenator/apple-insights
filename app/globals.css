@@ -196,10 +196,3 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
-
-.study-notice {
-  padding: var(--padding-sm);
-  text-align: center;
-  font-size: var(--font-size-xs);
-  color: var(--subtle);
-}

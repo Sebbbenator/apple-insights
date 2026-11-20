@@ -23,7 +23,7 @@ export default function HomeScreen() {
       <h1 className="sr-only">Hjemmeskærm</h1>
 
       <div className={styles.widgets}>
-        <ImageWidget src="/homescreen/widgets/2026.svg" alt="Apple Insights 2026" name="Indstilinger" />
+        <ImageWidget src="/homescreen/widgets/2026.svg" alt="Apple Insights 2026" name="Indstillinger" />
         <CalendarWidget />
       </div>
 
