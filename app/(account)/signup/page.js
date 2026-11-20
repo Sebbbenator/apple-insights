@@ -5,6 +5,7 @@ import Field from "@/components/Field";
 import FieldGroup from "@/components/FieldGroup";
 import SubmitButton from "@/components/SubmitButton";
 import { getCurrentUser } from "@/lib/auth";
+import { createFakeInsights } from "@/lib/fakeInsights";
 import { signupFields } from "@/lib/signupFields";
 import { createClient } from "@/lib/supabase/server";
 
@@ -31,6 +32,8 @@ async function signUp(formData) {
     name: name,
     mail: email,
   });
+
+  await createFakeInsights(supabase, data.user.id);
 
   redirect("/indstillinger");
 }

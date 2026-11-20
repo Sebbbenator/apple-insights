@@ -1,31 +1,70 @@
 import Link from "next/link";
 import { getCurrentProfile } from "@/lib/auth";
+import { DEMO_USER_ID, getInsights } from "@/lib/insights";
 import styles from "./page.module.css";
 
 export const metadata = {
   title: "Dit 2026",
 };
 
+function formatNumber(number) {
+  return number.toLocaleString("da-DK");
+}
+
+function formatMinutes(minutes) {
+  return `${Math.floor(minutes / 60)} t ${minutes % 60} min`;
+}
+
 export default async function InsightsPage() {
   const currentUser = await getCurrentProfile();
+  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
 
-  if (!currentUser) {
+  if (!insights) {
     return (
       <main className={styles.insights}>
-        <span className={styles.demo}>Demo</span>
-        <h1>Et 2026 på en iPhone</h1>
-        <p>Du ser en demo med eksempeldata.</p>
-        <p>
-          <Link href="/login">Log ind for at se dit eget 2026</Link>
-        </p>
+        <h1>Ingen data endnu</h1>
+        <p>Vi har ikke nogen data om dit 2026 endnu. Prøv igen senere.</p>
       </main>
     );
   }
 
+  const stats = [
+    { label: "Skærmtid om dagen", value: formatMinutes(insights.screenTime.dailyMinutes) },
+    { label: "Fotos i 2026", value: formatNumber(insights.photos.total) },
+    { label: "Skridt i 2026", value: formatNumber(insights.health.steps) },
+    { label: "Gennemsnitlig hvilepuls", value: `${insights.health.restingHeartRate} bpm` },
+  ];
+
   return (
     <main className={styles.insights}>
-      <h1>Dit 2026, {currentUser.name}</h1>
-      <p>Her kommer historien.</p>
+      {!currentUser && <span className={styles.demo}>Demo</span>}
+      <h1>{currentUser ? `Dit 2026, ${currentUser.name}` : "Et 2026 på en iPhone"}</h1>
+
+      <dl className={styles.stats}>
+        {stats.map((stat) => (
+          <div key={stat.label} className={styles.stat}>
+            <dt>{stat.label}</dt>
+            <dd className="text-3xl semibold rounded">{stat.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2>Awards</h2>
+      <ul className={styles.stats}>
+        {insights.awards.map((award) => (
+          <li key={award.title} className={styles.stat}>
+            <span>{award.title}</span>
+            <strong className="text-xl semibold">{award.value}</strong>
+            <span>{award.detail}</span>
+          </li>
+        ))}
+      </ul>
+
+      {!currentUser && (
+        <p>
+          <Link href="/login">Log ind for at se dit eget 2026</Link>
+        </p>
+      )}
     </main>
   );
 }
