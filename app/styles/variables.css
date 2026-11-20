@@ -59,6 +59,17 @@
 
   --app-homescreen-app-size: 4rem;
   --app-homescreen-app-corner-radius: 0.875rem;
+  --app-homescreen-row-app-margin: 2.1875rem;
+  --app-homescreen-row-widget-margin: 2.0625rem;
+  --app-homescreen-widget-corner-radius: 1.4375rem;
+  --app-homescreen-dock-bg: rgb(0 0 0 / 0.3);
+  --app-homescreen-dock-corner-radius: 2.5rem;
+  --app-homescreen-dock-margin-h: 0.9375rem;
+  --app-homescreen-dock-margin-v: 0.875rem;
+  --app-homescreen-dock-padding-h: 1.25rem;
+
+  --app-calendar-event: #1badf8;
+  --app-calendar-event-bg: rgb(27 173 248 / 0.28);
 
   --gradient-rainbow: linear-gradient(
     90deg,

@@ -1,0 +1,70 @@
+.home {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+  color: var(--color-neutral-white);
+}
+
+.wallpaper {
+  z-index: -1;
+  object-fit: cover;
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: clamp(1rem, 3.5dvh, 2.5rem);
+  padding-inline: var(--app-homescreen-row-widget-margin);
+}
+
+.widget {
+  width: 100%;
+  height: auto;
+  border-radius: var(--app-homescreen-widget-corner-radius);
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(4, var(--app-homescreen-app-size));
+  justify-content: space-between;
+  row-gap: clamp(0.75rem, 2.2dvh, 1.375rem);
+  margin-top: clamp(0.75rem, 2.2dvh, 1.375rem);
+  padding-inline: var(--app-homescreen-row-app-margin);
+  list-style: none;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.75rem, 2.8dvh, 1.8125rem);
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.bottom > * {
+  align-self: stretch;
+}
+
+.bottom > .search {
+  align-self: center;
+}
+
+.search {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  height: 1.875rem;
+  padding-inline: 0.6875rem;
+  border-radius: var(--border-radius-full);
+  background: var(--app-homescreen-dock-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+}
