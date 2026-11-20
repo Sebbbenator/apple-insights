@@ -27,7 +27,7 @@ async function signUp(formData) {
     mail: email,
   });
 
-  redirect("/insights");
+  redirect("/indstillinger");
 }
 
 export default async function SignUpPage({ searchParams }) {
@@ -36,7 +36,7 @@ export default async function SignUpPage({ searchParams }) {
   const user = await getCurrentUser();
 
   if (user) {
-    redirect("/insights");
+    redirect("/indstillinger");
   }
 
   return (

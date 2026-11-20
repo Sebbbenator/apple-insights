@@ -1,3 +1,15 @@
 .insights p {
   color: var(--muted);
 }
+
+.demo {
+  display: inline-block;
+  margin-bottom: var(--gap-md);
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-full);
+  color: var(--foreground);
+  background-color: var(--surface);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+}

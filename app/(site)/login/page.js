@@ -20,7 +20,7 @@ async function signIn(formData) {
     redirect("/login?error=true");
   }
 
-  redirect("/insights");
+  redirect("/indstillinger");
 }
 
 export default async function LoginPage({ searchParams }) {
@@ -29,7 +29,7 @@ export default async function LoginPage({ searchParams }) {
   const user = await getCurrentUser();
 
   if (user) {
-    redirect("/insights");
+    redirect("/indstillinger");
   }
 
   return (
