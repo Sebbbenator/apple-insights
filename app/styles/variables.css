@@ -72,6 +72,26 @@
   --app-calendar-event: #1badf8;
   --app-calendar-event-bg: rgb(27 173 248 / 0.28);
 
+  --app-settings-margin-h: 1.25rem;
+  --app-settings-section-gap: 2.1875rem;
+  --app-settings-card-bg: var(--color-neutral-dark-grey);
+  --app-settings-card-corner-radius: 1.625rem;
+  --app-settings-row-height: 2.75rem;
+  --app-settings-row-padding-h: 1.25rem;
+  --app-settings-row-gap: 0.9375rem;
+  --app-settings-label-size: 1.0625rem;
+  --app-settings-caption-size: 0.8125rem;
+  --app-settings-icon-size: 1.8125rem;
+  --app-settings-icon-corner-radius: 0.375rem;
+  --app-settings-divider: #464649;
+  --app-settings-divider-inset: 4rem;
+  --app-settings-chevron: var(--color-neutral-grey-900);
+  --app-settings-pressed-bg: rgb(255 255 255 / 0.08);
+  --app-settings-account-avatar-size: 4rem;
+  --app-settings-account-padding: 1rem;
+  --app-settings-login-ring: var(--accent);
+  --app-settings-login-glow: 0 0 24px rgb(0 122 255 / 0.45);
+
   --gradient-rainbow: linear-gradient(
     90deg,
     #f54804 0%,
