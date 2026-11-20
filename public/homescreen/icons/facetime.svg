@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="facetime-1575950" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M94 0H26C11.6406 0 0 11.6406 0 26V94C0 108.359 11.6406 120 26 120H94C108.359 120 120 108.359 120 94V26C120 11.6406 108.359 0 94 0Z" fill="url(#paint0_linear_0_4)"/>
+<path id="Vector_2" d="M18.49 73.73V45.44C18.49 37.64 22.71 33.38 30.59 33.38H65.16C73 33.38 77.26 37.64 77.26 45.44V73.73C77.26 81.53 73 85.79 65.16 85.79H30.59C22.75 85.79 18.49 81.53 18.49 73.73ZM79.6 51.17L94.8 38.78C95.8591 37.7775 97.2349 37.1763 98.69 37.08C100.76 37.08 102.16 38.52 102.16 41.08V79.08C102.16 81.67 100.76 83.08 98.69 83.08C97.2316 82.9974 95.8513 82.3941 94.8 81.38L79.6 68.88V51.17Z" fill="#FEFEFE"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_4" x1="60" y1="0" x2="60" y2="120" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5BF776"/>
+<stop offset="1" stop-color="#0DBC29"/>
+</linearGradient>
+<clipPath id="clip0_0_4">
+<rect width="120" height="120" fill="white"/>
+</clipPath>
+</defs>
+</svg>
