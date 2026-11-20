@@ -6,33 +6,6 @@
   background: var(--background);
 }
 
-.bar {
-  display: flex;
-  align-items: center;
-  min-height: var(--app-auth-back-size);
-  margin-top: var(--padding-xs);
-}
-
-.back {
-  display: grid;
-  place-items: center;
-  width: var(--app-auth-back-size);
-  height: var(--app-auth-back-size);
-  border-radius: var(--border-radius-full);
-  color: var(--foreground);
-  -webkit-tap-highlight-color: transparent;
-  transition: transform var(--duration-fast) var(--ease-out);
-}
-
-.back:active {
-  transform: scale(0.92);
-}
-
-.back:focus-visible {
-  outline: 2px solid var(--foreground);
-  outline-offset: 3px;
-}
-
 .content {
   display: flex;
   flex: 1;
@@ -124,10 +97,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .back {
-    transition: none;
-  }
-
   .content {
     animation: none;
   }

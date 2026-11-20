@@ -1,16 +1,10 @@
-import Link from "next/link";
+import BackButton from "@/components/BackButton";
 import styles from "./AuthScreen.module.css";
 
 export default function AuthScreen({ title, description, error, children, footer }) {
   return (
     <main className={styles.screen}>
-      <nav className={styles.bar}>
-        <Link href="/indstillinger" className={`${styles.back} liquid-glass`} aria-label="Tilbage til Indstillinger">
-          <svg width="11" height="19" viewBox="0 0 11 19" fill="none" aria-hidden="true">
-            <path d="M9.5 1.5l-8 8 8 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
-      </nav>
+      <BackButton href="/indstillinger" label="Tilbage til Indstillinger" />
 
       <div className={styles.content}>
         <span className={styles.icon} aria-hidden="true">
