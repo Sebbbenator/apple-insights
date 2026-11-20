@@ -1,0 +1,24 @@
+.widget {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--app-homescreen-widget-corner-radius);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.caption {
+  font-size: var(--font-size-2xs);
+  text-shadow: var(--app-homescreen-label-shadow);
+}

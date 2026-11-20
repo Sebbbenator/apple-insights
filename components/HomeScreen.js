@@ -2,6 +2,7 @@ import Image from "next/image";
 import AppIcon from "@/components/AppIcon";
 import CalendarWidget from "@/components/CalendarWidget";
 import Dock from "@/components/Dock";
+import ImageWidget from "@/components/ImageWidget";
 import StatusBar from "@/components/StatusBar";
 import { homeApps } from "@/lib/apps";
 import styles from "./HomeScreen.module.css";
@@ -22,7 +23,7 @@ export default function HomeScreen() {
       <h1 className="sr-only">Hjemmeskærm</h1>
 
       <div className={styles.widgets}>
-        <Image src="/homescreen/widget-2026.svg" alt="Apple Insights 2026" width={170} height={170} className={styles.widget} />
+        <ImageWidget src="/homescreen/widgets/2026.svg" alt="Apple Insights 2026" name="Indstilinger" />
         <CalendarWidget />
       </div>
 

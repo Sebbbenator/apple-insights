@@ -23,12 +23,6 @@
   padding-inline: var(--app-homescreen-row-widget-margin);
 }
 
-.widget {
-  width: 100%;
-  height: auto;
-  border-radius: var(--app-homescreen-widget-corner-radius);
-}
-
 .apps {
   display: grid;
   grid-template-columns: repeat(4, var(--app-homescreen-app-size));
