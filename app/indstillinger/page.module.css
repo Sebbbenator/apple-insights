@@ -1,0 +1,40 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: 0 0 var(--padding-sm);
+  background: var(--background);
+}
+
+.title {
+  margin: var(--padding-lg) var(--app-settings-margin-h) var(--padding-xs);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-settings-section-gap);
+  padding-inline: var(--app-settings-margin-h);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-settings-section-gap);
+}
+
+.search {
+  position: sticky;
+  bottom: var(--padding-sm);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  height: var(--btn-height-md);
+  margin: var(--padding-lg) var(--app-settings-margin-h) 0;
+  padding-inline: var(--padding-xs);
+  border-radius: var(--border-radius-full);
+  color: var(--muted);
+  font-size: var(--app-settings-label-size);
+}
