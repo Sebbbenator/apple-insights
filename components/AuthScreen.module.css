@@ -1,0 +1,134 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: 0 var(--app-settings-margin-h) var(--padding-sm);
+  background: var(--background);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  min-height: var(--app-auth-back-size);
+  margin-top: var(--padding-xs);
+}
+
+.back {
+  display: grid;
+  place-items: center;
+  width: var(--app-auth-back-size);
+  height: var(--app-auth-back-size);
+  border-radius: var(--border-radius-full);
+  color: var(--foreground);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.back:active {
+  transform: scale(0.92);
+}
+
+.back:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--app-auth-content-gap);
+  padding-top: var(--padding-lg);
+  animation: enter var(--duration-slow) var(--ease-out) both;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  width: var(--app-auth-icon-size);
+  height: var(--app-auth-icon-size);
+  border-radius: var(--border-radius-full);
+  color: var(--color-neutral-white);
+  background: var(--app-auth-icon-bg);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  text-align: center;
+}
+
+.description {
+  margin-top: calc(var(--app-auth-content-gap) * -0.6);
+  color: var(--muted);
+  font-size: var(--app-settings-label-size);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.error {
+  padding: var(--gap-md) var(--app-settings-row-padding-h);
+  border-radius: var(--border-radius-xs);
+  color: var(--danger);
+  background-color: color-mix(in srgb, var(--danger), transparent 88%);
+  font-size: var(--app-settings-label-size);
+  line-height: 1.35;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  align-items: center;
+  font-size: var(--app-settings-label-size);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: var(--padding-lg);
+  color: var(--muted);
+  font-size: var(--app-settings-caption-size);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.privacy svg {
+  color: var(--accent);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back {
+    transition: none;
+  }
+
+  .content {
+    animation: none;
+  }
+}

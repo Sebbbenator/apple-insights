@@ -115,7 +115,7 @@
   --app-auth-content-gap: 1.75rem;
   --app-auth-field-label-width: 6.5rem;
   --app-auth-button-height: 3.25rem;
-  --app-auth-button-bg: var(--accent);
+  --app-auth-button-bg: #0071e3;
 
   --gradient-rainbow: linear-gradient(
     90deg,

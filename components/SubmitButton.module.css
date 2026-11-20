@@ -1,0 +1,41 @@
+.button {
+  width: 100%;
+  min-height: var(--app-auth-button-height);
+  margin-top: var(--app-auth-content-gap);
+  border: 0;
+  border-radius: var(--border-radius-full);
+  color: var(--color-neutral-white);
+  background-color: var(--app-auth-button-bg);
+  font: inherit;
+  font-size: var(--app-settings-label-size);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .button:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,52 @@
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--app-settings-row-gap);
+  min-height: var(--app-settings-row-height);
+  padding-inline: var(--app-settings-row-padding-h);
+}
+
+.label {
+  flex-shrink: 0;
+  width: var(--app-auth-field-label-width);
+  color: var(--foreground);
+  font-size: var(--app-settings-label-size);
+  line-height: 1.3;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.field:focus-within .label {
+  color: var(--accent);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  min-height: var(--app-settings-row-height);
+  border: 0;
+  outline: none;
+  color: var(--foreground);
+  background: transparent;
+  font: inherit;
+  font-size: var(--app-settings-label-size);
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+.input:-webkit-autofill {
+  -webkit-text-fill-color: var(--foreground);
+  box-shadow: inset 0 0 0 100px var(--app-settings-card-bg);
+}
+
+.invalid .label,
+.invalid:focus-within .label {
+  color: var(--danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label {
+    transition: none;
+  }
+}

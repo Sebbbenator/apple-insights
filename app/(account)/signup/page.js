@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import AuthScreen from "@/components/AuthScreen";
+import Field from "@/components/Field";
+import FieldGroup from "@/components/FieldGroup";
+import SubmitButton from "@/components/SubmitButton";
 import { getCurrentUser } from "@/lib/auth";
+import { signupFields } from "@/lib/signupFields";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
@@ -40,36 +45,24 @@ export default async function SignUpPage({ searchParams }) {
   }
 
   return (
-    <main>
-      <h1>Opret bruger</h1>
-      {error && (
-        <p className="form-error" role="alert">
-          Kunne ikke oprette brugeren. Måske er e-mailen allerede i brug.
+    <AuthScreen
+      title="Opret bruger"
+      description="Én bruger er alt, du skal bruge for at se dit eget 2026."
+      error={error && "Kunne ikke oprette brugeren. Måske er e-mailen allerede i brug."}
+      footer={
+        <p>
+          Har du allerede en bruger? <Link href="/login">Log ind</Link>
         </p>
-      )}
-      <form action={signUp} className="form">
-        <label htmlFor="name">Navn</label>
-        <input id="name" name="name" placeholder="Dit fornavn" autoComplete="given-name" required />
-
-        <label htmlFor="email">E-mail</label>
-        <input id="email" name="email" type="email" placeholder="dig@eksempel.dk" autoComplete="email" required />
-
-        <label htmlFor="password">Adgangskode</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Mindst 6 tegn"
-          autoComplete="new-password"
-          minLength={6}
-          required
-        />
-
-        <button type="submit">Opret bruger</button>
+      }
+    >
+      <form action={signUp}>
+        <FieldGroup footnote="Adgangskoden skal være mindst 6 tegn.">
+          {signupFields.map((field) => (
+            <Field key={field.name} {...field} invalid={Boolean(error)} required />
+          ))}
+        </FieldGroup>
+        <SubmitButton pendingText="Opretter bruger…">Opret bruger</SubmitButton>
       </form>
-      <p>
-        Har du allerede en bruger? <Link href="/login">Log ind</Link>
-      </p>
-    </main>
+    </AuthScreen>
   );
 }

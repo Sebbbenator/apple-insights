@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import AuthScreen from "@/components/AuthScreen";
+import Field from "@/components/Field";
+import FieldGroup from "@/components/FieldGroup";
+import SubmitButton from "@/components/SubmitButton";
 import { getCurrentUser } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
 
@@ -33,32 +37,42 @@ export default async function LoginPage({ searchParams }) {
   }
 
   return (
-    <main>
-      <h1>Log ind</h1>
-      {error && (
-        <p className="form-error" role="alert">
-          Forkert e-mail eller adgangskode.
-        </p>
-      )}
-      <form action={signIn} className="form">
-        <label htmlFor="email">E-mail</label>
-        <input id="email" name="email" type="email" placeholder="dig@eksempel.dk" autoComplete="email" required />
-
-        <label htmlFor="password">Adgangskode</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Din adgangskode"
-          autoComplete="current-password"
-          required
-        />
-
-        <button type="submit">Log ind</button>
+    <AuthScreen
+      title="Log ind"
+      description="Log ind med din e-mail for at se dit eget 2026."
+      error={error && "Forkert e-mail eller adgangskode. Prøv igen."}
+      footer={
+        <>
+          <p>
+            Har du ikke en bruger? <Link href="/signup">Opret en</Link>
+          </p>
+          <Link href="/insights">Prøv demoen i stedet</Link>
+        </>
+      }
+    >
+      <form action={signIn}>
+        <FieldGroup>
+          <Field
+            name="email"
+            label="E-mail"
+            type="email"
+            placeholder="dig@eksempel.dk"
+            autoComplete="email"
+            invalid={Boolean(error)}
+            required
+          />
+          <Field
+            name="password"
+            label="Adgangskode"
+            type="password"
+            placeholder="Påkrævet"
+            autoComplete="current-password"
+            invalid={Boolean(error)}
+            required
+          />
+        </FieldGroup>
+        <SubmitButton pendingText="Logger ind…">Fortsæt</SubmitButton>
       </form>
-      <p>
-        Ingen bruger endnu? <Link href="/signup">Opret en</Link>
-      </p>
-    </main>
+    </AuthScreen>
   );
 }
