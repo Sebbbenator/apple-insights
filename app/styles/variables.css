@@ -117,6 +117,8 @@
   --app-auth-button-height: 3.25rem;
   --app-auth-button-bg: #0071e3;
 
+  --app-profile-avatar-size: 6rem;
+
   --gradient-rainbow: linear-gradient(
     90deg,
     #f54804 0%,

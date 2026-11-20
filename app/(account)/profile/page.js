@@ -1,8 +1,13 @@
 import { redirect } from "next/navigation";
-import UserBadge from "@/components/UserBadge";
+import Avatar from "@/components/Avatar";
+import BackButton from "@/components/BackButton";
+import Field from "@/components/Field";
+import FieldGroup from "@/components/FieldGroup";
+import SubmitButton from "@/components/SubmitButton";
 import { getCurrentProfile } from "@/lib/auth";
 import { signOut } from "@/lib/actions";
 import { createClient } from "@/lib/supabase/server";
+import styles from "./page.module.css";
 
 export const metadata = {
   title: "Profil",
@@ -26,10 +31,12 @@ async function updateProfile(formData) {
     })
     .eq("id", currentUser.id);
 
-  redirect("/profile");
+  redirect("/profile?saved=true");
 }
 
-export default async function ProfilePage() {
+export default async function ProfilePage({ searchParams }) {
+  const { saved } = await searchParams;
+
   const currentUser = await getCurrentProfile();
 
   if (!currentUser) {
@@ -37,24 +44,42 @@ export default async function ProfilePage() {
   }
 
   return (
-    <main>
-      <h1>Profil</h1>
-      <UserBadge user={currentUser} />
+    <main className={styles.profile}>
+      <BackButton href="/indstillinger" label="Tilbage til Indstillinger" />
 
-      <form action={updateProfile} className="form">
-        <label htmlFor="name">Navn</label>
-        <input id="name" name="name" defaultValue={currentUser.name} required />
+      <div className={styles.content}>
+        <header className={styles.header}>
+          <Avatar name={currentUser.name} image={currentUser.image} size="lg" />
+          <h1 className={styles.name}>{currentUser.name}</h1>
+          <p className={styles.mail}>{currentUser.mail}</p>
+        </header>
 
-        <label htmlFor="image">Billede (URL)</label>
-        <input id="image" name="image" type="url" placeholder="https://..." defaultValue={currentUser.image ?? ""} />
+        {saved && (
+          <p className={styles.saved} role="status">
+            Dine ændringer er gemt.
+          </p>
+        )}
 
-        <button type="submit">Gem</button>
-      </form>
+        <form action={updateProfile}>
+          <FieldGroup title="Personlige oplysninger" footnote="Billedet skal være et link, der starter med https://.">
+            <Field name="name" label="Navn" defaultValue={currentUser.name} autoComplete="given-name" required />
+            <Field
+              name="image"
+              label="Billede"
+              type="url"
+              placeholder="https://..."
+              defaultValue={currentUser.image ?? ""}
+            />
+          </FieldGroup>
+          <SubmitButton pendingText="Gemmer…">Gem</SubmitButton>
+        </form>
 
-      <p>E-mail: {currentUser.mail}</p>
-      <form action={signOut} className="form">
-        <button type="submit">Log ud</button>
-      </form>
+        <form action={signOut}>
+          <SubmitButton variant="danger" pendingText="Logger ud…">
+            Log ud
+          </SubmitButton>
+        </form>
+      </div>
     </main>
   );
 }

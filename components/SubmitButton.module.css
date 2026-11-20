@@ -1,11 +1,6 @@
 .button {
   width: 100%;
-  min-height: var(--app-auth-button-height);
-  margin-top: var(--app-auth-content-gap);
   border: 0;
-  border-radius: var(--border-radius-full);
-  color: var(--color-neutral-white);
-  background-color: var(--app-auth-button-bg);
   font: inherit;
   font-size: var(--app-settings-label-size);
   font-weight: var(--font-weight-semibold);
@@ -14,6 +9,26 @@
   transition:
     transform var(--duration-fast) var(--ease-out),
     opacity var(--duration-fast) var(--ease-out);
+}
+
+.primary {
+  min-height: var(--app-auth-button-height);
+  margin-top: var(--app-auth-content-gap);
+  border-radius: var(--border-radius-full);
+  color: var(--color-neutral-white);
+  background-color: var(--app-auth-button-bg);
+}
+
+.danger {
+  min-height: var(--app-settings-row-height);
+  border-radius: var(--app-settings-card-corner-radius);
+  color: var(--danger);
+  background-color: var(--app-settings-card-bg);
+  font-weight: var(--font-weight-regular);
+}
+
+.danger:hover {
+  background-color: color-mix(in srgb, var(--app-settings-card-bg), white 6%);
 }
 
 .button:active {

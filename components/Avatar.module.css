@@ -1,0 +1,23 @@
+.avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--border-radius-full);
+  color: var(--color-neutral-grey-700);
+  background-color: var(--color-neutral-grey-900);
+  font-weight: var(--font-weight-semibold);
+  object-fit: cover;
+}
+
+.md {
+  width: var(--app-settings-account-avatar-size);
+  height: var(--app-settings-account-avatar-size);
+  font-size: var(--font-size-2xl);
+}
+
+.lg {
+  width: var(--app-profile-avatar-size);
+  height: var(--app-profile-avatar-size);
+  font-size: var(--font-size-5xl);
+}
