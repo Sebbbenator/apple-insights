@@ -109,6 +109,14 @@
     ),
     var(--color-insights-blue);
 
+  --app-auth-back-size: 2.75rem;
+  --app-auth-icon-size: 5.5rem;
+  --app-auth-icon-bg: var(--color-insights-blue);
+  --app-auth-content-gap: 1.75rem;
+  --app-auth-field-label-width: 6.5rem;
+  --app-auth-button-height: 3.25rem;
+  --app-auth-button-bg: var(--accent);
+
   --gradient-rainbow: linear-gradient(
     90deg,
     #f54804 0%,
