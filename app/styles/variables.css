@@ -57,6 +57,9 @@
 
   --app-max-width: 26.875rem;
 
+  --app-homescreen-app-size: 4rem;
+  --app-homescreen-app-corner-radius: 0.875rem;
+
   --gradient-rainbow: linear-gradient(
     90deg,
     #f54804 0%,

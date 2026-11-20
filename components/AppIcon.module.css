@@ -1,0 +1,52 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: var(--app-homescreen-app-size);
+  color: var(--color-neutral-white);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon {
+  display: block;
+  width: var(--app-homescreen-app-size);
+  height: var(--app-homescreen-app-size);
+  border-radius: var(--app-homescreen-app-corner-radius);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.name {
+  max-width: calc(var(--app-homescreen-app-size) + 1.25rem);
+  overflow: hidden;
+  font-size: var(--font-size-2xs);
+  line-height: 1.33;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+.app:focus-visible {
+  outline: none;
+}
+
+.app:focus-visible .icon {
+  outline: 2px solid var(--color-neutral-white);
+  outline-offset: 3px;
+}
+
+.app:active .icon {
+  transform: scale(0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+
+  .app:active .icon {
+    transform: none;
+  }
+}
