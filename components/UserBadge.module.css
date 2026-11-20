@@ -1,0 +1,22 @@
+.badge {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+}
+
+.avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--color-neutral-grey-900);
+  font-weight: 600;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 600;
+  line-height: 1.3;
+}

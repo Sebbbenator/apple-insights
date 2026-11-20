@@ -1,0 +1,191 @@
+@import "./styles/variables.css";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--padding-lg) var(--padding-sm);
+}
+
+h1 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-3xl);
+  line-height: 1.15;
+  margin-bottom: var(--padding-xs);
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.semibold {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.regular {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+.thin {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-light);
+}
+
+.rounded {
+  font-family: var(--font-family-secondary);
+}
+
+.text-2xs { font-size: var(--font-size-2xs); }
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+.text-6xl { font-size: var(--font-size-6xl); }
+.text-7xl { font-size: var(--font-size-7xl); }
+.text-8xl { font-size: var(--font-size-8xl); }
+.text-9xl { font-size: var(--font-size-9xl); }
+.text-10xl { font-size: var(--font-size-10xl); }
+
+.semibold,
+.regular,
+.thin {
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.text-gradient-silver,
+.text-gradient-rainbow {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-silver { background-image: var(--gradient-silver); }
+.text-gradient-rainbow { background-image: var(--gradient-rainbow); }
+
+.radial-purple,
+.radial-yellow,
+.radial-teal,
+.radial-pink,
+.radial-indigo,
+.radial-green,
+.radial-white {
+  position: absolute;
+  pointer-events: none;
+}
+
+.radial-purple { background: var(--radial-purple); }
+.radial-yellow { background: var(--radial-yellow); }
+.radial-teal { background: var(--radial-teal); }
+.radial-pink { background: var(--radial-pink); }
+.radial-indigo { background: var(--radial-indigo); }
+.radial-green { background: var(--radial-green); }
+.radial-white { background: var(--radial-white); }
+
+.glass {
+  background: var(--glass-fill);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  max-width: 32rem;
+  margin: var(--padding-sm) 0;
+}
+
+.form label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.form input {
+  min-height: var(--btn-height-md);
+  margin-bottom: var(--gap-md);
+  padding: 0 var(--padding-xs);
+  border: 0;
+  border-radius: var(--border-radius-xs);
+  background: var(--surface);
+  color: var(--foreground);
+  font: inherit;
+}
+
+.form input::placeholder {
+  color: var(--subtle);
+}
+
+.form button {
+  min-height: var(--btn-height-md);
+  border: 0;
+  border-radius: var(--border-radius-xs);
+  background: var(--foreground);
+  color: var(--background);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-error {
+  margin-bottom: var(--padding-xs);
+  color: var(--danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.study-notice {
+  padding: var(--padding-sm);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--subtle);
+}

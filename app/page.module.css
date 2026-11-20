@@ -1,0 +1,7 @@
+.intro {
+  margin-bottom: var(--padding-lg);
+}
+
+.intro p {
+  color: var(--muted);
+}
