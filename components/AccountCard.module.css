@@ -1,0 +1,103 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  padding: var(--app-settings-account-padding);
+  color: var(--foreground);
+  text-decoration: none;
+  background-color: var(--app-settings-card-bg);
+  border-radius: var(--app-settings-card-corner-radius);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.card:hover,
+.card:active {
+  background-color: color-mix(in srgb, var(--app-settings-card-bg), white 6%);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+.login {
+  box-shadow: inset 0 0 0 1.5px var(--app-settings-login-ring);
+}
+
+.login::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: var(--app-settings-login-glow);
+  pointer-events: none;
+  animation: glow calc(var(--duration-hero) * 2) var(--ease-in-out) infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: var(--app-settings-account-avatar-size);
+  height: var(--app-settings-account-avatar-size);
+  overflow: hidden;
+  border-radius: var(--border-radius-full);
+  color: var(--color-neutral-grey-700);
+  background-color: var(--color-neutral-grey-900);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+
+.loginTitle {
+  color: var(--accent);
+  font-size: var(--app-settings-label-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.3;
+}
+
+.caption {
+  color: var(--muted);
+  font-size: var(--app-settings-caption-size);
+  line-height: 1.3;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--app-settings-chevron);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .login::after {
+    animation: none;
+  }
+}
