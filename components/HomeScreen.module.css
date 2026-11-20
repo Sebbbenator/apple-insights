@@ -16,7 +16,8 @@
 
 .widgets {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 1.5rem;
   margin-top: clamp(1rem, 3.5dvh, 2.5rem);
   padding-inline: var(--app-homescreen-row-widget-margin);
@@ -62,9 +63,6 @@
   height: 1.875rem;
   padding-inline: 0.6875rem;
   border-radius: var(--border-radius-full);
-  background: var(--app-homescreen-dock-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
   font-size: var(--font-size-2xs);
   font-weight: var(--font-weight-semibold);
 }

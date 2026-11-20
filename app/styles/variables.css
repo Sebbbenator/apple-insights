@@ -94,6 +94,15 @@
 
   --glass-blur: 50px;
   --glass-fill: var(--color-neutral-white-glass);
+  --glass-liquid-fill: rgb(255 255 255 / 0.08);
+  --glass-liquid-blur: 12px;
+  --glass-liquid-saturate: 180%;
+  --glass-liquid-border: rgb(255 255 255 / 0.28);
+  --glass-liquid-shadow:
+    inset 0 1px 0.5px rgb(255 255 255 / 0.5),
+    inset 0 -1px 0.5px rgb(255 255 255 / 0.15),
+    inset 0 0 24px rgb(255 255 255 / 0.08),
+    0 8px 24px rgb(0 0 0 / 0.18);
 
   --duration-fast: 150ms;
   --duration-base: 300ms;

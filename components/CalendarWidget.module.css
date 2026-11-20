@@ -38,6 +38,7 @@
 
 .event {
   display: flex;
+  min-width: 0;
   flex-direction: column;
   padding: 0 0.25rem 0 0.5rem;
   border-left: 4px solid var(--app-calendar-event);

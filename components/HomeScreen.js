@@ -35,7 +35,7 @@ export default function HomeScreen() {
       </ul>
 
       <div className={styles.bottom}>
-        <p className={styles.search} aria-hidden="true">
+        <p className={`${styles.search} liquid-glass`} aria-hidden="true">
           <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
             <circle cx="4.5" cy="4.5" r="3.75" stroke="currentColor" strokeWidth="1.5" />
             <path d="M7.5 7.5L10 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
