@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import "./globals.css";
 import styles from "./layout.module.css";
 
@@ -22,7 +21,6 @@ export default function RootLayout({ children }) {
     <html lang="da">
       <body>
         <div className={styles.app}>
-          <Header />
           {children}
           <footer className="study-notice">
             Studieprojekt, Multimediedesign, Erhvervsakademi Aarhus. Ikke tilknyttet Apple.
