@@ -96,7 +96,7 @@ export default function IntroductionScreen({ stats }) {
         ))}
       </ul>
 
-      <div className={styles.wave} onAnimationEnd={() => router.push("/insights/oversigt")} />
+      <div className={styles.wave} onAnimationEnd={() => router.push("/insights/skaermtid")} />
 
       <div className={styles.hold}>
         <MonthWheel progress={progress} calm={calm} />
