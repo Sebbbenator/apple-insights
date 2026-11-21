@@ -1,0 +1,12 @@
+.stripes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transition-duration: 250ms;
+}

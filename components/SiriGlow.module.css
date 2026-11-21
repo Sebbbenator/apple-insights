@@ -27,6 +27,10 @@
   animation: fade-in var(--duration-slow) var(--ease-out) var(--duration-base) forwards;
 }
 
+.progress {
+  mask: conic-gradient(transparent calc((100 - var(--siri-progress)) * 1%), #000 0);
+}
+
 .soft {
   position: absolute;
   inset: 0;
