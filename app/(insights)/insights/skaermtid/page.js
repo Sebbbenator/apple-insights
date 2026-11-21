@@ -8,7 +8,7 @@ export default function ScreenTimePage() {
     <main>
       <ChapterStart
         {...chapterStarts.screenTime}
-        hint={<Link href="/insights/oversigt">Fortsæt til oversigten</Link>}
+        hint={<Link href="/insights/fotos">Fortsæt til Fotos</Link>}
       />
     </main>
   );
