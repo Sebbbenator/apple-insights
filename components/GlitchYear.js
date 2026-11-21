@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { dockApps, getAppIcon, homeApps } from "@/lib/apps";
+import TimeDust from "@/components/TimeDust";
 import styles from "./GlitchYear.module.css";
 
 const icons = [...homeApps, ...dockApps].map(getAppIcon);
@@ -16,10 +17,17 @@ function stepTime(step) {
   return 50 + step * 7;
 }
 
-export default function GlitchYear() {
+export default function GlitchYear({ leaving, onDone }) {
   const reduceMotion = useReducedMotion();
+  const digitsRef = useRef(null);
   const [step, setStep] = useState(-1);
   const done = step >= lastStep;
+
+  useEffect(() => {
+    if (done) {
+      onDone();
+    }
+  }, [done, onDone]);
 
   useEffect(() => {
     if (done) {
@@ -37,7 +45,7 @@ export default function GlitchYear() {
 
   return (
     <span className={styles.year}>
-      <span className={styles.digits}>
+      <span ref={digitsRef} className={styles.digits}>
         {digits.map((digit, index) => {
           const landed = step >= landAt[index];
           const icon = icons[(step + index * 5) % icons.length];
@@ -47,16 +55,16 @@ export default function GlitchYear() {
             <span key={index} className={styles.cell}>
               <motion.span
                 initial={false}
-                animate={landed ? { opacity: 1, scale: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, scale: 1.3, y: 24, filter: "blur(12px)" }}
-                transition={spring}
+                animate={leaving ? { opacity: 0 } : landed ? { opacity: 1, scale: 1, x: 0, y: 0, filter: "blur(0px)" } : { opacity: 0, scale: 1.3, y: 24, filter: "blur(12px)" }}
+                transition={leaving ? { duration: reduceMotion ? 0.6 : 0 } : spring}
               >
-                <span className={`${styles.digit} ${styles[`digit${index}`]} ${done ? styles.shine : ""}`}>
+                <span data-digit className={`${styles.digit} ${styles[`digit${index}`]} ${done ? styles.shine : ""}`}>
                   {digit}
                 </span>
               </motion.span>
 
               <AnimatePresence>
-                {step >= 0 && !landed && (
+                {step >= 0 && !landed && !leaving && (
                   <motion.img
                     src={icon}
                     alt=""
@@ -69,10 +77,13 @@ export default function GlitchYear() {
                   />
                 )}
               </AnimatePresence>
+
             </span>
           );
         })}
       </span>
+
+      <TimeDust target={digitsRef} active={leaving} />
 
       <span hidden>
         {icons.map((src) => (

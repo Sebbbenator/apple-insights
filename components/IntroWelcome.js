@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { MotionConfig, motion } from "motion/react";
 import GlitchYear from "@/components/GlitchYear";
 import SiriGlow from "@/components/SiriGlow";
@@ -8,22 +9,57 @@ import styles from "./IntroWelcome.module.css";
 
 const durationSlow = 0.6;
 const easeOut = [0.22, 1, 0.36, 1];
-
 const hidden = { opacity: 0, y: 24 };
 const shown = { opacity: 1, y: 0 };
+const holdTime = 1000;
+const waitTime = 3000;
+const dustTime = 2400;
 
 function revealAfter(delay) {
   return { duration: durationSlow, ease: easeOut, delay: delay };
 }
 
 export default function IntroWelcome() {
+  const router = useRouter();
+  const holdTimer = useRef(null);
+  const [ready, setReady] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+
+  useEffect(() => {
+    if (!ready || leaving) {
+      return;
+    }
+    const timer = setTimeout(() => setLeaving(true), waitTime);
+    return () => clearTimeout(timer);
+  }, [ready, leaving]);
+
+  useEffect(() => {
+    if (!leaving) {
+      return;
+    }
+    const timer = setTimeout(() => router.push("/insights/oversigt"), dustTime);
+    return () => clearTimeout(timer);
+  }, [leaving, router]);
+
+  function startHold() {
+    holdTimer.current = setTimeout(() => setLeaving(true), holdTime);
+  }
+
+  function stopHold() {
+    clearTimeout(holdTimer.current);
+  }
+
   return (
     <MotionConfig reducedMotion="user">
       <main className={styles.welcome}>
         <SiriGlow />
-
         <h1 className={`${styles.title} semibold`} aria-label="Apple Insights 2026">
-          <motion.span className={styles.apple} initial={hidden} animate={shown} transition={revealAfter(0.3)}>
+          <motion.span
+            className={styles.apple}
+            initial={hidden}
+            animate={shown}
+            transition={revealAfter(0.3)}
+          >
             Apple
           </motion.span>
           <motion.span
@@ -34,26 +70,16 @@ export default function IntroWelcome() {
           >
             Insights
           </motion.span>
-          <GlitchYear />
+          <span
+            className={styles.hold}
+            onPointerDown={startHold}
+            onPointerUp={stopHold}
+            onPointerLeave={stopHold}
+            onPointerCancel={stopHold}
+          >
+            <GlitchYear leaving={leaving} onDone={() => setReady(true)} />
+          </span>
         </h1>
-
-        <motion.div
-          className={styles.next}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={revealAfter(1.2)}
-        >
-          <Link href="/insights/oversigt" className={styles.link}>
-            Swipe for at fortsætte
-            <motion.span
-              aria-hidden="true"
-              animate={{ x: [0, 10] }}
-              transition={{ duration: 0.5, ease: "easeOut", repeat: Infinity, repeatType: "reverse" }}
-            >
-              →
-            </motion.span>
-          </Link>
-        </motion.div>
       </main>
     </MotionConfig>
   );
