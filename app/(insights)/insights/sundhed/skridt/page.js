@@ -54,7 +54,7 @@ export default async function StepsPage() {
           )}
         </>
       ) : <h1>Ingen skridtdata for 2026 endnu</h1>}
-      <Link href="/insights/oversigt" className={styles.next}>Fortsæt til oversigten</Link>
+      <Link href="/insights/sundhed/puls" className={styles.next}>Se din puls</Link>
     </main>
   );
 }
