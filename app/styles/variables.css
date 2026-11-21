@@ -185,6 +185,7 @@
   --app-habits-hint-size: calc(7.44 * var(--app-insights-unit));
   --app-habits-hint-width: calc(75.12 * var(--app-insights-unit));
   --app-habits-hint-color: #a2a0a0;
+  --app-habits-choice-fill: var(--color-indigo);
 
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
