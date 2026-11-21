@@ -37,7 +37,7 @@ export default function IntroWelcome() {
     if (!leaving) {
       return;
     }
-    const timer = setTimeout(() => router.push("/insights/oversigt"), dustTime);
+    const timer = setTimeout(() => router.push("/insights/introduction"), dustTime);
     return () => clearTimeout(timer);
   }, [leaving, router]);
 

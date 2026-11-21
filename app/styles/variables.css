@@ -28,6 +28,7 @@
   --font-weight-light: 200;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   --font-size-2xs: 0.75rem;
   --font-size-xs: 0.875rem;
@@ -134,6 +135,17 @@
   --app-insights-year-opacity: 0.6;
   --app-insights-glitch-icon-size: calc(29.8 * var(--app-insights-unit));
   --app-insights-shine-loop: 5s;
+
+  --app-introduction-stats-center: 29.3%;
+  --app-introduction-number-size: calc(10.23 * var(--app-insights-unit));
+  --app-introduction-row-gap: calc(0.93 * var(--app-insights-unit));
+  --app-introduction-word-gap: calc(2.23 * var(--app-insights-unit));
+  --app-introduction-timer-opacity: 0.8;
+  --app-introduction-glow-opacity: 0.2;
+  --app-introduction-hold-top: 64.7%;
+  --app-introduction-hold-size: calc(47.26 * var(--app-insights-unit));
+  --app-introduction-hold-circle-size: calc(30.47 * var(--app-insights-unit));
+  --app-introduction-hold-text-size: calc(3.72 * var(--app-insights-unit));
 
   --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;
