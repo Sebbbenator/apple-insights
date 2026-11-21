@@ -25,7 +25,7 @@ function drawDigits(target, context) {
     const metrics = context.measureText(digit.textContent);
     const textHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
     const baseline = box.top + (box.height - textHeight) / 2 + metrics.fontBoundingBoxAscent;
-    context.fillText(digit.textContent, box.left, baseline);
+    context.fillText(digit.textContent, box.left + parseFloat(style.paddingLeft), baseline);
   });
 }
 

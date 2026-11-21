@@ -19,6 +19,8 @@
   font-size: var(--app-insights-year-size);
   line-height: var(--app-insights-year-line-height);
   letter-spacing: -0.02em;
+  padding: 0.15em 0.1em;
+  margin: -0.15em -0.1em;
   background-image:
     linear-gradient(110deg, transparent 40%, rgb(255 255 255 / 0.9) 50%, transparent 60%),
     var(--gradient-silver);
