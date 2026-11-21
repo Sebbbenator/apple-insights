@@ -236,6 +236,10 @@
   --app-apps-glow-width: calc(239.47 * var(--app-insights-unit));
   --app-apps-glow-height: calc(207.05 * var(--app-insights-unit));
   --app-apps-glow-opacity: 0.2;
+  --app-apps-delay: 300ms;
+  --app-apps-stagger: 100ms;
+  --app-apps-footer-delay: 1200ms;
+  --app-apps-rise: calc(4.65 * var(--app-insights-unit));
 
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;

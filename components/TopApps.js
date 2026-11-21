@@ -14,7 +14,7 @@ export default function TopApps({ title, persona, detail, rows }) {
           <li
             key={row.name}
             className={styles.row}
-            style={{ "--fill": `${row.fill}%`, "--tint": `var(--color-${row.color})` }}
+            style={{ "--fill": `${row.fill}%`, "--tint": `var(--color-${row.color})`, "--rank": index }}
           >
             <span className={styles.rank}>{index + 1}</span>
             {row.icon ? (

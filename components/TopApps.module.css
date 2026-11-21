@@ -12,6 +12,7 @@
   height: var(--app-apps-glow-height);
   opacity: var(--app-apps-glow-opacity);
   translate: -50% -50%;
+  animation: breathe var(--app-screentime-loop) var(--ease-in-out) infinite;
 }
 
 .title {
@@ -25,6 +26,7 @@
   line-height: normal;
   text-align: center;
   translate: -50% 0;
+  animation: rise var(--duration-slow) var(--ease-out) both;
 }
 
 .list {
@@ -46,12 +48,24 @@
   height: var(--app-apps-row-height);
   padding: var(--app-apps-row-padding);
   border: var(--app-apps-row-border) solid var(--app-habits-choice-border-color);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   border-radius: var(--app-apps-row-radius);
-  background: linear-gradient(
-    to right,
-    color-mix(in srgb, var(--tint) 20%, transparent) var(--fill),
-    transparent var(--fill)
-  );
+  animation: rise var(--duration-slow) var(--ease-out) both;
+  animation-delay: calc(var(--app-apps-delay) + var(--rank) * var(--app-apps-stagger));
+}
+
+.row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: var(--fill);
+  background: color-mix(in srgb, var(--tint) 20%, transparent);
+  transform-origin: left;
+  animation: fill var(--duration-hero) var(--ease-out) both;
+  animation-delay: calc(var(--app-apps-delay) * 2 + var(--rank) * var(--app-apps-stagger));
 }
 
 .rank {
@@ -99,6 +113,8 @@
   width: var(--app-apps-footer-width);
   text-align: center;
   translate: -50% 0;
+  animation: rise var(--duration-slow) var(--ease-out) both;
+  animation-delay: var(--app-apps-footer-delay);
 }
 
 .persona {
@@ -109,4 +125,32 @@
   color: var(--app-habits-hint-color);
   font-size: var(--app-apps-detail-size);
   line-height: 1.5;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--app-apps-rise));
+  }
+}
+
+@keyframes fill {
+  from {
+    scale: 0 1;
+  }
+}
+
+@keyframes breathe {
+  50% {
+    scale: var(--app-screentime-glow-scale);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title,
+  .row,
+  .row::before,
+  .footer {
+    animation: none;
+  }
 }
