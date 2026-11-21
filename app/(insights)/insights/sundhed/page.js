@@ -8,7 +8,7 @@ export default function HealthPage() {
     <main>
       <ChapterStart
         {...chapterStarts.health}
-        hint={<Link href="/insights/oversigt">Fortsæt til oversigten</Link>}
+        hint={<Link href="/insights/sundhed/skridt">Se dine skridt</Link>}
       />
     </main>
   );
