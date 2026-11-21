@@ -7,18 +7,17 @@ import GlitchYear from "@/components/GlitchYear";
 import SiriGlow from "@/components/SiriGlow";
 import styles from "./IntroWelcome.module.css";
 
-const durationSlow = 0.6;
-const easeOut = [0.22, 1, 0.36, 1];
-const hidden = { opacity: 0, y: 24 };
-const shown = { opacity: 1, y: 0 };
+const popEase = [0.4, 1.75, 0.3, 1];
+const hidden = { opacity: 0, scale: 0 };
+const shown = { opacity: 1, scale: 1 };
 const holdTime = 1000;
 const waitTime = 3000;
 const exitTime = 700;
 const exit = { scale: 2.5, opacity: 0, filter: "blur(8px)" };
 const exitEase = [0.15, 0.85, 0.3, 1];
 
-function revealAfter(delay) {
-  return { duration: durationSlow, ease: easeOut, delay: delay };
+function popAfter(delay) {
+  return { duration: 0.9, ease: popEase, delay: delay, opacity: { duration: 0.2, delay: delay } };
 }
 
 export default function IntroWelcome() {
@@ -65,7 +64,7 @@ export default function IntroWelcome() {
             className={styles.apple}
             initial={hidden}
             animate={shown}
-            transition={revealAfter(0.3)}
+            transition={popAfter(0.3)}
           >
             Apple
           </motion.span>
@@ -73,7 +72,7 @@ export default function IntroWelcome() {
             className={`${styles.insights} text-gradient-rainbow`}
             initial={hidden}
             animate={shown}
-            transition={revealAfter(0.45)}
+            transition={popAfter(0.45)}
           >
             Insights
           </motion.span>

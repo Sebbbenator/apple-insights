@@ -10,7 +10,7 @@
 .title {
   display: flex;
   flex-direction: column;
-  width: var(--app-insights-content-width);
+  width: max-content;
   margin: 0;
   line-height: normal;
 }
@@ -21,7 +21,6 @@
 }
 
 .insights {
-  align-self: center;
   font-size: var(--app-insights-title-size);
   white-space: nowrap;
 }
