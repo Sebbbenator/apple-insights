@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import MonthWheel from "@/components/MonthWheel";
 import SiriGlow from "@/components/SiriGlow";
 import styles from "./IntroductionScreen.module.css";
 
@@ -77,6 +78,7 @@ export default function IntroductionScreen({ stats }) {
       </ul>
 
       <div className={styles.hold}>
+        <MonthWheel progress={progress} />
         <button
           type="button"
           className={styles.button}
