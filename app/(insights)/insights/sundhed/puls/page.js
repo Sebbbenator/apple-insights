@@ -23,7 +23,7 @@ export default function PulsePage() {
           <dd>115 bpm<time dateTime="2026-12-24">24. dec.</time></dd>
         </div>
       </dl>
-      <Link className={styles.next} href="/insights/oversigt">Fortsæt til oversigten</Link>
+      <Link className={styles.next} href="/insights/sundhed/del">Se din aktivitet</Link>
     </main>
   );
 }
