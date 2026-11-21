@@ -147,6 +147,12 @@
   --app-introduction-hold-circle-size: calc(30.47 * var(--app-insights-unit));
   --app-introduction-hold-stroke: calc(0.47 * var(--app-insights-unit));
   --app-introduction-hold-text-size: calc(3.72 * var(--app-insights-unit));
+  --app-introduction-burst-scale: 2.5;
+  --app-introduction-burst-time: 600ms;
+  --app-introduction-burst-ease: cubic-bezier(0.15, 0.85, 0.3, 1);
+  --app-introduction-wave-scale: 12;
+  --app-introduction-wave-blur: 1.5rem;
+  --app-introduction-wave-time: 1200ms;
 
   --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;

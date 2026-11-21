@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import MonthWheel from "@/components/MonthWheel";
 import SiriGlow from "@/components/SiriGlow";
 import SpeedStripes from "@/components/SpeedStripes";
@@ -16,9 +17,21 @@ function formatNumber(number) {
 
 export default function IntroductionScreen({ stats }) {
   const [holding, setHolding] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(100);
+  const [bursting, setBursting] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
+    if (holding && progress >= 100) {
+      setBursting(true);
+    }
+  }, [holding, progress]);
+
+  useEffect(() => {
+    if (bursting) {
+      return;
+    }
+
     let frame;
     let lastTime = performance.now();
 
@@ -36,10 +49,12 @@ export default function IntroductionScreen({ stats }) {
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [holding]);
+  }, [holding, bursting]);
 
   function startHold() {
-    setHolding(true);
+    if (!bursting) {
+      setHolding(true);
+    }
   }
 
   function stopHold() {
@@ -62,7 +77,7 @@ export default function IntroductionScreen({ stats }) {
   const summary = stats.map((stat) => `${formatNumber(stat.value)} ${stat.label}`).join(", ");
 
   return (
-    <main className={styles.screen}>
+    <main className={`${styles.screen} ${bursting ? styles.bursting : ""}`}>
       <div className={`radial-white ${styles.glow}`} />
       <SpeedStripes holding={holding} progress={progress} />
 
@@ -78,6 +93,8 @@ export default function IntroductionScreen({ stats }) {
           </li>
         ))}
       </ul>
+
+      <div className={styles.wave} onAnimationEnd={() => router.push("/insights/oversigt")} />
 
       <div className={styles.hold}>
         <MonthWheel progress={progress} />

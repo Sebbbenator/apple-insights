@@ -3,6 +3,7 @@
   padding: 0;
   overflow: hidden;
   background: var(--background);
+  animation: fade-in var(--duration-slow) var(--ease-out);
 }
 
 .glow {
@@ -92,4 +93,56 @@
 .label {
   position: relative;
   z-index: 2;
+}
+
+.wave {
+  position: absolute;
+  top: calc(var(--app-introduction-hold-top) + var(--app-introduction-hold-size) / 2);
+  left: 50%;
+  width: var(--app-introduction-hold-circle-size);
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-full);
+  background: conic-gradient(var(--app-siri-glow-colors));
+  filter: blur(var(--app-introduction-wave-blur));
+  opacity: 0;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.bursting .wave {
+  animation: wave var(--app-introduction-wave-time) var(--ease-out) forwards;
+}
+
+.bursting .hold {
+  pointer-events: none;
+  animation: burst var(--app-introduction-burst-time) var(--app-introduction-burst-ease) forwards;
+}
+
+.bursting .stats {
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-out);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes burst {
+  to {
+    scale: var(--app-introduction-burst-scale);
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    scale: var(--app-introduction-wave-scale);
+    opacity: 0;
+  }
 }
