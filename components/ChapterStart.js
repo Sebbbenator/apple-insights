@@ -15,7 +15,7 @@ export const chapterStarts = {
     description: "Tag en tur tilbage i minderne.",
   },
   health: {
-    eyebrow: "Sidste app",
+    eyebrow: "Sidste stop",
     title: "Sundhed",
     image: "/homescreen/icons/health.svg",
     description: "Tag en tur tilbage i minderne.",
