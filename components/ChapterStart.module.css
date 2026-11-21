@@ -1,0 +1,68 @@
+.screen {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 12cqh 5cqw;
+  background: radial-gradient(ellipse 190% 52% at 100% 0%, #111127, transparent 85%), #000;
+  color: var(--color-neutral-white);
+  text-align: center;
+  --unit: var(--app-insights-unit);
+}
+
+.content {
+  display: grid;
+  justify-items: center;
+  gap: calc(5.52 * var(--unit));
+  width: 100%;
+}
+
+.content > *, .hint {
+  margin: 0;
+}
+
+.eyebrow, .title {
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+
+.eyebrow { font-size: calc(10.46 * var(--unit)); }
+
+.title {
+  color: #888;
+  font-size: calc(17.83 * var(--unit));
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.icon {
+  width: calc(48.4 * var(--unit));
+  height: calc(48.4 * var(--unit));
+  object-fit: contain;
+}
+
+.description {
+  max-width: calc(73 * var(--unit));
+  color: var(--muted);
+  font-size: calc(7.82 * var(--unit));
+  line-height: 1.19;
+  text-wrap: balance;
+}
+
+.hint {
+  position: absolute;
+  bottom: 0.8cqh;
+  color: var(--color-neutral-grey-700);
+  font-size: calc(3.72 * var(--unit));
+}
+
+.hint::after {
+  content: "";
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.5em auto 0;
+  border: solid currentColor;
+  border-width: 1px 1px 0 0;
+  transform: rotate(-45deg);
+}
