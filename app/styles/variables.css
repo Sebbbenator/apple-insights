@@ -123,11 +123,14 @@
 
   --app-profile-avatar-size: 6rem;
 
-  --app-insights-content-width: 19.1875rem;
-  --app-insights-year-size: 16.375rem;
+  --app-insights-unit: min(1cqw, 0.7cqh);
+  --app-insights-content-width: calc(71.4 * var(--app-insights-unit));
+  --app-insights-apple-size: calc(14.9 * var(--app-insights-unit));
+  --app-insights-title-size: calc(19.5 * var(--app-insights-unit));
+  --app-insights-year-size: calc(60.9 * var(--app-insights-unit));
   --app-insights-year-line-height: 0.775;
   --app-insights-year-opacity: 0.6;
-  --app-insights-glitch-icon-size: 8rem;
+  --app-insights-glitch-icon-size: calc(29.8 * var(--app-insights-unit));
   --app-insights-shine-loop: 5s;
 
   --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;

@@ -17,12 +17,13 @@
 
 .apple {
   color: var(--foreground);
-  font-size: var(--font-size-7xl);
+  font-size: var(--app-insights-apple-size);
 }
 
 .insights {
-  font-size: var(--font-size-10xl);
-  text-align: center;
+  align-self: center;
+  font-size: var(--app-insights-title-size);
+  white-space: nowrap;
 }
 
 .hold {
