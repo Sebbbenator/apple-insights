@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MotionConfig, motion } from "motion/react";
+import SlotNumber from "@/components/SlotNumber";
 import styles from "./ScreenTimeScreen.module.css";
 
 const textHidden = { opacity: 0, y: -40 };
@@ -34,9 +35,8 @@ export default function ScreenTimeScreen({ hours }) {
         >
           <span>Du har brugt</span>
           <span className={styles.number}>
-            {hours.toLocaleString("da-DK")}
-            <br />
-            timer
+            <SlotNumber value={hours} />
+            <span>timer</span>
           </span>
           <span>på din telefon</span>
         </motion.h1>

@@ -50,6 +50,8 @@
 }
 
 .number {
+  display: flex;
+  flex-direction: column;
   color: var(--app-screentime-number-color);
   font-size: var(--app-screentime-number-size);
   line-height: 1.1;

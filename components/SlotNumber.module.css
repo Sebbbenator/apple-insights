@@ -1,0 +1,14 @@
+.reels {
+  display: flex;
+  justify-content: center;
+}
+
+.window {
+  height: 1lh;
+  overflow: hidden;
+}
+
+.reel {
+  display: flex;
+  flex-direction: column;
+}
