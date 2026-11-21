@@ -172,6 +172,20 @@
   --app-screentime-wheel-turn: -90deg;
   --app-screentime-loop: 2s;
 
+  --app-habits-content-width: calc(90.47 * var(--app-insights-unit));
+  --app-habits-content-offset: calc(11.68 * var(--app-insights-unit));
+  --app-habits-gap: calc(13.95 * var(--app-insights-unit));
+  --app-habits-title-size: calc(9.13 * var(--app-insights-unit));
+  --app-habits-choice-gap: calc(5.52 * var(--app-insights-unit));
+  --app-habits-choice-padding: calc(2.26 * var(--app-insights-unit));
+  --app-habits-choice-border: calc(0.45 * var(--app-insights-unit));
+  --app-habits-choice-border-color: #737373;
+  --app-habits-choice-radius: calc(4.07 * var(--app-insights-unit));
+  --app-habits-choice-size: calc(10.87 * var(--app-insights-unit));
+  --app-habits-hint-size: calc(7.44 * var(--app-insights-unit));
+  --app-habits-hint-width: calc(75.12 * var(--app-insights-unit));
+  --app-habits-hint-color: #a2a0a0;
+
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;

@@ -1,0 +1,68 @@
+.screen {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.glow {
+  left: 50%;
+  width: var(--app-screentime-glow-width);
+  height: var(--app-screentime-glow-height);
+  opacity: var(--app-screentime-glow-opacity);
+  translate: -50% -50%;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  top: 100%;
+}
+
+.content {
+  position: absolute;
+  top: calc(50% + var(--app-habits-content-offset));
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--app-habits-gap);
+  width: var(--app-habits-content-width);
+  translate: -50% -50%;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: var(--app-habits-title-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  text-align: center;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--app-habits-choice-gap);
+  width: 100%;
+}
+
+.choice {
+  padding: var(--app-habits-choice-padding);
+  border: var(--app-habits-choice-border) solid var(--app-habits-choice-border-color);
+  border-radius: var(--app-habits-choice-radius);
+  background: transparent;
+  font-size: var(--app-habits-choice-size);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.hint {
+  width: var(--app-habits-hint-width);
+  color: var(--app-habits-hint-color);
+  font-size: var(--app-habits-hint-size);
+  line-height: 1.5;
+  text-align: center;
+}
