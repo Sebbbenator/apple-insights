@@ -119,6 +119,12 @@
 
   --app-profile-avatar-size: 6rem;
 
+  --app-insights-content-width: 19.1875rem;
+  --app-insights-year-size: 16.375rem;
+  --app-insights-year-line-height: 0.775;
+  --app-insights-year-opacity: 0.6;
+  --app-insights-next-height: 3rem;
+
   --gradient-rainbow: linear-gradient(
     90deg,
     #f54804 0%,

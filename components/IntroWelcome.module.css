@@ -1,0 +1,49 @@
+.welcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--background);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  width: var(--app-insights-content-width);
+  margin: 0;
+  line-height: normal;
+}
+
+.apple {
+  color: var(--foreground);
+  font-size: var(--font-size-7xl);
+}
+
+.insights {
+  font-size: var(--font-size-10xl);
+  text-align: center;
+}
+
+.year {
+  margin-top: var(--padding-sm);
+  font-size: var(--app-insights-year-size);
+  line-height: var(--app-insights-year-line-height);
+  letter-spacing: -0.02em;
+  opacity: var(--app-insights-year-opacity);
+}
+
+.next {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  height: var(--app-insights-next-height);
+  color: var(--foreground);
+  line-height: 2;
+  text-decoration: none;
+}
