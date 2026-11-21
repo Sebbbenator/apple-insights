@@ -1,0 +1,95 @@
+@property --siri-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: var(--app-siri-glow-radius);
+  pointer-events: none;
+  animation: spin var(--app-siri-glow-loop) linear infinite;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  padding: var(--app-siri-glow-width);
+  border-radius: inherit;
+  background: conic-gradient(from var(--siri-angle), var(--app-siri-glow-colors));
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  opacity: 0;
+  animation: fade-in var(--duration-slow) var(--ease-out) var(--duration-base) forwards;
+}
+
+.soft {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  filter: blur(var(--app-siri-glow-soft-blur));
+}
+
+.soft .ring {
+  padding: var(--app-siri-glow-soft-width);
+}
+
+.splash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 26.875rem at 100% 22%,
+    rgb(255 255 255 / 0.5),
+    rgb(245 185 234 / 0.5) 30%,
+    rgb(188 130 243 / 0.3) 55%,
+    transparent 80%
+  );
+  transform-origin: 100% 22%;
+  animation: splash var(--app-siri-glow-splash) var(--ease-out) forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    --siri-angle: 360deg;
+  }
+}
+
+@keyframes splash {
+  from {
+    transform: scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow,
+  .ring {
+    animation: none;
+  }
+
+  .ring {
+    opacity: 1;
+  }
+
+  .splash {
+    display: none;
+  }
+}
