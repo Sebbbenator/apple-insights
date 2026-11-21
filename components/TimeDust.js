@@ -72,12 +72,15 @@ export default function TimeDust({ target, active }) {
 
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d", { willReadFrequently: true });
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const area = canvas.getBoundingClientRect();
+    const width = Math.round(area.width);
+    const height = Math.round(area.height);
     canvas.width = width;
     canvas.height = height;
 
+    context.translate(-area.left, -area.top);
     drawDigits(target.current, context);
+    context.resetTransform();
     const particles = makeParticles(context, width, height);
     const start = performance.now();
     let frame;

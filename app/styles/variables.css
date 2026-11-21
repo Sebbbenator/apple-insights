@@ -57,6 +57,10 @@
   --btn-height-md: 2.875rem;
 
   --app-max-width: 26.875rem;
+  --app-frame-max-height: 58.25rem;
+  --app-frame-ratio: 9 / 19.5;
+  --app-frame-gap: 1.5rem;
+  --app-frame-radius: 3rem;
 
   --app-homescreen-app-size: 4rem;
   --app-homescreen-app-corner-radius: 0.875rem;

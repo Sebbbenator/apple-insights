@@ -16,3 +16,19 @@
 .app > main {
   flex: 1;
 }
+
+@media (min-width: 48rem) {
+  .app {
+    width: auto;
+    height: calc(100dvh - 2 * var(--app-frame-gap));
+    min-height: 0;
+    max-height: var(--app-frame-max-height);
+    aspect-ratio: var(--app-frame-ratio);
+    margin-block: var(--app-frame-gap);
+    padding: 0;
+    border-radius: var(--app-frame-radius);
+    overflow-y: auto;
+    contain: paint;
+    scrollbar-width: none;
+  }
+}
