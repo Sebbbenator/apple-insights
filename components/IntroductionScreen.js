@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import MonthWheel from "@/components/MonthWheel";
 import SiriGlow from "@/components/SiriGlow";
+import SpeedStripes from "@/components/SpeedStripes";
 import styles from "./IntroductionScreen.module.css";
 
 const holdTime = 2500;
@@ -63,6 +64,7 @@ export default function IntroductionScreen({ stats }) {
   return (
     <main className={styles.screen}>
       <div className={`radial-white ${styles.glow}`} />
+      <SpeedStripes holding={holding} />
 
       <h1 className="sr-only">Dit 2026 i tal</h1>
       <p className="sr-only">{summary}</p>
