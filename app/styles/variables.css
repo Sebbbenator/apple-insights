@@ -22,8 +22,10 @@
   --color-teal: #5ac8fa;
   --color-grey: #c5c5c6;
 
-  --font-family-primary: "SF Pro", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-family-secondary: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+  --font-family-primary:
+    "SF Pro", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-family-secondary:
+    ui-rounded, "SF Pro Rounded", "Inter", -apple-system, system-ui, sans-serif;
 
   --font-weight-light: 200;
   --font-weight-regular: 400;
@@ -68,9 +70,12 @@
   --app-homescreen-app-corner-radius: calc(0.875 * var(--app-homescreen-rem));
   --app-homescreen-row-app-margin: calc(2.1875 * var(--app-homescreen-rem));
   --app-homescreen-row-widget-margin: calc(2.0625 * var(--app-homescreen-rem));
-  --app-homescreen-widget-corner-radius: calc(1.4375 * var(--app-homescreen-rem));
+  --app-homescreen-widget-corner-radius: calc(
+    1.4375 * var(--app-homescreen-rem)
+  );
   --app-homescreen-dock-bg: rgb(0 0 0 / 0.3);
-  --app-homescreen-label-shadow: 0 0 4px rgb(0 0 0 / 0.6), 0 1px 2px rgb(0 0 0 / 0.6);
+  --app-homescreen-label-shadow:
+    0 0 4px rgb(0 0 0 / 0.6), 0 1px 2px rgb(0 0 0 / 0.6);
   --app-homescreen-dock-corner-radius: calc(2.5 * var(--app-homescreen-rem));
   --app-homescreen-dock-margin-h: calc(0.9375 * var(--app-homescreen-rem));
   --app-homescreen-dock-margin-v: calc(0.875 * var(--app-homescreen-rem));
@@ -135,7 +140,8 @@
   --app-insights-glitch-icon-size: calc(29.8 * var(--app-insights-unit));
   --app-insights-shine-loop: 5s;
 
-  --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
+  --app-siri-glow-colors:
+    #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;
   --app-siri-glow-width: 0.25rem;
   --app-siri-glow-soft-width: 0.5rem;
@@ -155,12 +161,36 @@
 
   --gradient-silver: linear-gradient(to top left, #737373 0%, #ffffff 70%);
 
-  --radial-purple: radial-gradient(closest-side, var(--color-purple) 0%, transparent 90%);
-  --radial-yellow: radial-gradient(closest-side, var(--color-yellow) 0%, transparent 90%);
-  --radial-teal: radial-gradient(closest-side, var(--color-teal) 0%, transparent 90%);
-  --radial-pink: radial-gradient(closest-side, var(--color-pink) 0%, transparent 90%);
-  --radial-indigo: radial-gradient(closest-side, var(--color-indigo) 0%, transparent 90%);
-  --radial-green: radial-gradient(closest-side, var(--color-green) 0%, transparent 90%);
+  --radial-purple: radial-gradient(
+    closest-side,
+    var(--color-purple) 0%,
+    transparent 90%
+  );
+  --radial-yellow: radial-gradient(
+    closest-side,
+    var(--color-yellow) 0%,
+    transparent 90%
+  );
+  --radial-teal: radial-gradient(
+    closest-side,
+    var(--color-teal) 0%,
+    transparent 90%
+  );
+  --radial-pink: radial-gradient(
+    closest-side,
+    var(--color-pink) 0%,
+    transparent 90%
+  );
+  --radial-indigo: radial-gradient(
+    closest-side,
+    var(--color-indigo) 0%,
+    transparent 90%
+  );
+  --radial-green: radial-gradient(
+    closest-side,
+    var(--color-green) 0%,
+    transparent 90%
+  );
   --radial-white: radial-gradient(closest-side, #ffffff 0%, transparent 90%);
 
   --glass-blur: 50px;
@@ -172,8 +202,7 @@
   --glass-liquid-shadow:
     inset 0 1px 0.5px rgb(255 255 255 / 0.5),
     inset 0 -1px 0.5px rgb(255 255 255 / 0.15),
-    inset 0 0 24px rgb(255 255 255 / 0.08),
-    0 8px 24px rgb(0 0 0 / 0.18);
+    inset 0 0 24px rgb(255 255 255 / 0.08), 0 8px 24px rgb(0 0 0 / 0.18);
 
   --duration-fast: 150ms;
   --duration-base: 300ms;
