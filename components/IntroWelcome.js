@@ -13,7 +13,9 @@ const hidden = { opacity: 0, y: 24 };
 const shown = { opacity: 1, y: 0 };
 const holdTime = 1000;
 const waitTime = 3000;
-const dustTime = 2400;
+const exitTime = 700;
+const exit = { scale: 2.5, opacity: 0, filter: "blur(8px)" };
+const exitEase = [0.15, 0.85, 0.3, 1];
 
 function revealAfter(delay) {
   return { duration: durationSlow, ease: easeOut, delay: delay };
@@ -37,7 +39,7 @@ export default function IntroWelcome() {
     if (!leaving) {
       return;
     }
-    const timer = setTimeout(() => router.push("/insights/introduction"), dustTime);
+    const timer = setTimeout(() => router.push("/insights/introduction"), exitTime);
     return () => clearTimeout(timer);
   }, [leaving, router]);
 
@@ -53,7 +55,12 @@ export default function IntroWelcome() {
     <MotionConfig reducedMotion="user">
       <main className={styles.welcome}>
         <SiriGlow />
-        <h1 className={`${styles.title} semibold`} aria-label="Apple Insights 2026">
+        <motion.h1
+          className={`${styles.title} semibold`}
+          aria-label="Apple Insights 2026"
+          animate={leaving ? exit : { scale: 1, opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: exitTime / 1000, ease: exitEase }}
+        >
           <motion.span
             className={styles.apple}
             initial={hidden}
@@ -77,9 +84,9 @@ export default function IntroWelcome() {
             onPointerLeave={stopHold}
             onPointerCancel={stopHold}
           >
-            <GlitchYear leaving={leaving} onDone={() => setReady(true)} />
+            <GlitchYear onDone={() => setReady(true)} />
           </span>
-        </h1>
+        </motion.h1>
       </main>
     </MotionConfig>
   );
