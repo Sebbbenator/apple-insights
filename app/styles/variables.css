@@ -187,6 +187,28 @@
   --app-habits-hint-color: #a2a0a0;
   --app-habits-choice-fill: var(--color-indigo);
 
+  --app-vaner-content-width: calc(89.77 * var(--app-insights-unit));
+  --app-vaner-gap: calc(9.3 * var(--app-insights-unit));
+  --app-vaner-title-size: calc(7.44 * var(--app-insights-unit));
+  --app-vaner-summary-size: calc(5.58 * var(--app-insights-unit));
+  --app-vaner-dial-width: calc(85.12 * var(--app-insights-unit));
+  --app-vaner-dial-height: calc(83.49 * var(--app-insights-unit));
+  --app-vaner-bar-width: calc(2.71 * var(--app-insights-unit));
+  --app-vaner-bar-min: calc(3.4 * var(--app-insights-unit));
+  --app-vaner-bar-max: calc(27.16 * var(--app-insights-unit));
+  --app-vaner-bar-inner: calc(22 * var(--app-insights-unit));
+  --app-vaner-peak: var(--color-insights-blue);
+  --app-vaner-label-size: calc(3.72 * var(--app-insights-unit));
+  --app-vaner-circle-size: calc(38.99 * var(--app-insights-unit));
+  --app-vaner-circle-border: calc(0.23 * var(--app-insights-unit));
+  --app-vaner-caption-size: calc(3.26 * var(--app-insights-unit));
+  --app-vaner-hour-size: calc(9.3 * var(--app-insights-unit));
+  --app-vaner-glow: radial-gradient(closest-side, var(--color-light-blue) 0%, transparent 90%);
+  --app-vaner-glow-opacity: 0.2;
+  --app-vaner-glow-width: calc(233.26 * var(--app-insights-unit));
+  --app-vaner-glow-height: calc(188.2 * var(--app-insights-unit));
+  --app-vaner-glow-rotate: -27.7deg;
+
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;

@@ -1,0 +1,133 @@
+.screen {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.glow {
+  position: absolute;
+  width: var(--app-vaner-glow-width);
+  height: var(--app-vaner-glow-height);
+  background: var(--app-vaner-glow);
+  opacity: var(--app-vaner-glow-opacity);
+  translate: -50% -50%;
+  rotate: var(--app-vaner-glow-rotate);
+  pointer-events: none;
+}
+
+.first {
+  top: 13.4%;
+  left: 12.4%;
+}
+
+.second {
+  top: 71.5%;
+  left: 124.5%;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--app-vaner-gap);
+  width: var(--app-vaner-content-width);
+  translate: -50% -50%;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: var(--app-vaner-title-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  text-align: center;
+}
+
+.dial {
+  position: relative;
+  width: var(--app-vaner-dial-width);
+  height: var(--app-vaner-dial-height);
+}
+
+.bar {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: var(--app-vaner-bar-width);
+  height: max(var(--app-vaner-bar-min), calc(var(--size) * var(--app-vaner-bar-max)));
+  margin-left: calc(var(--app-vaner-bar-width) / -2);
+  border-radius: var(--border-radius-full);
+  background: var(--foreground);
+  transform-origin: bottom center;
+  transform: rotate(calc(var(--hour) * 15deg)) translateY(calc(-1 * var(--app-vaner-bar-inner)));
+}
+
+.peak {
+  background: var(--app-vaner-peak);
+}
+
+.label {
+  position: absolute;
+  color: var(--foreground);
+  font-size: var(--app-vaner-label-size);
+}
+
+.top {
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.bottom {
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.left {
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+}
+
+.right {
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--app-vaner-circle-size);
+  aspect-ratio: 1;
+  border: var(--app-vaner-circle-border) solid var(--foreground);
+  border-radius: var(--border-radius-full);
+  color: var(--foreground);
+  translate: -50% -50%;
+}
+
+.caption {
+  font-size: var(--app-vaner-caption-size);
+}
+
+.hour {
+  font-size: var(--app-vaner-hour-size);
+  line-height: 1.1;
+}
+
+.summary {
+  color: var(--app-habits-hint-color);
+  font-size: var(--app-vaner-summary-size);
+  line-height: 1.5;
+  text-align: center;
+}
