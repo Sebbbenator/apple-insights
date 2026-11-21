@@ -168,6 +168,9 @@
   --app-screentime-glow-width: calc(233.26 * var(--app-insights-unit));
   --app-screentime-glow-height: calc(100.23 * var(--app-insights-unit));
   --app-screentime-glow-opacity: 0.2;
+  --app-screentime-glow-scale: 0.8;
+  --app-screentime-wheel-turn: -90deg;
+  --app-screentime-loop: 2s;
 
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;

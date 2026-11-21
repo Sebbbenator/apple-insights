@@ -11,6 +11,7 @@
   height: var(--app-screentime-glow-height);
   opacity: var(--app-screentime-glow-opacity);
   translate: -50% -50%;
+  animation: breathe var(--app-screentime-loop) var(--ease-in-out) infinite;
 }
 
 .top {
@@ -29,6 +30,7 @@
   height: auto;
   translate: -50% -50%;
   pointer-events: none;
+  animation: spin var(--app-screentime-loop) linear infinite;
 }
 
 .text {
@@ -52,4 +54,16 @@
   font-size: var(--app-screentime-number-size);
   line-height: 1.1;
   font-variant-numeric: tabular-nums;
+}
+
+@keyframes spin {
+  from {
+    rotate: var(--app-screentime-wheel-turn);
+  }
+}
+
+@keyframes breathe {
+  50% {
+    scale: var(--app-screentime-glow-scale);
+  }
 }
