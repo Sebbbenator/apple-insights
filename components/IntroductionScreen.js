@@ -1,3 +1,4 @@
+import SiriGlow from "@/components/SiriGlow";
 import styles from "./IntroductionScreen.module.css";
 
 export default function IntroductionScreen({ stats }) {
@@ -16,8 +17,9 @@ export default function IntroductionScreen({ stats }) {
       </ul>
 
       <div className={styles.hold}>
-        <button type="button" className={`${styles.button} regular text-gradient-silver`}>
-          Hold nede
+        <button type="button" className={styles.button}>
+          <SiriGlow progress={65} className={styles.ring} />
+          <span className={`${styles.label} regular text-gradient-silver`}>Hold nede</span>
         </button>
       </div>
     </main>

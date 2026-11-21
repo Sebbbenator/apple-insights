@@ -145,6 +145,7 @@
   --app-introduction-hold-top: 64.7%;
   --app-introduction-hold-size: calc(47.26 * var(--app-insights-unit));
   --app-introduction-hold-circle-size: calc(30.47 * var(--app-insights-unit));
+  --app-introduction-hold-stroke: calc(0.47 * var(--app-insights-unit));
   --app-introduction-hold-text-size: calc(3.72 * var(--app-insights-unit));
 
   --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
