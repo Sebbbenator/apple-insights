@@ -1,0 +1,112 @@
+.screen {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.glow {
+  top: 70.1%;
+  left: 2.3%;
+  width: var(--app-apps-glow-width);
+  height: var(--app-apps-glow-height);
+  opacity: var(--app-apps-glow-opacity);
+  translate: -50% -50%;
+}
+
+.title {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: var(--app-apps-title-width);
+  margin: 0;
+  font-size: var(--app-apps-title-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  text-align: center;
+  translate: -50% 0;
+}
+
+.list {
+  position: absolute;
+  top: 46.5%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-apps-row-gap);
+  width: var(--app-apps-list-width);
+  list-style: none;
+  translate: -50% -50%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--app-apps-row-inner-gap);
+  height: var(--app-apps-row-height);
+  padding: var(--app-apps-row-padding);
+  border: var(--app-apps-row-border) solid var(--app-habits-choice-border-color);
+  border-radius: var(--app-apps-row-radius);
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--tint) 20%, transparent) var(--fill),
+    transparent var(--fill)
+  );
+}
+
+.rank {
+  width: var(--app-apps-rank-width);
+  color: var(--foreground);
+  font-size: var(--app-apps-rank-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+}
+
+.icon {
+  width: var(--app-apps-icon-size);
+  height: var(--app-apps-icon-size);
+  flex-shrink: 0;
+}
+
+.letter {
+  display: grid;
+  place-items: center;
+  border-radius: var(--app-apps-icon-radius);
+  background: var(--tint);
+  color: var(--background);
+  font-size: var(--app-apps-name-size);
+}
+
+.name {
+  font-size: var(--app-apps-name-size);
+  white-space: nowrap;
+}
+
+.hours {
+  color: var(--color-neutral-grey-800);
+  font-size: var(--app-apps-hours-size);
+  white-space: nowrap;
+}
+
+.footer {
+  position: absolute;
+  top: 72.9%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--app-apps-footer-gap);
+  width: var(--app-apps-footer-width);
+  text-align: center;
+  translate: -50% 0;
+}
+
+.persona {
+  font-size: var(--app-apps-persona-size);
+}
+
+.detail {
+  color: var(--app-habits-hint-color);
+  font-size: var(--app-apps-detail-size);
+  line-height: 1.5;
+}

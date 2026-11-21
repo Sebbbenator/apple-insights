@@ -211,6 +211,32 @@
   --app-vaner-bar-delay: 600ms;
   --app-vaner-bar-stagger: 30ms;
 
+  --app-apps-title-width: calc(61.86 * var(--app-insights-unit));
+  --app-apps-title-size: calc(11.16 * var(--app-insights-unit));
+  --app-apps-list-width: calc(82.05 * var(--app-insights-unit));
+  --app-apps-row-gap: calc(3.14 * var(--app-insights-unit));
+  --app-apps-row-height: calc(18.21 * var(--app-insights-unit));
+  --app-apps-row-padding: calc(2.66 * var(--app-insights-unit));
+  --app-apps-row-inner-gap: calc(3.56 * var(--app-insights-unit));
+  --app-apps-row-border: calc(0.53 * var(--app-insights-unit));
+  --app-apps-row-radius: calc(4.79 * var(--app-insights-unit));
+  --app-apps-rank-width: calc(5.23 * var(--app-insights-unit));
+  --app-apps-rank-size: calc(10.05 * var(--app-insights-unit));
+  --app-apps-icon-size: calc(12.56 * var(--app-insights-unit));
+  --app-apps-icon-radius: calc(2.8 * var(--app-insights-unit));
+  --app-apps-name-size: calc(7.53 * var(--app-insights-unit));
+  --app-apps-hours-size: calc(3.35 * var(--app-insights-unit));
+  --app-apps-footer-width: calc(88.37 * var(--app-insights-unit));
+  --app-apps-footer-gap: calc(2.79 * var(--app-insights-unit));
+  --app-apps-persona-size: calc(11.16 * var(--app-insights-unit));
+  --app-apps-detail-size: calc(7.44 * var(--app-insights-unit));
+  --app-apps-share-width: calc(27.91 * var(--app-insights-unit));
+  --app-apps-share-height: calc(11.16 * var(--app-insights-unit));
+  --app-apps-share-size: calc(5.58 * var(--app-insights-unit));
+  --app-apps-glow-width: calc(239.47 * var(--app-insights-unit));
+  --app-apps-glow-height: calc(207.05 * var(--app-insights-unit));
+  --app-apps-glow-opacity: 0.2;
+
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;

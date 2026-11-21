@@ -1,0 +1,11 @@
+.button {
+  min-width: var(--app-apps-share-width);
+  height: var(--app-apps-share-height);
+  padding: 0 var(--padding-xs);
+  border: 0;
+  border-radius: var(--border-radius-full);
+  background: var(--foreground);
+  color: var(--background);
+  font-size: var(--app-apps-share-size);
+  cursor: pointer;
+}
