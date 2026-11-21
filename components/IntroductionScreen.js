@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useReducedMotion } from "motion/react";
 import MonthWheel from "@/components/MonthWheel";
 import SiriGlow from "@/components/SiriGlow";
 import SpeedStripes from "@/components/SpeedStripes";
@@ -20,6 +21,7 @@ export default function IntroductionScreen({ stats }) {
   const [progress, setProgress] = useState(100);
   const [bursting, setBursting] = useState(false);
   const router = useRouter();
+  const calm = useReducedMotion();
 
   useEffect(() => {
     if (holding && progress >= 100) {
@@ -79,7 +81,7 @@ export default function IntroductionScreen({ stats }) {
   return (
     <main className={`${styles.screen} ${bursting ? styles.bursting : ""}`}>
       <div className={`radial-white ${styles.glow}`} />
-      <SpeedStripes holding={holding} progress={progress} />
+      {!calm && <SpeedStripes holding={holding} progress={progress} />}
 
       <h1 className="sr-only">Dit 2026 i tal</h1>
       <p className="sr-only">{summary}</p>
@@ -97,7 +99,7 @@ export default function IntroductionScreen({ stats }) {
       <div className={styles.wave} onAnimationEnd={() => router.push("/insights/oversigt")} />
 
       <div className={styles.hold}>
-        <MonthWheel progress={progress} />
+        <MonthWheel progress={progress} calm={calm} />
         <button
           type="button"
           className={styles.button}
