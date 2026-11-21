@@ -26,6 +26,7 @@
 }
 
 .year {
+  display: block;
   margin-top: var(--padding-sm);
   font-size: var(--app-insights-year-size);
   line-height: var(--app-insights-year-line-height);
@@ -39,8 +40,12 @@
   left: 0;
   right: 0;
   display: flex;
-  gap: 0.5rem;
   justify-content: center;
+}
+
+.link {
+  display: flex;
+  gap: 0.5rem;
   align-items: center;
   height: var(--app-insights-next-height);
   color: var(--foreground);
