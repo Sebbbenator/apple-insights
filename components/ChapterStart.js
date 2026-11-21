@@ -18,7 +18,7 @@ export const chapterStarts = {
     eyebrow: "Sidste stop",
     title: "Sundhed",
     image: "/homescreen/icons/health.svg",
-    description: "Tag en tur tilbage i minderne.",
+    description: "Dit år i skridt og hjerteslag.",
   },
 };
 
