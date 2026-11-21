@@ -1,7 +1,7 @@
 .widget {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: calc(0.25 * var(--app-homescreen-rem));
   align-items: center;
   margin: 0;
 }
@@ -9,7 +9,7 @@
 .card {
   width: 100%;
   aspect-ratio: 1;
-  padding: 0.875rem 1rem;
+  padding: calc(0.875 * var(--app-homescreen-rem)) var(--app-homescreen-rem);
   overflow: hidden;
   border-radius: var(--app-homescreen-widget-corner-radius);
   background: var(--color-neutral-dark-grey);
@@ -17,22 +17,22 @@
 
 .weekday {
   color: var(--color-red);
-  font-size: 0.8125rem;
+  font-size: calc(0.8125 * var(--app-homescreen-rem));
   font-weight: var(--font-weight-semibold);
   line-height: 1.25;
   text-transform: uppercase;
 }
 
 .day {
-  font-size: 2.125rem;
+  font-size: calc(2.125 * var(--app-homescreen-rem));
   line-height: 1.2;
 }
 
 .events {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  margin-top: 0.25rem;
+  gap: calc(0.25 * var(--app-homescreen-rem));
+  margin-top: calc(0.25 * var(--app-homescreen-rem));
   list-style: none;
 }
 
@@ -40,9 +40,9 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
-  padding: 0 0.25rem 0 0.5rem;
-  border-left: 4px solid var(--app-calendar-event);
-  border-radius: 0.25rem;
+  padding: 0 calc(0.25 * var(--app-homescreen-rem)) 0 calc(0.5 * var(--app-homescreen-rem));
+  border-left: calc(0.25 * var(--app-homescreen-rem)) solid var(--app-calendar-event);
+  border-radius: calc(0.25 * var(--app-homescreen-rem));
   background: var(--app-calendar-event-bg);
   color: var(--app-calendar-event);
   white-space: nowrap;
@@ -50,18 +50,18 @@
 
 .title {
   overflow: hidden;
-  font-size: 0.9375rem;
+  font-size: calc(0.9375 * var(--app-homescreen-rem));
   font-weight: var(--font-weight-semibold);
   line-height: 1.25;
   text-overflow: ellipsis;
 }
 
 .eventTime {
-  font-size: var(--font-size-2xs);
+  font-size: calc(0.75 * var(--app-homescreen-rem));
   line-height: 1.4;
 }
 
 .caption {
-  font-size: var(--font-size-2xs);
+  font-size: calc(0.75 * var(--app-homescreen-rem));
   text-shadow: var(--app-homescreen-label-shadow);
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: calc(0.25 * var(--app-homescreen-rem));
   width: var(--app-homescreen-app-size);
   color: var(--color-neutral-white);
   text-decoration: none;
@@ -18,9 +18,9 @@
 }
 
 .name {
-  max-width: calc(var(--app-homescreen-app-size) + 1.25rem);
+  max-width: calc(var(--app-homescreen-app-size) + 1.25 * var(--app-homescreen-rem));
   overflow: hidden;
-  font-size: var(--font-size-2xs);
+  font-size: calc(0.75 * var(--app-homescreen-rem));
   line-height: 1.33;
   text-align: center;
   text-overflow: ellipsis;

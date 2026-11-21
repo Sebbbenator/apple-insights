@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6.625rem;
+  height: calc(6.625 * var(--app-homescreen-rem));
   padding-inline: var(--app-homescreen-dock-padding-h);
   border-radius: var(--app-homescreen-dock-corner-radius);
   list-style: none;

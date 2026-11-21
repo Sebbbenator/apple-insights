@@ -2,28 +2,28 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  height: 3.375rem;
-  padding-inline: 0.625rem;
+  height: calc(3.375 * var(--app-homescreen-rem));
+  padding-inline: calc(0.625 * var(--app-homescreen-rem));
   color: var(--color-neutral-white);
 }
 
 .time {
   justify-self: center;
-  font-size: 1.125rem;
+  font-size: calc(1.125 * var(--app-homescreen-rem));
   font-weight: var(--font-weight-semibold);
   letter-spacing: -0.03em;
 }
 
 .island {
-  width: 7.875rem;
-  height: 2.3125rem;
+  width: calc(7.875 * var(--app-homescreen-rem));
+  height: calc(2.3125 * var(--app-homescreen-rem));
   border-radius: var(--border-radius-full);
   background: #000;
 }
 
 .icons {
   display: flex;
-  gap: 0.4375rem;
+  gap: calc(0.4375 * var(--app-homescreen-rem));
   align-items: center;
   justify-self: center;
 }

@@ -3,7 +3,7 @@
   isolation: isolate;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 0 calc((100cqw - 100 * var(--app-homescreen-unit)) / 2);
   overflow: hidden;
   color: var(--color-neutral-white);
 }
@@ -17,8 +17,8 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 1.5rem;
-  margin-top: clamp(1rem, 3.5dvh, 2.5rem);
+  gap: calc(1.5 * var(--app-homescreen-rem));
+  margin-top: calc(1.5 * var(--app-homescreen-rem));
   padding-inline: var(--app-homescreen-row-widget-margin);
 }
 
@@ -26,8 +26,8 @@
   display: grid;
   grid-template-columns: repeat(4, var(--app-homescreen-app-size));
   justify-content: space-between;
-  row-gap: clamp(0.75rem, 2.2dvh, 1.375rem);
-  margin-top: clamp(0.75rem, 2.2dvh, 1.375rem);
+  row-gap: var(--app-homescreen-rem);
+  margin-top: var(--app-homescreen-rem);
   padding-inline: var(--app-homescreen-row-app-margin);
   list-style: none;
 }
@@ -36,9 +36,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(0.75rem, 2.8dvh, 1.8125rem);
+  gap: calc(1.25 * var(--app-homescreen-rem));
   margin-top: auto;
-  padding-top: 0.5rem;
+  padding-top: calc(0.5 * var(--app-homescreen-rem));
 }
 
 .bottom > * {
@@ -51,11 +51,11 @@
 
 .search {
   display: flex;
-  gap: 0.25rem;
+  gap: calc(0.25 * var(--app-homescreen-rem));
   align-items: center;
-  height: 1.875rem;
-  padding-inline: 0.6875rem;
+  height: calc(1.875 * var(--app-homescreen-rem));
+  padding-inline: calc(0.6875 * var(--app-homescreen-rem));
   border-radius: var(--border-radius-full);
-  font-size: var(--font-size-2xs);
+  font-size: calc(0.75 * var(--app-homescreen-rem));
   font-weight: var(--font-weight-semibold);
 }
