@@ -64,7 +64,7 @@ export default function IntroductionScreen({ stats }) {
   return (
     <main className={styles.screen}>
       <div className={`radial-white ${styles.glow}`} />
-      <SpeedStripes holding={holding} />
+      <SpeedStripes holding={holding} progress={progress} />
 
       <h1 className="sr-only">Dit 2026 i tal</h1>
       <p className="sr-only">{summary}</p>

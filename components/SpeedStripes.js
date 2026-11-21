@@ -6,13 +6,14 @@ import styles from "./SpeedStripes.module.css";
 
 const stateMachine = "State Machine 1";
 
-export default function SpeedStripes({ holding }) {
+export default function SpeedStripes({ holding, progress }) {
   const { rive, RiveComponent } = useRive({
     src: "/rive/stripes.riv",
     stateMachines: stateMachine,
     autoplay: true,
   });
   const holdingInput = useStateMachineInput(rive, stateMachine, "holding");
+  const progressInput = useStateMachineInput(rive, stateMachine, "progress");
 
   useEffect(() => {
     if (holdingInput) {
@@ -20,5 +21,16 @@ export default function SpeedStripes({ holding }) {
     }
   }, [holdingInput, holding]);
 
-  return <RiveComponent className={styles.stripes} aria-hidden="true" />;
+  useEffect(() => {
+    if (progressInput) {
+      progressInput.value = progress;
+    }
+  }, [progressInput, progress]);
+
+  return (
+    <RiveComponent
+      className={`${styles.stripes} ${holding ? styles.visible : ""}`}
+      aria-hidden="true"
+    />
+  );
 }
