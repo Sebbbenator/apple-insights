@@ -6,7 +6,11 @@ export const metadata = {
     default: "Apple Insights 2026",
     template: "%s · Apple Insights",
   },
-  description: "Studieprojekt på Erhvervsakademi Aarhus. Ikke tilknyttet Apple.",
+  description:
+    "Studieprojekt på Erhvervsakademi Aarhus. Ikke tilknyttet Apple.",
+  icons: {
+    icon: "/gapple.ico",
+  },
 };
 
 export const viewport = {
@@ -20,9 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="da">
       <body>
-        <div className={styles.app}>
-          {children}
-        </div>
+        <div className={styles.app}>{children}</div>
       </body>
     </html>
   );
