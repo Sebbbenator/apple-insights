@@ -208,6 +208,8 @@
   --app-vaner-glow-width: calc(233.26 * var(--app-insights-unit));
   --app-vaner-glow-height: calc(188.2 * var(--app-insights-unit));
   --app-vaner-glow-rotate: -27.7deg;
+  --app-vaner-bar-delay: 600ms;
+  --app-vaner-bar-stagger: 30ms;
 
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;

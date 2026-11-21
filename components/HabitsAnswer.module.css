@@ -14,6 +14,7 @@
   translate: -50% -50%;
   rotate: var(--app-vaner-glow-rotate);
   pointer-events: none;
+  animation: breathe var(--app-screentime-loop) var(--ease-in-out) infinite;
 }
 
 .first {
@@ -64,6 +65,8 @@
   background: var(--foreground);
   transform-origin: bottom center;
   transform: rotate(calc(var(--hour) * 15deg)) translateY(calc(-1 * var(--app-vaner-bar-inner)));
+  animation: grow var(--duration-slow) var(--ease-out) both;
+  animation-delay: calc(var(--app-vaner-bar-delay) + var(--hour) * var(--app-vaner-bar-stagger));
 }
 
 .peak {
@@ -130,4 +133,22 @@
   font-size: var(--app-vaner-summary-size);
   line-height: 1.5;
   text-align: center;
+}
+
+@keyframes grow {
+  from {
+    scale: 1 0;
+  }
+}
+
+@keyframes breathe {
+  50% {
+    scale: var(--app-screentime-glow-scale);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    animation: none;
+  }
 }
