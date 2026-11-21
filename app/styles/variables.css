@@ -159,6 +159,16 @@
   --app-introduction-wave-blur: 1.5rem;
   --app-introduction-wave-time: 1200ms;
 
+  --app-screentime-text-size: calc(11.16 * var(--app-insights-unit));
+  --app-screentime-number-size: calc(19.53 * var(--app-insights-unit));
+  --app-screentime-number-color: rgb(255 255 255 / 0.5);
+  --app-screentime-text-gap: calc(3.26 * var(--app-insights-unit));
+  --app-screentime-wheel-size: calc(158.85 * var(--app-insights-unit));
+  --app-screentime-wheel-center: 51.9%;
+  --app-screentime-glow-width: calc(233.26 * var(--app-insights-unit));
+  --app-screentime-glow-height: calc(100.23 * var(--app-insights-unit));
+  --app-screentime-glow-opacity: 0.2;
+
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;
