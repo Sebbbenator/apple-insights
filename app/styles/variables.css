@@ -125,6 +125,14 @@
   --app-insights-year-opacity: 0.6;
   --app-insights-next-height: 3rem;
 
+  --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
+  --app-siri-glow-radius: 3rem;
+  --app-siri-glow-width: 0.25rem;
+  --app-siri-glow-soft-width: 0.5rem;
+  --app-siri-glow-soft-blur: 0.5rem;
+  --app-siri-glow-loop: 6s;
+  --app-siri-glow-splash: 900ms;
+
   --gradient-rainbow: linear-gradient(
     90deg,
     #f54804 0%,

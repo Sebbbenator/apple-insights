@@ -1,9 +1,12 @@
 import Link from "next/link";
+import SiriGlow from "@/components/SiriGlow";
 import styles from "./IntroWelcome.module.css";
 
 export default function IntroWelcome() {
   return (
     <main className={styles.welcome}>
+      <SiriGlow />
+
       <h1 className={`${styles.title} semibold`} aria-label="Apple Insights 2026">
         <span className={styles.apple}>Apple</span>
         <span className={`${styles.insights} text-gradient-rainbow`}>Insights</span>
