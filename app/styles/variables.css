@@ -124,6 +124,8 @@
   --app-insights-year-line-height: 0.775;
   --app-insights-year-opacity: 0.6;
   --app-insights-next-height: 3rem;
+  --app-insights-glitch-icon-size: 8rem;
+  --app-insights-shine-loop: 5s;
 
   --app-siri-glow-colors: #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { MotionConfig, motion } from "motion/react";
+import GlitchYear from "@/components/GlitchYear";
 import SiriGlow from "@/components/SiriGlow";
 import styles from "./IntroWelcome.module.css";
 
@@ -33,13 +34,7 @@ export default function IntroWelcome() {
           >
             Insights
           </motion.span>
-          <motion.span initial={hidden} animate={shown} transition={revealAfter(0.6)}>
-            <span className={`${styles.year} text-gradient-silver`}>
-              20
-              <br />
-              26
-            </span>
-          </motion.span>
+          <GlitchYear />
         </h1>
 
         <motion.div

@@ -25,15 +25,6 @@
   text-align: center;
 }
 
-.year {
-  display: block;
-  margin-top: var(--padding-sm);
-  font-size: var(--app-insights-year-size);
-  line-height: var(--app-insights-year-line-height);
-  letter-spacing: -0.02em;
-  opacity: var(--app-insights-year-opacity);
-}
-
 .next {
   position: absolute;
   bottom: 0;

@@ -1,0 +1,91 @@
+.year {
+  display: block;
+  margin-top: var(--padding-sm);
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: max-content max-content;
+}
+
+.cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.digit {
+  display: block;
+  font-size: var(--app-insights-year-size);
+  line-height: var(--app-insights-year-line-height);
+  letter-spacing: -0.02em;
+  background-image:
+    linear-gradient(110deg, transparent 40%, rgb(255 255 255 / 0.9) 50%, transparent 60%),
+    var(--gradient-silver);
+  background-size: 300% 100%, 200% 200%;
+  background-position: 150% 0, var(--silver-position);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: var(--app-insights-year-opacity);
+}
+
+.digit0 {
+  --silver-position: 0 0;
+}
+
+.digit1 {
+  --silver-position: 100% 0;
+  animation-delay: 0.1s;
+}
+
+.digit2 {
+  --silver-position: 0 100%;
+  animation-delay: 0.2s;
+}
+
+.digit3 {
+  --silver-position: 100% 100%;
+  animation-delay: 0.3s;
+}
+
+.shine {
+  animation-name: shine;
+  animation-duration: var(--app-insights-shine-loop);
+  animation-timing-function: var(--ease-in-out);
+  animation-iteration-count: infinite;
+}
+
+.icon {
+  position: absolute;
+  width: var(--app-insights-glitch-icon-size);
+  height: var(--app-insights-glitch-icon-size);
+  border-radius: 22%;
+  filter:
+    drop-shadow(-3px 0 var(--color-pink))
+    drop-shadow(3px 0 var(--color-teal));
+}
+
+.flash {
+  filter:
+    brightness(1.6)
+    drop-shadow(-6px 0 var(--color-pink))
+    drop-shadow(6px 0 var(--color-teal));
+}
+
+@keyframes shine {
+  from {
+    background-position: 150% 0, var(--silver-position);
+  }
+
+  30%,
+  to {
+    background-position: -50% 0, var(--silver-position);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine {
+    animation: none;
+  }
+}
