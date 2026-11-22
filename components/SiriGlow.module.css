@@ -57,8 +57,8 @@
   background: radial-gradient(
     circle 26.875rem at 100% 22%,
     rgb(255 255 255 / 0.5),
-    rgb(245 185 234 / 0.5) 30%,
-    rgb(188 130 243 / 0.3) 55%,
+    rgb(233 164 222 / 0.5) 30%,
+    rgb(174 128 230 / 0.3) 55%,
     transparent 80%
   );
   transform-origin: 100% 22%;

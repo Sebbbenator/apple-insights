@@ -21,6 +21,9 @@
   --color-green: #34c759;
   --color-teal: #5ac8fa;
   --color-grey: #c5c5c6;
+  --color-light-indigo: #ae80e6;
+  --color-light-orange: #ffae65;
+  --color-light-pink: #e9a4de;
 
   --font-family-primary:
     "SF Pro", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -145,7 +148,6 @@
   --app-introduction-number-size: calc(10.23 * var(--app-insights-unit));
   --app-introduction-row-gap: calc(0.93 * var(--app-insights-unit));
   --app-introduction-word-gap: calc(2.23 * var(--app-insights-unit));
-  --app-introduction-timer-opacity: 0.8;
   --app-introduction-glow-opacity: 0.2;
   --app-introduction-hold-top: 64.7%;
   --app-introduction-hold-size: calc(47.26 * var(--app-insights-unit));
@@ -169,6 +171,10 @@
   --app-screentime-glow-height: calc(100.23 * var(--app-insights-unit));
   --app-screentime-glow-opacity: 0.2;
   --app-screentime-glow-scale: 0.8;
+  --app-screentime-glow-strong-width: calc(232.56 * var(--app-insights-unit));
+  --app-screentime-glow-strong-height: calc(93.02 * var(--app-insights-unit));
+  --app-screentime-glow-strong-opacity: 0.24;
+  --app-screentime-glow-soft-opacity: 0.08;
   --app-screentime-wheel-turn: -90deg;
   --app-screentime-loop: 2s;
 
@@ -233,9 +239,6 @@
   --app-apps-share-width: calc(27.91 * var(--app-insights-unit));
   --app-apps-share-height: calc(11.16 * var(--app-insights-unit));
   --app-apps-share-size: calc(5.58 * var(--app-insights-unit));
-  --app-apps-glow-width: calc(239.47 * var(--app-insights-unit));
-  --app-apps-glow-height: calc(207.05 * var(--app-insights-unit));
-  --app-apps-glow-opacity: 0.2;
   --app-apps-delay: 300ms;
   --app-apps-stagger: 100ms;
   --app-apps-footer-delay: 1200ms;
@@ -255,7 +258,10 @@
   --app-progress-height: calc(0.93 * var(--app-insights-unit));
   --app-progress-gap: calc(1.86 * var(--app-insights-unit));
   --app-progress-track: rgb(255 255 255 / 0.2);
-  --app-chapter-glow: #111127;
+  --app-chapter-photos-glow-size: calc(69.77 * var(--app-insights-unit));
+  --app-chapter-photos-glow-opacity: 0.6;
+  --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
+  --app-health-glow-opacity: 0.4;
 
   --app-health-title-size: calc(11.16 * var(--app-insights-unit));
   --app-health-number-size: calc(19.53 * var(--app-insights-unit));
@@ -274,7 +280,8 @@
   --app-health-card-blur: calc(0.45 * var(--app-insights-unit));
 
   --app-siri-glow-colors:
-    #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
+    #b3a0f5 0%, #e18ba8 11.5%, #ffae65 20.5%, #efa2b6 31%, #d998d5 40%,
+    #ae80e6 50%, #e9a4de 62.5%, #d2a4e8 75%, #aba1ff 87.5%, #b3a0f5 100%;
   --app-siri-glow-radius: 3rem;
   --app-siri-glow-width: 0.25rem;
   --app-siri-glow-soft-width: 0.5rem;
@@ -282,7 +289,8 @@
   --app-siri-glow-loop: 6s;
   --app-siri-glow-splash: 900ms;
 
-  --gradient-apple-colors:
+  --gradient-apple: linear-gradient(
+    90deg,
     #b3a0f5 0%,
     #e18ba8 11.5%,
     #ffae65 20.5%,
@@ -292,17 +300,7 @@
     #e9a4de 62.5%,
     #d2a4e8 75%,
     #aba1ff 87.5%,
-    #b3a0f5 100%;
-  --gradient-apple: conic-gradient(from 90deg, var(--gradient-apple-colors));
-
-  --gradient-rainbow: linear-gradient(
-    90deg,
-    #f54804 0%,
-    #b537be 20%,
-    #136894 39%,
-    #37be39 57%,
-    #227077 75%,
-    #e43232 88%
+    #b3a0f5 100%
   );
 
   --gradient-silver: linear-gradient(to top left, #737373 0%, #ffffff 70%);

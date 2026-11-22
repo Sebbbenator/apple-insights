@@ -1,13 +1,23 @@
 .screen {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
   padding: 17.4cqh 5cqw 8cqh;
-  background:
-    radial-gradient(ellipse at 125% 34%, color-mix(in srgb, var(--color-pink) 18%, transparent), transparent 49%),
-    radial-gradient(ellipse at -24% 81%, color-mix(in srgb, var(--color-red) 21%, transparent), transparent 44%),
-    var(--background);
+  overflow: hidden;
+  background: var(--background);
+}
+
+.glow {
+  top: 59%;
+  left: 50%;
+  z-index: -1;
+  width: var(--app-health-glow-size);
+  aspect-ratio: 1;
+  opacity: var(--app-health-glow-opacity);
+  translate: -50% -50%;
 }
 
 .heading, .record {

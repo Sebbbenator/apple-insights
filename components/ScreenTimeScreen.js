@@ -17,7 +17,9 @@ export default function ScreenTimeScreen({ hours }) {
     <MotionConfig reducedMotion="user">
       <main className={styles.screen}>
         <div className={`radial-indigo ${styles.glow} ${styles.top}`} />
+        <div className={`radial-indigo ${styles.glow} ${styles.strong} ${styles.strongTop}`} />
         <div className={`radial-indigo ${styles.glow} ${styles.bottom}`} />
+        <div className={`radial-indigo ${styles.glow} ${styles.strong} ${styles.strongBottom}`} />
         <Image
           src="/screentime/wheel.svg"
           alt=""

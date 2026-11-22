@@ -9,18 +9,21 @@
   left: 50%;
   width: var(--app-screentime-glow-width);
   height: var(--app-screentime-glow-height);
-  opacity: var(--app-screentime-glow-opacity);
+  opacity: var(--app-screentime-glow-soft-opacity);
   translate: -50% -50%;
   animation: breathe var(--app-screentime-loop) var(--ease-in-out) infinite;
 }
 
-.top {
-  top: 0;
+.strong {
+  width: var(--app-screentime-glow-strong-width);
+  height: var(--app-screentime-glow-strong-height);
+  opacity: var(--app-screentime-glow-strong-opacity);
 }
 
-.bottom {
-  top: 100%;
-}
+.top { top: 3.4%; }
+.strongTop { top: 1.7%; }
+.bottom { top: 99.9%; }
+.strongBottom { top: 98.3%; }
 
 .wheel {
   position: absolute;

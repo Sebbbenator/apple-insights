@@ -30,7 +30,7 @@ Filen er delt i fire sektioner:
 | Sektion | Indhold |
 | --- | --- |
 | 1. Figma-variabler | Alle 48 variabler: `--color-*`, `--font-*`, `--gap-*`, `--padding-*`, `--border-radius-*`, `--btn-height-md` |
-| 2. Figma-styles | `--gradient-rainbow`, `--gradient-silver`, `--radial-purple` osv., `--glass-blur`, `--glass-fill` |
+| 2. Figma-styles | `--gradient-apple`, `--gradient-silver`, `--radial-purple` osv., `--glass-blur`, `--glass-fill` |
 | 3. Kun i kode | Motion: `--duration-fast` til `--duration-hero`, `--ease-out`, `--ease-in-out`, `--ease-spring` |
 | 4. Roller | `--background`, `--surface`, `--foreground`, `--muted`, `--accent`, `--danger` |
 

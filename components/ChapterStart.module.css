@@ -4,12 +4,59 @@
   place-items: center;
   min-height: 100%;
   padding: 12cqh 5cqw;
-  background: radial-gradient(ellipse 190% 52% at 100% 0%, var(--app-chapter-glow), transparent 85%), var(--background);
+  overflow: hidden;
+  background: var(--background);
   color: var(--color-neutral-white);
   text-align: center;
 }
 
+.glow {
+  translate: -50% -50%;
+}
+
+.indigoTop,
+.indigoBottom {
+  left: 50%;
+  width: var(--app-screentime-glow-strong-width);
+  height: var(--app-screentime-glow-strong-height);
+  opacity: var(--app-screentime-glow-strong-opacity);
+}
+
+.indigoTopSoft,
+.indigoBottomSoft {
+  left: 50%;
+  width: var(--app-screentime-glow-width);
+  height: var(--app-screentime-glow-height);
+  opacity: var(--app-screentime-glow-soft-opacity);
+}
+
+.indigoTop { top: 1.7%; }
+.indigoTopSoft { top: 3.4%; }
+.indigoBottom { top: 98.3%; }
+.indigoBottomSoft { top: 99.9%; }
+
+.whiteFirst,
+.whiteSecond,
+.whiteThird {
+  width: var(--app-chapter-photos-glow-size);
+  aspect-ratio: 1;
+  opacity: var(--app-chapter-photos-glow-opacity);
+}
+
+.whiteFirst { top: 2.4%; left: 7.9%; }
+.whiteSecond { top: 31.2%; left: 98.8%; }
+.whiteThird { top: 88%; left: 1.4%; }
+
+.pinkCenter {
+  top: 50%;
+  left: 50%;
+  width: var(--app-health-glow-size);
+  aspect-ratio: 1;
+  opacity: var(--app-health-glow-opacity);
+}
+
 .content {
+  position: relative;
   display: grid;
   justify-items: center;
   gap: var(--app-chapter-gap);
