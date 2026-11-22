@@ -19,7 +19,7 @@
   inset: 0;
   padding: var(--app-siri-glow-width);
   border-radius: inherit;
-  background: conic-gradient(from var(--siri-angle), var(--app-siri-glow-colors));
+  background: conic-gradient(from calc(var(--siri-angle) + var(--siri-offset, 0deg)), var(--app-siri-glow-colors));
   mask:
     linear-gradient(#000 0 0) content-box exclude,
     linear-gradient(#000 0 0);

@@ -275,8 +275,7 @@
   --app-siri-glow-loop: 6s;
   --app-siri-glow-splash: 900ms;
 
-  --gradient-apple: conic-gradient(
-    from 90deg,
+  --gradient-apple-colors:
     #b3a0f5 0%,
     #e18ba8 11.5%,
     #ffae65 20.5%,
@@ -286,8 +285,8 @@
     #e9a4de 62.5%,
     #d2a4e8 75%,
     #aba1ff 87.5%,
-    #b3a0f5 100%
-  );
+    #b3a0f5 100%;
+  --gradient-apple: conic-gradient(from 90deg, var(--gradient-apple-colors));
 
   --gradient-rainbow: linear-gradient(
     90deg,
