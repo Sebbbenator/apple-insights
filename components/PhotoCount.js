@@ -29,7 +29,7 @@ const textTransition = {
   y: { duration: 0.6, ease: [0.05, 0.4, 0.5, 1] },
 };
 
-export default function PhotoCount({ total, photos }) {
+export default function PhotoCount({ total, percentile, photos }) {
   return (
     <MotionConfig reducedMotion="user">
       <main className={styles.screen}>
@@ -60,18 +60,25 @@ export default function PhotoCount({ total, photos }) {
           })}
         </div>
 
-        <motion.h1
-          className={`${styles.text} semibold`}
+        <motion.div
+          className={styles.text}
           initial={textHidden}
           animate={textShown}
           transition={textTransition}
         >
-          <span>Du har taget</span>
-          <span className={`${styles.number} text-gradient-silver`}>
-            {total.toLocaleString("da-DK")}
-          </span>
-          <span className={styles.year}>fotos i 2026</span>
-        </motion.h1>
+          <h1 className={`${styles.heading} semibold`}>
+            <span>Du har taget</span>
+            <span className={`${styles.number} text-gradient-silver`}>
+              {total.toLocaleString("da-DK")}
+            </span>
+            <span className={styles.year}>fotos i 2026</span>
+          </h1>
+          {percentile !== null && (
+            <p className={`${styles.percentile} regular`}>
+              mere end {percentile.toLocaleString("da-DK")}% af brugere
+            </p>
+          )}
+        </motion.div>
       </main>
     </MotionConfig>
   );

@@ -273,6 +273,7 @@
   --app-photos-text-width: calc(79.53 * var(--app-insights-unit));
   --app-photos-text-size: calc(11.16 * var(--app-insights-unit));
   --app-photos-number-size: calc(19.53 * var(--app-insights-unit));
+  --app-photos-detail-size: calc(6.51 * var(--app-insights-unit));
   --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
   --app-health-glow-opacity: 0.4;
 

@@ -31,15 +31,18 @@
   position: absolute;
   top: var(--app-photos-text-top);
   left: 50%;
+  width: var(--app-photos-text-width);
+  color: var(--foreground);
+  text-align: center;
+  translate: -50% 0;
+}
+
+.heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: var(--app-photos-text-width);
   margin: 0;
-  color: var(--foreground);
   font-size: var(--app-photos-text-size);
-  text-align: center;
-  translate: -50% 0;
 }
 
 .number {
@@ -49,4 +52,10 @@
 
 .year {
   color: var(--color-neutral-grey-600);
+}
+
+.percentile {
+  margin: 0;
+  color: var(--color-neutral-grey-700);
+  font-size: var(--app-photos-detail-size);
 }

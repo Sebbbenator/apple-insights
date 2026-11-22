@@ -30,5 +30,11 @@ export default async function PhotoCountPage() {
     ...photos.filter((photo) => photo.position === topMonth),
   ];
 
-  return <PhotoCount total={insights.photos.total} photos={stack} />;
+  return (
+    <PhotoCount
+      total={insights.photos.total}
+      percentile={insights.photos.percentile}
+      photos={stack}
+    />
+  );
 }
