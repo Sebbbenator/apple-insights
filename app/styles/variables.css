@@ -274,7 +274,8 @@
   --app-health-card-blur: calc(0.45 * var(--app-insights-unit));
 
   --app-siri-glow-colors:
-    #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
+    #b3a0f5 0%, #e18ba8 11.5%, #ffae65 20.5%, #efa2b6 31%, #d998d5 40%,
+    #ae80e6 50%, #e9a4de 62.5%, #d2a4e8 75%, #aba1ff 87.5%, #b3a0f5 100%;
   --app-siri-glow-radius: 3rem;
   --app-siri-glow-width: 0.25rem;
   --app-siri-glow-soft-width: 0.5rem;
