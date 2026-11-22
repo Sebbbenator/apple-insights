@@ -260,6 +260,9 @@
   --app-progress-track: rgb(255 255 255 / 0.2);
   --app-chapter-photos-glow-size: calc(69.77 * var(--app-insights-unit));
   --app-chapter-photos-glow-opacity: 0.6;
+  --app-photos-flash-time: var(--duration-hero);
+  --app-photos-flash-peak: 1;
+  --app-photos-flash-second-peak: 0.85;
   --app-photos-stack-top: 31.7%;
   --app-photos-card-width: calc(43.25 * var(--app-insights-unit));
   --app-photos-card-height: calc(51.62 * var(--app-insights-unit));

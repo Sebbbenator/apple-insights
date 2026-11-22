@@ -8,3 +8,23 @@
 .first { top: 2.4%; left: 7.9%; }
 .second { top: 31.2%; left: 98.8%; }
 .third { top: 88%; left: 1.4%; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .glow {
+    animation: flash var(--app-photos-flash-time) var(--ease-out) both;
+  }
+}
+
+@keyframes flash {
+  0%, 30%, 60%, 100% {
+    opacity: var(--app-chapter-photos-glow-opacity);
+  }
+
+  10% {
+    opacity: var(--app-photos-flash-peak);
+  }
+
+  40% {
+    opacity: var(--app-photos-flash-second-peak);
+  }
+}
