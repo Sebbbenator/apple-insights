@@ -1,0 +1,78 @@
+.screen {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-photos-lens-gap);
+  align-items: center;
+  width: var(--app-photos-lens-width);
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  color: var(--foreground);
+  font-size: var(--app-photos-lens-heading-size);
+}
+
+.frame {
+  position: relative;
+  width: var(--app-photos-lens-grid-width);
+  height: var(--app-photos-lens-grid-height);
+  overflow: hidden;
+  border-radius: var(--app-photos-lens-grid-radius);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: var(--app-photos-lens-grid-gap);
+  height: 100%;
+  margin: 0;
+  padding: var(--app-photos-lens-border);
+  list-style: none;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.glow {
+  border-radius: inherit;
+  --app-siri-glow-width: var(--app-photos-lens-border);
+  --app-siri-glow-soft-width: var(--app-photos-lens-border);
+  --app-siri-glow-soft-blur: var(--app-photos-lens-border);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--app-photos-lens-share-gap);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--app-photos-lens-title-size);
+}
+
+.description {
+  margin: 0;
+  color: var(--color-neutral-grey-700);
+  font-size: var(--app-photos-lens-description-size);
+  text-wrap: balance;
+}

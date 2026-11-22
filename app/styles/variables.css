@@ -291,6 +291,17 @@
   --app-photos-thumb-radius: calc(2.79 * var(--app-insights-unit));
   --app-photos-thumb-shadow: 0 calc(0.93 * var(--app-insights-unit)) calc(0.93 * var(--app-insights-unit)) rgb(0 0 0 / 0.5);
   --app-photos-avatar-size: calc(46.51 * var(--app-insights-unit));
+  --app-photos-lens-width: calc(87.21 * var(--app-insights-unit));
+  --app-photos-lens-gap: calc(3.02 * var(--app-insights-unit));
+  --app-photos-lens-share-gap: calc(4.65 * var(--app-insights-unit));
+  --app-photos-lens-heading-size: calc(7.44 * var(--app-insights-unit));
+  --app-photos-lens-grid-width: calc(81.4 * var(--app-insights-unit));
+  --app-photos-lens-grid-height: calc(102.09 * var(--app-insights-unit));
+  --app-photos-lens-grid-radius: calc(6.51 * var(--app-insights-unit));
+  --app-photos-lens-grid-gap: calc(0.47 * var(--app-insights-unit));
+  --app-photos-lens-border: calc(1.86 * var(--app-insights-unit));
+  --app-photos-lens-title-size: calc(13.02 * var(--app-insights-unit));
+  --app-photos-lens-description-size: calc(3.72 * var(--app-insights-unit));
   --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
   --app-health-glow-opacity: 0.4;
 
