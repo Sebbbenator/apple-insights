@@ -50,9 +50,9 @@
 .pinkCenter {
   top: 50%;
   left: 50%;
-  width: var(--app-chapter-health-glow-size);
+  width: var(--app-health-glow-size);
   aspect-ratio: 1;
-  opacity: var(--app-chapter-health-glow-opacity);
+  opacity: var(--app-health-glow-opacity);
 }
 
 .content {

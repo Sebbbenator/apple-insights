@@ -16,6 +16,7 @@ export default async function StepsPage() {
 
   return (
     <main className={styles.screen}>
+      <div className={`radial-pink ${styles.glow}`} />
       {health ? (
         <>
           <h1 className={styles.heading}>

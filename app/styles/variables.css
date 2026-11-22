@@ -260,8 +260,8 @@
   --app-progress-track: rgb(255 255 255 / 0.2);
   --app-chapter-photos-glow-size: calc(69.77 * var(--app-insights-unit));
   --app-chapter-photos-glow-opacity: 0.6;
-  --app-chapter-health-glow-size: calc(167.44 * var(--app-insights-unit));
-  --app-chapter-health-glow-opacity: 0.4;
+  --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
+  --app-health-glow-opacity: 0.4;
 
   --app-health-title-size: calc(11.16 * var(--app-insights-unit));
   --app-health-number-size: calc(19.53 * var(--app-insights-unit));

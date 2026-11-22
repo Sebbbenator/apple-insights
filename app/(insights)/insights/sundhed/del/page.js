@@ -21,6 +21,7 @@ export default async function ActivityPage() {
 
   return (
     <main className={styles.screen}>
+      <div className={`radial-pink ${styles.glow}`} />
       <h1>Din aktivitet i<br />2026</h1>
       {health ? (
         <>
