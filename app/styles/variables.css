@@ -88,7 +88,7 @@
   --app-settings-margin-h: 1.25rem;
   --app-settings-section-gap: 2.1875rem;
   --app-settings-card-bg: var(--color-neutral-dark-grey);
-  --app-settings-card-corner-radius: 1.625rem;
+  --app-settings-card-corner-radius: 0.625rem;
   --app-settings-row-height: 2.75rem;
   --app-settings-row-padding-h: 1.25rem;
   --app-settings-row-gap: 0.9375rem;
@@ -100,11 +100,11 @@
   --app-settings-divider-inset: 4rem;
   --app-settings-chevron: var(--color-neutral-grey-900);
   --app-settings-pressed-bg: rgb(255 255 255 / 0.08);
-  --app-settings-account-avatar-size: 4rem;
-  --app-settings-account-padding: 1rem;
+  --app-settings-account-avatar-size: 3.75rem;
+  --app-settings-account-padding: 0.3125rem 0.9375rem;
   --app-settings-login-ring: var(--accent);
   --app-settings-login-glow: 0 0 24px rgb(3 133 255 / 0.45);
-  --app-settings-banner-height: 5.9rem;
+  --app-settings-banner-radius: 1rem;
   --app-settings-banner-bg:
     radial-gradient(
       circle at 50% 46%,
@@ -281,6 +281,19 @@
   --app-siri-glow-soft-blur: 0.5rem;
   --app-siri-glow-loop: 6s;
   --app-siri-glow-splash: 900ms;
+
+  --gradient-apple-colors:
+    #b3a0f5 0%,
+    #e18ba8 11.5%,
+    #ffae65 20.5%,
+    #efa2b6 31%,
+    #d998d5 40%,
+    #ae80e6 50%,
+    #e9a4de 62.5%,
+    #d2a4e8 75%,
+    #aba1ff 87.5%,
+    #b3a0f5 100%;
+  --gradient-apple: conic-gradient(from 90deg, var(--gradient-apple-colors));
 
   --gradient-rainbow: linear-gradient(
     90deg,

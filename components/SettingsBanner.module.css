@@ -1,13 +1,9 @@
 .banner {
   position: relative;
-  display: grid;
-  place-items: center;
-  height: var(--app-settings-banner-height);
-  overflow: hidden;
-  color: var(--foreground);
-  text-decoration: none;
-  background: var(--app-settings-banner-bg);
-  border-radius: var(--app-settings-card-corner-radius);
+  display: block;
+  width: 100%;
+  flex: none;
+  border-radius: var(--app-settings-banner-radius);
   -webkit-tap-highlight-color: transparent;
   transition: transform var(--duration-fast) var(--ease-out);
 }
@@ -21,28 +17,10 @@
   outline-offset: 3px;
 }
 
-.title {
-  width: auto;
-  height: 80%;
-}
-
-.chip {
-  position: absolute;
-  top: 0.625rem;
-  left: 0.75rem;
-  padding: 0.125rem 0.625rem;
-  border-radius: var(--border-radius-full);
-  font-size: var(--font-size-2xs);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.5;
-}
-
-.chevron {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  color: var(--color-grey);
-  translate: 0 -50%;
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
