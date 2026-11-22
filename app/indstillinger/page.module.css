@@ -6,7 +6,8 @@
 }
 
 .title {
-  margin: var(--padding-lg) var(--app-settings-margin-h) var(--padding-xs);
+  margin: 2.9375rem var(--app-settings-margin-h) 0.5rem;
+  line-height: 2.5625rem;
   font-size: var(--font-size-3xl);
   font-weight: 700;
 }
