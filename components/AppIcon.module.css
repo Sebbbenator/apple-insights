@@ -1,4 +1,5 @@
 .app {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +16,15 @@
   height: var(--app-homescreen-app-size);
   border-radius: var(--app-homescreen-app-corner-radius);
   transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.badge {
+  position: absolute;
+  top: calc(-0.375 * var(--app-homescreen-rem));
+  right: calc(-0.375 * var(--app-homescreen-rem));
+  width: calc(1.5 * var(--app-homescreen-rem));
+  height: auto;
+  pointer-events: none;
 }
 
 .name {
