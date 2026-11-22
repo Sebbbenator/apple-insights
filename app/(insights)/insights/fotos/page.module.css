@@ -1,0 +1,23 @@
+.state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-md);
+}
+
+.state p {
+  color: var(--muted);
+}
+
+.retry {
+  align-self: flex-start;
+  min-height: var(--btn-height-md);
+  padding: 0 var(--padding-sm);
+  border: 0;
+  border-radius: var(--border-radius-xs);
+  background: var(--foreground);
+  color: var(--background);
+  font: inherit;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
