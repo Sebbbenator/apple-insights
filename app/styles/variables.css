@@ -21,6 +21,9 @@
   --color-green: #34c759;
   --color-teal: #5ac8fa;
   --color-grey: #c5c5c6;
+  --color-light-indigo: #ae80e6;
+  --color-light-orange: #ffae65;
+  --color-light-pink: #e9a4de;
 
   --font-family-primary:
     "SF Pro", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -145,7 +148,6 @@
   --app-introduction-number-size: calc(10.23 * var(--app-insights-unit));
   --app-introduction-row-gap: calc(0.93 * var(--app-insights-unit));
   --app-introduction-word-gap: calc(2.23 * var(--app-insights-unit));
-  --app-introduction-timer-opacity: 0.8;
   --app-introduction-glow-opacity: 0.2;
   --app-introduction-hold-top: 64.7%;
   --app-introduction-hold-size: calc(47.26 * var(--app-insights-unit));

@@ -43,17 +43,16 @@
   color: var(--color-neutral-white);
 }
 
-.purple {
-  color: var(--color-purple);
-  opacity: var(--app-introduction-timer-opacity);
+.indigo {
+  color: var(--color-light-indigo);
 }
 
 .orange {
-  color: var(--color-orange);
+  color: var(--color-light-orange);
 }
 
 .pink {
-  color: var(--color-pink);
+  color: var(--color-light-pink);
 }
 
 .hold {

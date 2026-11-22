@@ -22,7 +22,7 @@ export default async function IntroductionPage() {
 
   const stats = [
     { label: "dage", value: 365, color: "white" },
-    { label: "timer", value: Math.round(insights.screenTime.totalMinutes / 60), color: "purple" },
+    { label: "timer", value: Math.round(insights.screenTime.totalMinutes / 60), color: "indigo" },
     { label: "fotos", value: insights.photos.total, color: "orange" },
     { label: "skridt", value: insights.health.steps, color: "pink" },
   ];
