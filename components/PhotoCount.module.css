@@ -21,7 +21,6 @@
   box-shadow: var(--app-photos-card-shadow);
   translate: calc(var(--x) * var(--app-insights-unit) - 50%)
     calc(var(--y) * var(--app-insights-unit) - 50%);
-  rotate: var(--rotate);
 }
 
 .image {
