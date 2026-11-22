@@ -1,10 +1,10 @@
-import NextLink from "@/components/NextLink";
+import Instruction from "@/components/Instruction";
 
 export default function InsightsLayout({ children }) {
   return (
     <>
       {children}
-      <NextLink />
+      <Instruction />
     </>
   );
 }
