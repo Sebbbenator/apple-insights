@@ -1,18 +1,17 @@
 .screen {
-  --unit: min(1cqw, 0.462cqh);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
   padding: 8cqh 4cqw 1cqh;
-  background: radial-gradient(ellipse 84cqw 39cqh at 50% 45%, rgb(255 45 85 / 30%), transparent), var(--background);
+  background: radial-gradient(ellipse 84cqw 39cqh at 50% 45%, color-mix(in srgb, var(--color-pink) 30%, transparent), transparent), var(--background);
   color: var(--foreground);
   text-align: center;
 }
 
 .screen h1, .screen h2 {
   margin: 0;
-  font-size: calc(11.16 * var(--unit));
+  font-size: var(--app-health-title-size);
   font-weight: var(--font-weight-semibold);
   line-height: 1.19;
 }
@@ -20,8 +19,8 @@
 .cards {
   display: grid;
   justify-items: center;
-  gap: calc(3.7 * var(--unit));
-  width: calc(82 * var(--unit));
+  gap: var(--app-health-cards-gap);
+  width: var(--app-health-cards-width);
   margin: 2.6cqh 0 4cqh;
 }
 
@@ -30,11 +29,11 @@
   align-content: space-between;
   width: 90%;
   aspect-ratio: 2.56;
-  padding: calc(3.2 * var(--unit));
-  border-radius: calc(4.4 * var(--unit));
+  padding: var(--app-health-card-padding);
+  border-radius: var(--app-health-card-radius);
   background: var(--surface);
   text-align: left;
-  filter: blur(calc(0.45 * var(--unit)));
+  filter: blur(var(--app-health-card-blur));
 }
 
 .card:nth-child(2) { width: 100%; filter: none; }
@@ -43,13 +42,13 @@
   align-items: center;
   gap: 0.25em;
   color: var(--color-red);
-  font-size: calc(3.72 * var(--unit));
+  font-size: var(--app-health-small-size);
 }
 .card dt img { width: 0.7em; height: auto; }
 .card dt span { margin-left: auto; color: var(--color-neutral-grey-700); }
-.card dd { margin: 0; font-size: calc(7.44 * var(--unit)); font-weight: var(--font-weight-semibold); }
+.card dd { margin: 0; font-size: var(--app-health-value-size); font-weight: var(--font-weight-semibold); }
 .card small { font-size: 0.48em; }
-.caption { margin: 0 0 1.6cqh; color: var(--color-neutral-grey-800); font-size: calc(7.44 * var(--unit)); }
+.caption { margin: 0 0 1.6cqh; color: var(--color-neutral-grey-800); font-size: var(--app-health-value-size); }
 .share {
   border: 0;
   border-radius: var(--border-radius-full);
@@ -57,7 +56,7 @@
   background: var(--foreground);
   color: var(--background);
   font: inherit;
-  font-size: calc(5.58 * var(--unit));
+  font-size: var(--app-health-label-size);
   cursor: pointer;
 }
 .next { margin-top: auto; padding: 0.6rem; color: var(--color-neutral-grey-700); }

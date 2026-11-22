@@ -1,13 +1,12 @@
 .screen {
-  --unit: min(1cqw, 0.47cqh);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
   padding: 17.4cqh 5cqw 1cqh;
   background:
-    radial-gradient(ellipse at 125% 34%, rgb(255 45 85 / 18%), transparent 49%),
-    radial-gradient(ellipse at -24% 81%, rgb(255 59 48 / 21%), transparent 44%),
+    radial-gradient(ellipse at 125% 34%, color-mix(in srgb, var(--color-pink) 18%, transparent), transparent 49%),
+    radial-gradient(ellipse at -24% 81%, color-mix(in srgb, var(--color-red) 21%, transparent), transparent 44%),
     var(--background);
 }
 
@@ -18,7 +17,7 @@
 }
 .heading {
   text-align: center;
-  font-size: calc(11.16 * var(--unit));
+  font-size: var(--app-health-title-size);
 }
 .heading strong, .record strong {
   display: block;
@@ -26,7 +25,7 @@
   font-weight: inherit;
   font-variant-numeric: tabular-nums;
 }
-.heading strong { font-size: calc(19.53 * var(--unit)); }
+.heading strong { font-size: var(--app-health-number-size); }
 .chart {
   display: flex;
   width: 100%;
@@ -39,7 +38,7 @@
   flex: 1;
   min-width: 0;
   text-align: center;
-  font-size: calc(2.79 * var(--unit));
+  font-size: var(--app-health-month-size);
 }
 .track {
   height: 22.6cqh;
@@ -49,17 +48,17 @@
 }
 .bar {
   width: 100%;
-  border-radius: calc(0.9 * var(--unit));
+  border-radius: var(--app-health-bar-radius);
   background: var(--color-neutral-grey-700);
 }
 .bar[data-peak="true"] { background: var(--color-red); }
 .record {
   display: grid;
   margin-top: 2.8cqh;
-  font-size: calc(5.58 * var(--unit));
+  font-size: var(--app-health-label-size);
   text-transform: capitalize;
 }
-.record strong { font-size: calc(13.02 * var(--unit)); }
+.record strong { font-size: var(--app-health-highlight-size); }
 .recordMonth { display: flex; align-items: center; gap: 0.2em; }
 .recordMonth img { width: 0.7em; height: auto; }
 .record span:last-child { text-align: right; text-transform: none; }
