@@ -24,7 +24,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .heart { animation: heartbeat 0.83333s ease-in-out infinite; }
+  .heart { animation: heartbeat var(--beat) ease-in-out infinite; }
 }
 
 @keyframes heartbeat {
