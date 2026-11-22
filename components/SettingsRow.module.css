@@ -10,8 +10,8 @@
   transition: background-color var(--duration-fast) var(--ease-out);
 }
 
-.row:hover,
-.row:active {
+a.row:hover,
+a.row:active {
   background-color: var(--app-settings-pressed-bg);
 }
 
