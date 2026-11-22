@@ -1,0 +1,76 @@
+.screen {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.selected {
+  position: absolute;
+  top: var(--app-photos-selected-top);
+  left: 50%;
+  width: var(--app-photos-selected-width);
+  height: var(--app-photos-selected-height);
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--app-photos-selected-radius);
+  box-shadow: var(--app-photos-selected-shadow);
+  translate: -50% 0;
+}
+
+.label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--app-photos-label-padding);
+  background: var(--app-photos-label-fade);
+}
+
+.month {
+  text-transform: capitalize;
+  color: var(--color-neutral-grey-600);
+  font-size: var(--app-photos-month-size);
+  line-height: 1.5;
+}
+
+.count {
+  color: var(--foreground);
+  font-size: var(--app-photos-count-size);
+}
+
+.wheel {
+  position: absolute;
+  top: var(--app-photos-wheel-top);
+  left: 50%;
+  width: var(--app-photos-wheel-size);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  rotate: var(--turn);
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--app-photos-thumb-width);
+  height: var(--app-photos-thumb-height);
+  margin: calc(var(--app-photos-thumb-height) / -2) 0 0 calc(var(--app-photos-thumb-width) / -2);
+  overflow: hidden;
+  border-radius: var(--app-photos-thumb-radius);
+  box-shadow: var(--app-photos-thumb-shadow);
+  transform: rotate(var(--angle)) translateY(calc(var(--app-photos-wheel-radius) * -1));
+}
+
+.avatar {
+  position: absolute;
+  top: var(--app-photos-wheel-top);
+  left: 50%;
+  translate: -50% -50%;
+}

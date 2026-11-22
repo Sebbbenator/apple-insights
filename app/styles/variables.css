@@ -274,6 +274,23 @@
   --app-photos-text-size: calc(11.16 * var(--app-insights-unit));
   --app-photos-number-size: calc(19.53 * var(--app-insights-unit));
   --app-photos-detail-size: calc(6.51 * var(--app-insights-unit));
+  --app-photos-selected-top: 9.1%;
+  --app-photos-selected-width: calc(88.37 * var(--app-insights-unit));
+  --app-photos-selected-height: calc(76.51 * var(--app-insights-unit));
+  --app-photos-selected-radius: calc(12.42 * var(--app-insights-unit));
+  --app-photos-selected-shadow: 0 calc(4.14 * var(--app-insights-unit)) calc(4.14 * var(--app-insights-unit)) rgb(0 0 0 / 0.5);
+  --app-photos-label-padding: calc(4.65 * var(--app-insights-unit));
+  --app-photos-label-fade: linear-gradient(to right, rgb(28 28 30 / 0.6), rgb(28 28 30 / 0));
+  --app-photos-month-size: calc(7.44 * var(--app-insights-unit));
+  --app-photos-count-size: calc(5.58 * var(--app-insights-unit));
+  --app-photos-wheel-top: 70.5%;
+  --app-photos-wheel-size: calc(88.37 * var(--app-insights-unit));
+  --app-photos-wheel-radius: calc(35.58 * var(--app-insights-unit));
+  --app-photos-thumb-width: calc(14.42 * var(--app-insights-unit));
+  --app-photos-thumb-height: calc(17.21 * var(--app-insights-unit));
+  --app-photos-thumb-radius: calc(2.79 * var(--app-insights-unit));
+  --app-photos-thumb-shadow: 0 calc(0.93 * var(--app-insights-unit)) calc(0.93 * var(--app-insights-unit)) rgb(0 0 0 / 0.5);
+  --app-photos-avatar-size: calc(46.51 * var(--app-insights-unit));
   --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
   --app-health-glow-opacity: 0.4;
 

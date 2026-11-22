@@ -16,6 +16,12 @@
   font-size: var(--font-size-2xl);
 }
 
+.xl {
+  width: var(--app-photos-avatar-size);
+  height: var(--app-photos-avatar-size);
+  font-size: var(--font-size-10xl);
+}
+
 .lg {
   width: var(--app-profile-avatar-size);
   height: var(--app-profile-avatar-size);
