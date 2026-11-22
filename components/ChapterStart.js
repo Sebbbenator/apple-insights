@@ -27,7 +27,6 @@ export default function ChapterStart({
   title,
   image,
   description,
-  hint = "Rul for at fortsætte",
 }) {
   return (
     <section aria-label={title} className={styles.screen}>
@@ -37,7 +36,6 @@ export default function ChapterStart({
         <Image src={image} alt="" width={208} height={208} className={styles.icon} />
         <p className={styles.description}>{description}</p>
       </div>
-      {hint && <p className={styles.hint}>{hint}</p>}
     </section>
   );
 }

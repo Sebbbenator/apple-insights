@@ -241,6 +241,31 @@
   --app-apps-footer-delay: 1200ms;
   --app-apps-rise: calc(4.65 * var(--app-insights-unit));
 
+  --app-chapter-gap: calc(5.52 * var(--app-insights-unit));
+  --app-chapter-eyebrow-size: calc(10.46 * var(--app-insights-unit));
+  --app-chapter-title-size: calc(17.83 * var(--app-insights-unit));
+  --app-chapter-icon-size: calc(48.4 * var(--app-insights-unit));
+  --app-chapter-description-width: calc(73 * var(--app-insights-unit));
+  --app-chapter-description-size: calc(7.82 * var(--app-insights-unit));
+  --app-next-size: calc(3.72 * var(--app-insights-unit));
+  --app-chapter-glow: #111127;
+
+  --app-health-title-size: calc(11.16 * var(--app-insights-unit));
+  --app-health-number-size: calc(19.53 * var(--app-insights-unit));
+  --app-health-highlight-size: calc(13.02 * var(--app-insights-unit));
+  --app-health-value-size: calc(7.44 * var(--app-insights-unit));
+  --app-health-label-size: calc(5.58 * var(--app-insights-unit));
+  --app-health-small-size: calc(3.72 * var(--app-insights-unit));
+  --app-health-date-size: calc(3.26 * var(--app-insights-unit));
+  --app-health-month-size: calc(2.79 * var(--app-insights-unit));
+  --app-health-bar-radius: calc(0.9 * var(--app-insights-unit));
+  --app-health-heart-size: calc(70.68 * var(--app-insights-unit));
+  --app-health-cards-width: calc(82 * var(--app-insights-unit));
+  --app-health-cards-gap: calc(3.7 * var(--app-insights-unit));
+  --app-health-card-padding: calc(3.2 * var(--app-insights-unit));
+  --app-health-card-radius: calc(4.4 * var(--app-insights-unit));
+  --app-health-card-blur: calc(0.45 * var(--app-insights-unit));
+
   --app-siri-glow-colors:
     #bc82f3, #f5b9ea, #8d9fff, #ff6778, #ffba71, #c686ff, #bc82f3;
   --app-siri-glow-radius: 3rem;
