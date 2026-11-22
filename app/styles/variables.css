@@ -171,6 +171,10 @@
   --app-screentime-glow-height: calc(100.23 * var(--app-insights-unit));
   --app-screentime-glow-opacity: 0.2;
   --app-screentime-glow-scale: 0.8;
+  --app-screentime-glow-strong-width: calc(232.56 * var(--app-insights-unit));
+  --app-screentime-glow-strong-height: calc(93.02 * var(--app-insights-unit));
+  --app-screentime-glow-strong-opacity: 0.24;
+  --app-screentime-glow-soft-opacity: 0.08;
   --app-screentime-wheel-turn: -90deg;
   --app-screentime-loop: 2s;
 
@@ -257,7 +261,10 @@
   --app-progress-height: calc(0.93 * var(--app-insights-unit));
   --app-progress-gap: calc(1.86 * var(--app-insights-unit));
   --app-progress-track: rgb(255 255 255 / 0.2);
-  --app-chapter-glow: #111127;
+  --app-chapter-photos-glow-size: calc(69.77 * var(--app-insights-unit));
+  --app-chapter-photos-glow-opacity: 0.6;
+  --app-chapter-health-glow-size: calc(167.44 * var(--app-insights-unit));
+  --app-chapter-health-glow-opacity: 0.4;
 
   --app-health-title-size: calc(11.16 * var(--app-insights-unit));
   --app-health-number-size: calc(19.53 * var(--app-insights-unit));
