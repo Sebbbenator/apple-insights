@@ -201,8 +201,8 @@
   --app-vaner-dial-height: calc(83.49 * var(--app-insights-unit));
   --app-vaner-bar-width: calc(2.71 * var(--app-insights-unit));
   --app-vaner-bar-min: calc(3.4 * var(--app-insights-unit));
-  --app-vaner-bar-max: calc(27.16 * var(--app-insights-unit));
-  --app-vaner-bar-inner: calc(22 * var(--app-insights-unit));
+  --app-vaner-bar-max: calc(17 * var(--app-insights-unit));
+  --app-vaner-bar-inner: calc(21.5 * var(--app-insights-unit));
   --app-vaner-peak: var(--color-insights-blue);
   --app-vaner-label-size: calc(3.72 * var(--app-insights-unit));
   --app-vaner-circle-size: calc(38.99 * var(--app-insights-unit));
