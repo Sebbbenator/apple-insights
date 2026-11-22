@@ -1,7 +1,7 @@
 import TopApps from "@/components/TopApps";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, getInsights } from "@/lib/insights";
-import { rankColors, screenApps } from "@/lib/screenApps";
+import { appGlows, rankColors, screenApps } from "@/lib/screenApps";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -37,6 +37,7 @@ export default async function TopAppsPage() {
       persona={favorite?.persona ?? "Appeksperten"}
       detail={favorite?.detail ?? "Du ved, hvad du kan lide"}
       rows={rows}
+      glow={appGlows[apps[0].app] ?? "indigo"}
     />
   );
 }

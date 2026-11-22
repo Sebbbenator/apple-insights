@@ -6,6 +6,9 @@
 }
 
 .glow {
+  position: absolute;
+  background: radial-gradient(closest-side, var(--app-glow), transparent 90%);
+  pointer-events: none;
   left: 50%;
   width: var(--app-screentime-glow-width);
   height: var(--app-screentime-glow-height);

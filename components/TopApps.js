@@ -2,13 +2,13 @@ import Image from "next/image";
 import ShareButton from "@/components/ShareButton";
 import styles from "./TopApps.module.css";
 
-export default function TopApps({ title, persona, detail, rows }) {
+export default function TopApps({ title, persona, detail, rows, glow }) {
   return (
-    <main className={styles.screen}>
-      <div className={`radial-indigo ${styles.glow} ${styles.top}`} />
-      <div className={`radial-indigo ${styles.glow} ${styles.strong} ${styles.strongTop}`} />
-      <div className={`radial-indigo ${styles.glow} ${styles.bottom}`} />
-      <div className={`radial-indigo ${styles.glow} ${styles.strong} ${styles.strongBottom}`} />
+    <main className={styles.screen} style={{ "--app-glow": `var(--color-${glow})` }}>
+      <div className={`${styles.glow} ${styles.top}`} />
+      <div className={`${styles.glow} ${styles.strong} ${styles.strongTop}`} />
+      <div className={`${styles.glow} ${styles.bottom}`} />
+      <div className={`${styles.glow} ${styles.strong} ${styles.strongBottom}`} />
 
       <h1 className={`${styles.title} text-gradient-silver`}>{title}</h1>
 
