@@ -239,9 +239,6 @@
   --app-apps-share-width: calc(27.91 * var(--app-insights-unit));
   --app-apps-share-height: calc(11.16 * var(--app-insights-unit));
   --app-apps-share-size: calc(5.58 * var(--app-insights-unit));
-  --app-apps-glow-width: calc(239.47 * var(--app-insights-unit));
-  --app-apps-glow-height: calc(207.05 * var(--app-insights-unit));
-  --app-apps-glow-opacity: 0.2;
   --app-apps-delay: 300ms;
   --app-apps-stagger: 100ms;
   --app-apps-footer-delay: 1200ms;

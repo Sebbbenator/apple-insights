@@ -5,7 +5,10 @@ import styles from "./TopApps.module.css";
 export default function TopApps({ title, persona, detail, rows }) {
   return (
     <main className={styles.screen}>
-      <div className={`radial-indigo ${styles.glow}`} />
+      <div className={`radial-indigo ${styles.glow} ${styles.top}`} />
+      <div className={`radial-indigo ${styles.glow} ${styles.strong} ${styles.strongTop}`} />
+      <div className={`radial-indigo ${styles.glow} ${styles.bottom}`} />
+      <div className={`radial-indigo ${styles.glow} ${styles.strong} ${styles.strongBottom}`} />
 
       <h1 className={`${styles.title} text-gradient-silver`}>{title}</h1>
 
