@@ -92,15 +92,6 @@
   flex-shrink: 0;
 }
 
-.letter {
-  display: grid;
-  place-items: center;
-  border-radius: var(--app-apps-icon-radius);
-  background: var(--tint);
-  color: var(--background);
-  font-size: var(--app-apps-name-size);
-}
-
 .name {
   font-size: var(--app-apps-name-size);
   white-space: nowrap;

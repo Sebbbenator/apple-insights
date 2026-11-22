@@ -20,13 +20,7 @@ export default function TopApps({ title, persona, detail, rows }) {
             style={{ "--fill": `${row.fill}%`, "--tint": `var(--color-${row.color})`, "--rank": index }}
           >
             <span className={styles.rank}>{index + 1}</span>
-            {row.icon ? (
-              <Image src={row.icon} alt="" width={54} height={54} className={styles.icon} />
-            ) : (
-              <span className={`${styles.icon} ${styles.letter} semibold`} aria-hidden="true">
-                {row.name[0]}
-              </span>
-            )}
+            <Image src={row.icon} alt="" width={54} height={54} className={styles.icon} />
             <span className={`${styles.name} semibold text-gradient-silver`}>{row.name}</span>
             <span className={`${styles.hours} regular`}>{row.hours}</span>
           </li>

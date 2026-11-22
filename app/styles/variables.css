@@ -229,7 +229,6 @@
   --app-apps-rank-width: calc(5.23 * var(--app-insights-unit));
   --app-apps-rank-size: calc(10.05 * var(--app-insights-unit));
   --app-apps-icon-size: calc(12.56 * var(--app-insights-unit));
-  --app-apps-icon-radius: calc(2.8 * var(--app-insights-unit));
   --app-apps-name-size: calc(7.53 * var(--app-insights-unit));
   --app-apps-hours-size: calc(3.35 * var(--app-insights-unit));
   --app-apps-footer-width: calc(88.37 * var(--app-insights-unit));
