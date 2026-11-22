@@ -15,11 +15,16 @@
   left: 50%;
   width: var(--app-photos-selected-width);
   height: var(--app-photos-selected-height);
+  translate: -50% 0;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
   margin: 0;
   overflow: hidden;
   border-radius: var(--app-photos-selected-radius);
   box-shadow: var(--app-photos-selected-shadow);
-  translate: -50% 0;
 }
 
 .label {
@@ -52,7 +57,6 @@
   width: var(--app-photos-wheel-size);
   aspect-ratio: 1;
   translate: -50% -50%;
-  rotate: var(--turn);
 }
 
 .thumb {
@@ -62,9 +66,13 @@
   width: var(--app-photos-thumb-width);
   height: var(--app-photos-thumb-height);
   margin: calc(var(--app-photos-thumb-height) / -2) 0 0 calc(var(--app-photos-thumb-width) / -2);
+  padding: 0;
   overflow: hidden;
+  border: 0;
   border-radius: var(--app-photos-thumb-radius);
+  background: none;
   box-shadow: var(--app-photos-thumb-shadow);
+  cursor: pointer;
   transform: rotate(var(--angle)) translateY(calc(var(--app-photos-wheel-radius) * -1));
 }
 
