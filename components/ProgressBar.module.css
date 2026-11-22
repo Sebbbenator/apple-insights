@@ -1,0 +1,45 @@
+.progressBar {
+  position: absolute;
+  top: var(--app-progress-top);
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  gap: var(--app-progress-gap);
+  width: var(--app-insights-content-width);
+  translate: -50% 0;
+}
+
+.pill {
+  flex: 1;
+  height: var(--app-progress-height);
+  overflow: hidden;
+  border-radius: var(--border-radius-full);
+  background: var(--app-progress-track);
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--chapter-color);
+  transform: scaleX(var(--fill));
+  transform-origin: left;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.skaermtid {
+  --chapter-color: var(--color-indigo);
+}
+
+.fotos {
+  --chapter-color: var(--color-orange);
+}
+
+.sundhed {
+  --chapter-color: var(--color-pink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transition: none;
+  }
+}
