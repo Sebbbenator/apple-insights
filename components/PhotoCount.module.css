@@ -58,4 +58,5 @@
   margin: 0;
   color: var(--color-neutral-grey-700);
   font-size: var(--app-photos-detail-size);
+  white-space: nowrap;
 }
