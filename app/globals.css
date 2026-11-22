@@ -92,14 +92,14 @@ a {
 }
 
 .text-gradient-silver,
-.text-gradient-rainbow {
+.text-gradient-apple {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .text-gradient-silver { background-image: var(--gradient-silver); }
-.text-gradient-rainbow { background-image: var(--gradient-rainbow); }
+.text-gradient-apple { background-image: var(--gradient-apple); }
 
 .radial-purple,
 .radial-yellow,

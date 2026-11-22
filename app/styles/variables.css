@@ -282,14 +282,18 @@
   --app-siri-glow-loop: 6s;
   --app-siri-glow-splash: 900ms;
 
-  --gradient-rainbow: linear-gradient(
+  --gradient-apple: linear-gradient(
     90deg,
-    #f54804 0%,
-    #b537be 20%,
-    #136894 39%,
-    #37be39 57%,
-    #227077 75%,
-    #e43232 88%
+    #b3a0f5 0%,
+    #e18ba8 11.5%,
+    #ffae65 20.5%,
+    #efa2b6 31%,
+    #d998d5 40%,
+    #ae80e6 50%,
+    #e9a4de 62.5%,
+    #d2a4e8 75%,
+    #aba1ff 87.5%,
+    #b3a0f5 100%
   );
 
   --gradient-silver: linear-gradient(to top left, #737373 0%, #ffffff 70%);

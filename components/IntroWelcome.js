@@ -69,7 +69,7 @@ export default function IntroWelcome() {
             Apple
           </motion.span>
           <motion.span
-            className={`${styles.insights} text-gradient-rainbow`}
+            className={`${styles.insights} text-gradient-apple`}
             initial={hidden}
             animate={shown}
             transition={popAfter(0.45)}
