@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Studieprojekt på Erhvervsakademi Aarhus. Ikke tilknyttet Apple.",
   icons: {
-    icon: "/gapple.ico",
+    icon: "/AppleInsights.ico",
   },
 };
 
