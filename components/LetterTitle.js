@@ -7,17 +7,18 @@ const letterStagger = 0.021;
 const letterSpring = { type: "spring", stiffness: 100, damping: 12, mass: 1 };
 
 export default function LetterTitle({ text, className }) {
-  let index = 0;
+  const words = text.split(" ");
+  const wordStarts = words.map((word, wordIndex) => words.slice(0, wordIndex).join("").length);
 
   return (
     <h1 className={className}>
       <span className="sr-only">{text}</span>
       <span aria-hidden="true">
-        {text.split(" ").map((word, wordIndex) => (
+        {words.map((word, wordIndex) => (
           <span key={wordIndex}>
             <span className={styles.word}>
-              {word.split("").map((letter) => {
-                index = index + 1;
+              {word.split("").map((letter, letterIndex) => {
+                const index = wordStarts[wordIndex] + letterIndex + 1;
                 return (
                   <motion.span
                     key={index}

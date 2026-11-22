@@ -23,11 +23,9 @@ export default function IntroductionScreen({ stats }) {
   const router = useRouter();
   const calm = useReducedMotion();
 
-  useEffect(() => {
-    if (holding && progress >= 100) {
-      setBursting(true);
-    }
-  }, [holding, progress]);
+  if (holding && progress >= 100 && !bursting) {
+    setBursting(true);
+  }
 
   useEffect(() => {
     if (bursting) {

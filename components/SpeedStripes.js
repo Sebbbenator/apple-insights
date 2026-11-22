@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRive, useStateMachineInput } from "@rive-app/react-webgl2";
+import { useRive } from "@rive-app/react-webgl2";
+import { setRiveInput } from "@/lib/rive";
 import styles from "./SpeedStripes.module.css";
 
 const stateMachine = "State Machine 1";
@@ -12,20 +13,11 @@ export default function SpeedStripes({ holding, progress }) {
     stateMachines: stateMachine,
     autoplay: true,
   });
-  const holdingInput = useStateMachineInput(rive, stateMachine, "holding");
-  const progressInput = useStateMachineInput(rive, stateMachine, "progress");
 
   useEffect(() => {
-    if (holdingInput) {
-      holdingInput.value = holding;
-    }
-  }, [holdingInput, holding]);
-
-  useEffect(() => {
-    if (progressInput) {
-      progressInput.value = progress;
-    }
-  }, [progressInput, progress]);
+    setRiveInput(rive, stateMachine, "holding", holding);
+    setRiveInput(rive, stateMachine, "progress", progress);
+  }, [rive, holding, progress]);
 
   return (
     <RiveComponent
