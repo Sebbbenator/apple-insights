@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  padding: 16.74cqh 4cqw 1cqh;
+  padding: 16.74cqh 4cqw 8cqh;
   background: radial-gradient(ellipse 84cqw 39cqh at 50% 50%, color-mix(in srgb, var(--color-pink) 27%, transparent), transparent), var(--background);
   color: var(--foreground);
 }
@@ -60,9 +60,3 @@
 }
 
 .average dd { font-size: var(--app-health-highlight-size); }
-
-.next {
-  margin-top: auto;
-  padding: 0.6rem;
-  color: var(--color-neutral-grey-700);
-}

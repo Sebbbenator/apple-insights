@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.content > *, .hint {
+.content > * {
   margin: 0;
 }
 
@@ -46,22 +46,4 @@
   font-size: var(--app-chapter-description-size);
   line-height: 1.19;
   text-wrap: balance;
-}
-
-.hint {
-  position: absolute;
-  bottom: 0.8cqh;
-  color: var(--color-neutral-grey-700);
-  font-size: var(--app-chapter-hint-size);
-}
-
-.hint::after {
-  content: "";
-  display: block;
-  width: 0.6em;
-  height: 0.6em;
-  margin: 0.5em auto 0;
-  border: solid currentColor;
-  border-width: 1px 1px 0 0;
-  transform: rotate(-45deg);
 }

@@ -247,7 +247,7 @@
   --app-chapter-icon-size: calc(48.4 * var(--app-insights-unit));
   --app-chapter-description-width: calc(73 * var(--app-insights-unit));
   --app-chapter-description-size: calc(7.82 * var(--app-insights-unit));
-  --app-chapter-hint-size: calc(3.72 * var(--app-insights-unit));
+  --app-next-size: calc(3.72 * var(--app-insights-unit));
   --app-chapter-glow: #111127;
 
   --app-health-title-size: calc(11.16 * var(--app-insights-unit));

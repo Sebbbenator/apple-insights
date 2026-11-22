@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, getInsights } from "@/lib/insights";
 import styles from "./page.module.css";
@@ -51,7 +50,6 @@ export default async function StepsPage() {
           )}
         </>
       ) : <h1>Ingen skridtdata for 2026 endnu</h1>}
-      <Link href="/insights/sundhed/puls" className={styles.next}>Se din puls</Link>
     </main>
   );
 }

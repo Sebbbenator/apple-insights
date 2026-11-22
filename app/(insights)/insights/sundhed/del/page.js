@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, getInsights } from "@/lib/insights";
 import ShareActivity from "./ShareActivity";
@@ -40,7 +39,6 @@ export default async function ActivityPage() {
           <ShareActivity text={`${health.title} · Min aktivitet i 2026: ${cards.map(card => card.value + " " + card.unit).join(", ")}.`} />
         </>
       ) : <p>Ingen aktivitetsdata for 2026 endnu.</p>}
-      <Link className={styles.next} href="/insights/oversigt">Fortsæt til oversigten</Link>
     </main>
   );
 }
