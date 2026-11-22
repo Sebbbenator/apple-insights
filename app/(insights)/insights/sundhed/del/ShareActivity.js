@@ -15,7 +15,7 @@ export default function ShareActivity({ text }) {
         setStatus("Din aktivitet er kopieret.");
       }
     } catch (error) {
-      if (error.name !== "AbortError") setStatus(text);
+      if (error.name !== "AbortError") setStatus("Kunne ikke dele. Prøv igen.");
     }
   }
 
