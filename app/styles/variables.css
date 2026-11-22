@@ -260,6 +260,16 @@
   --app-progress-track: rgb(255 255 255 / 0.2);
   --app-chapter-photos-glow-size: calc(69.77 * var(--app-insights-unit));
   --app-chapter-photos-glow-opacity: 0.6;
+  --app-photos-stack-top: 31.7%;
+  --app-photos-card-width: calc(43.25 * var(--app-insights-unit));
+  --app-photos-card-height: calc(51.62 * var(--app-insights-unit));
+  --app-photos-card-radius: calc(8.37 * var(--app-insights-unit));
+  --app-photos-card-border-color: #2a2a2a;
+  --app-photos-card-shadow: 0 calc(1.4 * var(--app-insights-unit)) calc(1.4 * var(--app-insights-unit)) rgb(0 0 0 / 0.25);
+  --app-photos-text-top: 55.8%;
+  --app-photos-text-width: calc(79.53 * var(--app-insights-unit));
+  --app-photos-text-size: calc(11.16 * var(--app-insights-unit));
+  --app-photos-number-size: calc(19.53 * var(--app-insights-unit));
   --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
   --app-health-glow-opacity: 0.4;
 

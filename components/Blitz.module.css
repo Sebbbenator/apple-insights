@@ -1,0 +1,10 @@
+.glow {
+  width: var(--app-chapter-photos-glow-size);
+  aspect-ratio: 1;
+  opacity: var(--app-chapter-photos-glow-opacity);
+  translate: -50% -50%;
+}
+
+.first { top: 2.4%; left: 7.9%; }
+.second { top: 31.2%; left: 98.8%; }
+.third { top: 88%; left: 1.4%; }
