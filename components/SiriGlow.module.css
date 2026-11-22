@@ -19,7 +19,6 @@
   --app-siri-glow-width: 2px;
   --app-siri-glow-soft-width: 0.375rem;
   --app-siri-glow-soft-blur: 0.375rem;
-  --app-siri-glow-colors: var(--gradient-apple-colors);
   --siri-offset: 90deg;
 }
 
