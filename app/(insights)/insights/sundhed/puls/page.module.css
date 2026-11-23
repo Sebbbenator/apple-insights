@@ -4,6 +4,7 @@
   align-items: center;
   min-height: 100%;
   padding: 16.74cqh 4cqw 8cqh;
+  overflow: hidden;
   background: var(--background);
   color: var(--foreground);
 }
@@ -16,24 +17,55 @@
   text-align: center;
 }
 
-.heart {
-  width: var(--app-health-heart-size);
-  height: auto;
+.pulse {
+  position: relative;
+  display: grid;
+  place-items: center;
   margin-top: 6.35cqh;
 }
 
+.glow {
+  width: var(--app-pulse-glow-size);
+  aspect-ratio: 1;
+  opacity: var(--app-pulse-glow-rest);
+}
+
+.heart {
+  position: relative;
+  width: var(--app-health-heart-size);
+  height: auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .heart { animation: heartbeat var(--beat) ease-in-out infinite; }
+  .heart { animation: heartbeat var(--beat) var(--ease-out) infinite; }
+  .glow { animation: glow-beat var(--beat) var(--ease-out) infinite; }
 }
 
 @keyframes heartbeat {
-  0%, 45%, 100% { transform: scale(1); }
-  18% { transform: scale(1.035); }
+  0%, 24%, 50%, 100% { transform: scale(1); }
+  12% { transform: scale(var(--app-pulse-beat-big)); }
+  36% { transform: scale(var(--app-pulse-beat-small)); }
+}
+
+@keyframes glow-beat {
+  0%, 50%, 100% {
+    opacity: var(--app-pulse-glow-rest);
+    transform: scale(1);
+  }
+  12% {
+    opacity: var(--app-pulse-glow-peak);
+    transform: scale(var(--app-pulse-glow-scale));
+  }
+  36% {
+    opacity: var(--app-pulse-glow-mid);
+  }
 }
 
 .stats {
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+  text-align: center;
   gap: 2.58cqh var(--app-health-small-size);
   margin: 4.75cqh 0 0;
   font-size: var(--app-health-small-size);
@@ -51,6 +83,7 @@
   display: block;
   font-size: var(--app-health-date-size);
   font-weight: var(--font-weight-regular);
+  text-transform: capitalize;
 }
 
 .average {

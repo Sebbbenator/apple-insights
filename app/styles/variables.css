@@ -326,6 +326,13 @@
   --app-health-month-size: calc(2.79 * var(--app-insights-unit));
   --app-health-bar-radius: calc(0.9 * var(--app-insights-unit));
   --app-health-heart-size: calc(70.68 * var(--app-insights-unit));
+  --app-pulse-beat-big: 1.08;
+  --app-pulse-beat-small: 1.05;
+  --app-pulse-glow-size: calc(120 * var(--app-insights-unit));
+  --app-pulse-glow-rest: 0.25;
+  --app-pulse-glow-mid: 0.45;
+  --app-pulse-glow-peak: 0.7;
+  --app-pulse-glow-scale: 1.12;
   --app-health-cards-width: calc(82 * var(--app-insights-unit));
   --app-health-cards-gap: calc(3.7 * var(--app-insights-unit));
   --app-health-card-padding: calc(3.2 * var(--app-insights-unit));

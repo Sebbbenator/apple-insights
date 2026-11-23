@@ -19,14 +19,16 @@ export default async function PulsePage() {
       <h1 className={styles.title}>Din puls<br />gennem 2026</h1>
       {heartRate ? (
         <>
-          <Image
-            className={styles.heart}
-            src="/homescreen/widgets/heart.svg"
-            alt=""
-            width={304}
-            height={275}
-            style={{ "--beat": `${60 / heartRate.average}s` }}
-          />
+          <div className={styles.pulse} style={{ "--beat": `${60 / heartRate.average}s` }}>
+            <div className={`radial-pink ${styles.glow}`} />
+            <Image
+              className={styles.heart}
+              src="/homescreen/widgets/heart.svg"
+              alt=""
+              width={304}
+              height={275}
+            />
+          </div>
           <dl className={styles.stats}>
             <div className={styles.average}>
               <dt>Gennemsnit</dt>
