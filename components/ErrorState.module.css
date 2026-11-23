@@ -1,14 +1,3 @@
-.state {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--gap-md);
-}
-
-.state p {
-  color: var(--muted);
-}
-
 .retry {
   align-self: flex-start;
   min-height: var(--btn-height-md);

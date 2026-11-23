@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StatusScreen from "@/components/StatusScreen";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, getInsights } from "@/lib/insights";
 import styles from "./page.module.css";
@@ -21,10 +22,10 @@ export default async function InsightsPage() {
 
   if (!insights) {
     return (
-      <main className={styles.insights}>
-        <h1>Ingen data endnu</h1>
-        <p>Vi har ikke nogen data om dit 2026 endnu. Prøv igen senere.</p>
-      </main>
+      <StatusScreen
+        title="Ingen data endnu"
+        text="Vi har ikke nogen data om dit 2026 endnu. Prøv igen senere."
+      />
     );
   }
 

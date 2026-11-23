@@ -1,9 +1,5 @@
-import styles from "./page.module.css";
+import StatusScreen from "@/components/StatusScreen";
 
 export default function Loading() {
-  return (
-    <main className={styles.state}>
-      <p role="status">Henter dine fotos…</p>
-    </main>
-  );
+  return <StatusScreen text="Henter dine fotos…" loading />;
 }

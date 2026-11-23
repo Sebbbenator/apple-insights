@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
 import HabitsAnswer from "@/components/HabitsAnswer";
+import StatusScreen from "@/components/StatusScreen";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, dayPeriods, getInsights } from "@/lib/insights";
-import styles from "../page.module.css";
 
 export const metadata = {
   title: "Din prime time",
@@ -26,10 +26,10 @@ export default async function HabitsAnswerPage({ searchParams }) {
 
   if (!habits) {
     return (
-      <main className={styles.state}>
-        <h1>Ingen data endnu</h1>
-        <p>Vi har ikke nogen skærmvaner for dit 2026 endnu. Prøv igen senere.</p>
-      </main>
+      <StatusScreen
+        title="Ingen data endnu"
+        text="Vi har ikke nogen skærmvaner for dit 2026 endnu. Prøv igen senere."
+      />
     );
   }
 

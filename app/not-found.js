@@ -1,13 +1,10 @@
 import Link from "next/link";
+import StatusScreen from "@/components/StatusScreen";
 
 export default function NotFound() {
   return (
-    <main>
-      <h1>Siden findes ikke</h1>
-      <p>Vi kunne ikke finde det, du ledte efter.</p>
-      <p>
-        <Link href="/">Til hjemmeskærmen</Link>
-      </p>
-    </main>
+    <StatusScreen title="Siden findes ikke" text="Vi kunne ikke finde det, du ledte efter.">
+      <Link href="/">Til hjemmeskærmen</Link>
+    </StatusScreen>
   );
 }

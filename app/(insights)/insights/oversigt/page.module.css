@@ -45,18 +45,6 @@
   margin: 0;
 }
 
-.retry {
-  min-height: var(--btn-height-md);
-  padding: 0 var(--padding-sm);
-  border: 0;
-  border-radius: var(--border-radius-xs);
-  background: var(--foreground);
-  color: var(--background);
-  font: inherit;
-  font-weight: var(--font-weight-semibold);
-  cursor: pointer;
-}
-
 @keyframes rise {
   from {
     opacity: 0;

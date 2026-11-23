@@ -1,8 +1,8 @@
 import PhotoLens from "@/components/PhotoLens";
+import StatusScreen from "@/components/StatusScreen";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, getInsights } from "@/lib/insights";
 import { getPhotos } from "@/lib/photos";
-import styles from "../page.module.css";
 
 export const metadata = {
   title: "Fotos",
@@ -17,10 +17,10 @@ export default async function PhotoLensPage() {
 
   if (!insights || photos.length === 0) {
     return (
-      <main className={styles.state}>
-        <h1>Ingen fotos endnu</h1>
-        <p>Vi har ikke nogen fotos fra dit 2026 endnu. Prøv igen senere.</p>
-      </main>
+      <StatusScreen
+        title="Ingen fotos endnu"
+        text="Vi har ikke nogen fotos fra dit 2026 endnu. Prøv igen senere."
+      />
     );
   }
 

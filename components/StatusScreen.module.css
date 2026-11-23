@@ -1,0 +1,10 @@
+.state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-md);
+}
+
+.state p {
+  color: var(--muted);
+}

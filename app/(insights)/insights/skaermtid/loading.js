@@ -1,9 +1,5 @@
-import styles from "./page.module.css";
+import StatusScreen from "@/components/StatusScreen";
 
 export default function Loading() {
-  return (
-    <main className={styles.state}>
-      <p role="status">Henter din skærmtid…</p>
-    </main>
-  );
+  return <StatusScreen text="Henter din skærmtid…" loading />;
 }
