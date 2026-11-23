@@ -249,6 +249,10 @@
   --app-chapter-icon-size: calc(48.4 * var(--app-insights-unit));
   --app-chapter-description-width: calc(73 * var(--app-insights-unit));
   --app-chapter-description-size: calc(7.82 * var(--app-insights-unit));
+  --app-chapter-rise: calc(6 * var(--app-insights-unit));
+  --app-chapter-stagger: 150ms;
+  --app-chapter-glow-loop: 6s;
+  --app-chapter-glow-scale: 1.15;
   --app-instruction-size: calc(3.72 * var(--app-insights-unit));
   --app-instruction-arrow-size: calc(4.65 * var(--app-insights-unit));
   --app-instruction-gap: calc(0.93 * var(--app-insights-unit));
