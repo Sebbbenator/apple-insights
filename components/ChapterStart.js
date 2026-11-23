@@ -13,14 +13,14 @@ export const chapterStarts = {
     eyebrow: "Næste app",
     title: "Fotos",
     image: "/homescreen/icons/photos.svg",
-    description: "Året gennem din linse.",
+    description: "Året gennem din linse",
     glow: "white",
   },
   health: {
     eyebrow: "Sidste app",
     title: "Sundhed",
     image: "/homescreen/icons/health.svg",
-    description: "Hvert skridt tæller.",
+    description: "Hvert skridt tæller",
     glow: "pink",
   },
 };
