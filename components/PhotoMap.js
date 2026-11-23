@@ -2,7 +2,7 @@
 
 import "maplibre-gl/dist/maplibre-gl.css";
 import { motion, useReducedMotion } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { duration, textRise } from "@/lib/motion";
 import styles from "./PhotoMap.module.css";
 
@@ -27,16 +27,41 @@ function token(element, name) {
   return getComputedStyle(element).getPropertyValue(name).trim();
 }
 
+const locale = {
+  "Map.Title": "Kort over Danmark med dine fotos",
+  "NavigationControl.ZoomIn": "Zoom ind",
+  "NavigationControl.ZoomOut": "Zoom ud",
+  "AttributionControl.ToggleAttribution": "Vis kilder",
+};
+
+function showDanishNames(map) {
+  for (const layer of map.getStyle().layers) {
+    const field = layer.layout?.["text-field"];
+
+    if (field && JSON.stringify(field).includes("name_en")) {
+      map.setLayoutProperty(layer.id, "text-field", ["coalesce", ["get", "name:da"], ["get", "name"]]);
+    }
+  }
+}
+
+function closeAttribution(element) {
+  const attribution = element.querySelector(".maplibregl-ctrl-attrib");
+  attribution?.removeAttribute("open");
+  attribution?.classList.remove("maplibregl-compact-show");
+}
+
 const textHidden = { opacity: 0, y: -40 };
 const textShown = { opacity: 1, y: 0 };
 
 export default function PhotoMap({ places, topPlace }) {
   const container = useRef(null);
   const reduceMotion = useReducedMotion();
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let map = null;
     let cancelled = false;
+    let loaded = false;
 
     async function createMap() {
       const maplibregl = await import("maplibre-gl");
@@ -55,6 +80,7 @@ export default function PhotoMap({ places, topPlace }) {
         bounds: denmark,
         fitBoundsOptions: { padding: 16 },
         attributionControl: { compact: true },
+        locale: locale,
         dragPan: false,
         dragRotate: false,
         scrollZoom: false,
@@ -66,7 +92,17 @@ export default function PhotoMap({ places, topPlace }) {
       map.touchZoomRotate.disableRotation();
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
 
+      map.on("error", () => {
+        if (!loaded) {
+          setFailed(true);
+        }
+      });
+
       map.on("load", () => {
+        loaded = true;
+        showDanishNames(map);
+        closeAttribution(container.current);
+
         const most = Math.max(...places.map((place) => place.photos));
         const fade = reduceMotion ? 0 : duration.hero * 1000;
 
@@ -123,7 +159,7 @@ export default function PhotoMap({ places, topPlace }) {
       });
     }
 
-    createMap();
+    createMap().catch(() => setFailed(true));
 
     return () => {
       cancelled = true;
@@ -136,7 +172,21 @@ export default function PhotoMap({ places, topPlace }) {
       <div className={styles.content}>
         <h1 className={`${styles.heading} semibold`}>Her blev de fleste af dine minder skabt:</h1>
 
-        <div ref={container} className={styles.map} />
+        <div className={styles.map}>
+          {failed ? (
+            <p className={`${styles.fallback} regular`}>Kortet kunne ikke vises lige nu.</p>
+          ) : (
+            <div ref={container} className={styles.canvas} />
+          )}
+        </div>
+
+        <ul className={failed ? styles.list : "sr-only"} aria-label="Steder hvor du tog fotos">
+          {places.map((place) => (
+            <li key={place.place}>
+              {place.place}: {place.photos.toLocaleString("da-DK")} fotos
+            </li>
+          ))}
+        </ul>
 
         <motion.p
           className={`${styles.text} regular`}

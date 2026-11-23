@@ -313,6 +313,7 @@
   --app-photos-map-gap: calc(4.19 * var(--app-insights-unit));
   --app-photos-map-heading-size: calc(6.98 * var(--app-insights-unit));
   --app-photos-map-text-size: calc(5.58 * var(--app-insights-unit));
+  --app-photos-map-list-gap: calc(1.86 * var(--app-insights-unit));
   --app-photos-map-heat-low: var(--color-red);
   --app-photos-map-heat-mid: var(--color-orange);
   --app-photos-map-heat-high: var(--color-yellow);

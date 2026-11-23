@@ -32,6 +32,31 @@
   background: var(--surface);
 }
 
+.canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: var(--muted);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--app-photos-map-list-gap);
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
 .text {
   margin: 0;
   color: var(--color-neutral-grey-700);
