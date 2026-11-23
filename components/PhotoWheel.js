@@ -28,6 +28,7 @@ export default function PhotoWheel({ months, startMonth, name, image }) {
   return (
     <MotionConfig reducedMotion="user">
       <main className={styles.screen}>
+        <h1 className="sr-only">Dine fotos måned for måned</h1>
         <Blitz />
 
         <div className={styles.selected} aria-live="polite">

@@ -17,7 +17,7 @@ export default function ShareButton({ text }) {
 
   return (
     <button type="button" className={`${styles.button} semibold`} onClick={share}>
-      {copied ? "Kopieret" : "Share"}
+      {copied ? "Kopieret" : "Del"}
     </button>
   );
 }
