@@ -58,7 +58,7 @@ export default function Instruction() {
     }
 
     function onTouchStart(event) {
-      start = event.touches[0];
+      start = event.touches.length === 1 ? event.touches[0] : null;
     }
 
     function onTouchEnd(event) {
