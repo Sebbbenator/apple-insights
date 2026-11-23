@@ -19,6 +19,7 @@
 .arrow {
   font-size: var(--app-instruction-arrow-size);
   line-height: 1;
+  animation: nudge-down var(--app-instruction-loop) var(--ease-in-out) infinite;
 }
 
 .swipe {
@@ -28,4 +29,23 @@
 
 .swipe .arrow {
   font-size: var(--app-instruction-size);
+  animation-name: nudge-right;
+}
+
+@keyframes nudge-down {
+  50% {
+    transform: translateY(var(--app-instruction-nudge));
+  }
+}
+
+@keyframes nudge-right {
+  50% {
+    transform: translateX(var(--app-instruction-nudge));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    animation: none;
+  }
 }
