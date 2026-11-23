@@ -3,24 +3,24 @@ import styles from "./ChapterStart.module.css";
 
 export const chapterStarts = {
   screenTime: {
-    eyebrow: "Første stop",
+    eyebrow: "Første app",
     title: "Skærmtid",
     image: "/homescreen/icons/screentime.svg",
-    description: "Du er ikke alene om din skærmtid.",
+    description: "Swipe, scroll, repeat.",
     glow: "indigo",
   },
   photos: {
-    eyebrow: "Næste stop",
+    eyebrow: "Næste app",
     title: "Fotos",
     image: "/homescreen/icons/photos.svg",
-    description: "Tag en tur tilbage i minderne.",
+    description: "Året gennem din linse.",
     glow: "white",
   },
   health: {
-    eyebrow: "Sidste stop",
+    eyebrow: "Sidste app",
     title: "Sundhed",
     image: "/homescreen/icons/health.svg",
-    description: "Dit år i skridt og hjerteslag.",
+    description: "Hvert skridt tæller.",
     glow: "pink",
   },
 };
