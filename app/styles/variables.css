@@ -324,9 +324,6 @@
   --app-health-bar-stagger: 60ms;
   --app-health-rise: calc(4 * var(--app-insights-unit));
 
-  --app-overview-stagger: 80ms;
-  --app-overview-rise: 1rem;
-
   --app-health-title-size: calc(11.16 * var(--app-insights-unit));
   --app-health-number-size: calc(19.53 * var(--app-insights-unit));
   --app-health-highlight-size: calc(13.02 * var(--app-insights-unit));
