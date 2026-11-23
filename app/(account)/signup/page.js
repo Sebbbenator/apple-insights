@@ -23,17 +23,25 @@ async function signUp(formData) {
   const supabase = await createClient();
   const { data, error } = await supabase.auth.signUp({ email, password });
 
-  if (error) {
+  if (error || !data.session) {
     redirect("/signup?error=true");
   }
 
-  await supabase.from("users").insert({
+  const { error: profileError } = await supabase.from("users").insert({
     id: data.user.id,
     name: name,
     mail: email,
   });
 
-  await createFakeInsights(supabase, data.user.id);
+  if (profileError) {
+    redirect("/signup?error=true");
+  }
+
+  const insightsCreated = await createFakeInsights(supabase, data.user.id);
+
+  if (!insightsCreated) {
+    redirect("/signup?error=true");
+  }
 
   redirect("/indstillinger");
 }
