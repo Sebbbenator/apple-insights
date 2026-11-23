@@ -29,7 +29,7 @@ export default function HabitsQuiz({ periods }) {
       <div className={`radial-indigo ${styles.glow} ${styles.bottom}`} />
 
       <div className={styles.content}>
-        <LetterTitle text="Hvor godt kender du dine skærmvaner" className={styles.title} />
+        <LetterTitle text="Hvor godt kender du dine skærmvaner?" className={styles.title} />
 
         <motion.div
           className={styles.choices}
@@ -56,9 +56,7 @@ export default function HabitsQuiz({ periods }) {
         </motion.div>
 
         <p className={`${styles.hint} regular`}>
-          Hvornår på dagen er du mest aktiv?
-          <br />
-          Tag et gæt
+          Hvornår på døgnet var du mest aktiv?
         </p>
       </div>
     </main>

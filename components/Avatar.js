@@ -9,12 +9,7 @@ export default function Avatar({ name, image, size = "md" }) {
 
   if (!name) {
     return (
-      <span className={className} aria-hidden="true">
-        <svg width="62%" height="62%" viewBox="0 0 40 40" fill="currentColor">
-          <circle cx="20" cy="15" r="7" />
-          <path d="M6 34c2.5-6 8-9 14-9s11.5 3 14 9" />
-        </svg>
-      </span>
+        <img src="/memoji/Race.png" alt="Race" className={className} />
     );
   }
 

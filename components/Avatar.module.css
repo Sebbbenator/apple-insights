@@ -2,10 +2,10 @@
   display: grid;
   flex-shrink: 0;
   place-items: center;
+  justify-items: center;
   overflow: hidden;
   border-radius: var(--border-radius-full);
   color: var(--color-neutral-grey-700);
-  background-color: var(--color-neutral-grey-900);
   font-weight: var(--font-weight-semibold);
   object-fit: cover;
 }
