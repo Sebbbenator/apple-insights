@@ -22,3 +22,36 @@
   font-size: calc(0.75 * var(--app-homescreen-rem));
   text-shadow: var(--app-homescreen-label-shadow);
 }
+
+.link {
+  color: var(--color-neutral-white);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.link .card {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus-visible .card {
+  outline: 2px solid var(--color-neutral-white);
+  outline-offset: 3px;
+}
+
+.link:active .card {
+  transform: scale(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link .card {
+    transition: none;
+  }
+
+  .link:active .card {
+    transform: none;
+  }
+}
