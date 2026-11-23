@@ -6,6 +6,7 @@ import FieldGroup from "@/components/FieldGroup";
 import SubmitButton from "@/components/SubmitButton";
 import { getCurrentUser } from "@/lib/auth";
 import { createFakeInsights } from "@/lib/fakeInsights";
+import { randomMemoji } from "@/lib/memojis";
 import { signupFields } from "@/lib/signupFields";
 import { createClient } from "@/lib/supabase/server";
 
@@ -31,6 +32,7 @@ async function signUp(formData) {
     id: data.user.id,
     name: name,
     mail: email,
+    image: randomMemoji(),
   });
 
   if (profileError) {

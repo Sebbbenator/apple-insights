@@ -27,7 +27,6 @@ async function updateProfile(formData) {
     .from("users")
     .update({
       name: formData.get("name").trim(),
-      image: formData.get("image").trim(),
     })
     .eq("id", currentUser.id);
 
@@ -61,15 +60,8 @@ export default async function ProfilePage({ searchParams }) {
         )}
 
         <form action={updateProfile}>
-          <FieldGroup title="Personlige oplysninger" footnote="Billedet skal være et link, der starter med https://.">
+          <FieldGroup title="Personlige oplysninger">
             <Field name="name" label="Navn" defaultValue={currentUser.name} autoComplete="given-name" required />
-            <Field
-              name="image"
-              label="Billede"
-              type="url"
-              placeholder="https://..."
-              defaultValue={currentUser.image ?? ""}
-            />
           </FieldGroup>
           <SubmitButton pendingText="Gemmer…">Gem</SubmitButton>
         </form>

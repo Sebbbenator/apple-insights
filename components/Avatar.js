@@ -1,3 +1,4 @@
+import { demoMemoji } from "@/lib/memojis";
 import styles from "./Avatar.module.css";
 
 export default function Avatar({ name, image, size = "md" }) {
@@ -8,9 +9,7 @@ export default function Avatar({ name, image, size = "md" }) {
   }
 
   if (!name) {
-    return (
-        <img src="/memoji/Race.png" alt="Race" className={className} />
-    );
+    return <img src={demoMemoji} alt="" className={className} />;
   }
 
   return (
