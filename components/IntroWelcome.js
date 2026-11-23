@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { MotionConfig, motion } from "motion/react";
+import { motion } from "motion/react";
 import GlitchYear from "@/components/GlitchYear";
 import SiriGlow from "@/components/SiriGlow";
 import styles from "./IntroWelcome.module.css";
@@ -51,42 +51,40 @@ export default function IntroWelcome() {
   }
 
   return (
-    <MotionConfig reducedMotion="user">
-      <main className={styles.welcome}>
-        <SiriGlow />
-        <motion.h1
-          className={`${styles.title} semibold`}
-          aria-label="Apple Insights 2026"
-          animate={leaving ? exit : { scale: 1, opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: exitTime / 1000, ease: exitEase }}
+    <main className={styles.welcome}>
+      <SiriGlow />
+      <motion.h1
+        className={`${styles.title} semibold`}
+        aria-label="Apple Insights 2026"
+        animate={leaving ? exit : { scale: 1, opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: exitTime / 1000, ease: exitEase }}
+      >
+        <motion.span
+          className={styles.apple}
+          initial={hidden}
+          animate={shown}
+          transition={popAfter(0.3)}
         >
-          <motion.span
-            className={styles.apple}
-            initial={hidden}
-            animate={shown}
-            transition={popAfter(0.3)}
-          >
-            Apple
-          </motion.span>
-          <motion.span
-            className={`${styles.insights} text-gradient-apple`}
-            initial={hidden}
-            animate={shown}
-            transition={popAfter(0.45)}
-          >
-            Insights
-          </motion.span>
-          <span
-            className={styles.hold}
-            onPointerDown={startHold}
-            onPointerUp={stopHold}
-            onPointerLeave={stopHold}
-            onPointerCancel={stopHold}
-          >
-            <GlitchYear onDone={() => setReady(true)} />
-          </span>
-        </motion.h1>
-      </main>
-    </MotionConfig>
+          Apple
+        </motion.span>
+        <motion.span
+          className={`${styles.insights} text-gradient-apple`}
+          initial={hidden}
+          animate={shown}
+          transition={popAfter(0.45)}
+        >
+          Insights
+        </motion.span>
+        <span
+          className={styles.hold}
+          onPointerDown={startHold}
+          onPointerUp={stopHold}
+          onPointerLeave={stopHold}
+          onPointerCancel={stopHold}
+        >
+          <GlitchYear onDone={() => setReady(true)} />
+        </span>
+      </motion.h1>
+    </main>
   );
 }

@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
+import { ease } from "@/lib/motion";
 import styles from "./SlotNumber.module.css";
 
 const spinDelay = 0.6;
 const spinStagger = 0.15;
 const spinTime = 1.5;
-const spinEase = [0.22, 1, 0.36, 1];
 
 function Reel({ digit, index }) {
   const steps = 10 + digit;
@@ -18,7 +18,7 @@ function Reel({ digit, index }) {
         className={styles.reel}
         initial={{ y: 0 }}
         animate={{ y: `${(-100 * steps) / (steps + 1)}%` }}
-        transition={{ duration: spinTime, delay: spinDelay + index * spinStagger, ease: spinEase }}
+        transition={{ duration: spinTime, delay: spinDelay + index * spinStagger, ease: ease.out }}
       >
         {cells.map((cell, position) => (
           <span key={position}>{cell}</span>
