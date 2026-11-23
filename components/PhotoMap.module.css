@@ -1,0 +1,39 @@
+.screen {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-photos-map-gap);
+  align-items: center;
+  width: var(--app-photos-map-width);
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  color: var(--foreground);
+  font-size: var(--app-photos-map-heading-size);
+  text-wrap: balance;
+}
+
+.map {
+  position: relative;
+  width: var(--app-photos-map-width);
+  height: var(--app-photos-map-height);
+  overflow: hidden;
+  border-radius: var(--app-photos-map-radius);
+  background: var(--surface);
+}
+
+.text {
+  margin: 0;
+  color: var(--color-neutral-grey-700);
+  font-size: var(--app-photos-map-text-size);
+}

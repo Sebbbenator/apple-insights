@@ -307,6 +307,12 @@
   --app-photos-lens-border: calc(1.86 * var(--app-insights-unit));
   --app-photos-lens-title-size: calc(13.02 * var(--app-insights-unit));
   --app-photos-lens-description-size: calc(3.72 * var(--app-insights-unit));
+  --app-photos-map-width: calc(87.21 * var(--app-insights-unit));
+  --app-photos-map-height: calc(116.28 * var(--app-insights-unit));
+  --app-photos-map-radius: calc(5.58 * var(--app-insights-unit));
+  --app-photos-map-gap: calc(4.19 * var(--app-insights-unit));
+  --app-photos-map-heading-size: calc(6.98 * var(--app-insights-unit));
+  --app-photos-map-text-size: calc(5.58 * var(--app-insights-unit));
   --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
   --app-health-glow-opacity: 0.4;
   --app-health-bar-delay: 300ms;
