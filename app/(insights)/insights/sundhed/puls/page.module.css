@@ -37,14 +37,28 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .heart { animation: heartbeat var(--beat) var(--ease-out) infinite; }
-  .glow { animation: glow-beat var(--beat) var(--ease-out) infinite; }
+  .heart {
+    animation: heartbeat var(--beat) var(--ease-out) infinite;
+  }
+
+  .glow {
+    animation: glow-beat var(--beat) var(--ease-out) infinite;
+  }
 }
 
 @keyframes heartbeat {
-  0%, 24%, 50%, 100% { transform: scale(1); }
-  12% { transform: scale(var(--app-pulse-beat-big)); }
-  36% { transform: scale(var(--app-pulse-beat-small)); }
+  0%,
+  24%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(var(--app-pulse-beat-big));
+  }
+  36% {
+    transform: scale(var(--app-pulse-beat-small));
+  }
 }
 
 @keyframes glow-beat {
@@ -92,4 +106,6 @@
   font-size: var(--app-health-value-size);
 }
 
-.average dd { font-size: var(--app-health-highlight-size); }
+.average dd {
+  font-size: var(--app-health-highlight-size);
+}

@@ -22,7 +22,8 @@
   translate: -50% -50%;
 }
 
-.screen h1, .screen h2 {
+.screen h1,
+.screen h2 {
   margin: 0;
   font-size: var(--app-health-title-size);
   font-weight: var(--font-weight-semibold);
@@ -49,7 +50,11 @@
   filter: blur(var(--app-health-card-blur));
 }
 
-.card:nth-child(2) { width: 100%; filter: none; }
+.card:nth-child(2) {
+  width: 100%;
+  filter: none;
+}
+
 .card dt {
   display: flex;
   align-items: center;
@@ -57,18 +62,29 @@
   color: var(--color-red);
   font-size: var(--app-health-small-size);
 }
-.card dt img { width: 0.7em; height: auto; }
-.card dt span { margin-left: auto; color: var(--color-neutral-grey-700); }
-.card dd { margin: 0; font-size: var(--app-health-value-size); font-weight: var(--font-weight-semibold); }
-.card small { font-size: 0.48em; }
-.caption { margin: 0 0 1.6cqh; color: var(--color-neutral-grey-800); font-size: var(--app-health-value-size); }
-.share {
-  border: 0;
-  border-radius: var(--border-radius-full);
-  padding: 0.35em 1.75em;
-  background: var(--foreground);
-  color: var(--background);
-  font: inherit;
-  font-size: var(--app-health-label-size);
-  cursor: pointer;
+
+.card dt img {
+  width: 0.7em;
+  height: auto;
+}
+
+.card dt span {
+  margin-left: auto;
+  color: var(--color-neutral-grey-700);
+}
+
+.card dd {
+  margin: 0;
+  font-size: var(--app-health-value-size);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card small {
+  font-size: 0.48em;
+}
+
+.caption {
+  margin: 0 0 1.6cqh;
+  color: var(--color-neutral-grey-800);
+  font-size: var(--app-health-value-size);
 }

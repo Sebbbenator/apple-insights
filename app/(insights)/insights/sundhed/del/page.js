@@ -1,45 +1,69 @@
 import Image from "next/image";
+import ShareButton from "@/components/ShareButton";
+import StatusScreen from "@/components/StatusScreen";
 import { getCurrentProfile } from "@/lib/auth";
 import { DEMO_USER_ID, getInsights } from "@/lib/insights";
-import ShareActivity from "./ShareActivity";
 import styles from "./page.module.css";
 
-export const metadata = { title: "Din aktivitet i 2026" };
+export const metadata = {
+  title: "Din aktivitet i 2026",
+};
 
-const numbers = new Intl.NumberFormat("da-DK");
-const kilometers = new Intl.NumberFormat("da-DK", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+function formatNumber(number, decimals = 0) {
+  return number.toLocaleString("da-DK", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+}
 
 export default async function ActivityPage() {
-  const profile = await getCurrentProfile();
-  const insights = await getInsights(profile?.id ?? DEMO_USER_ID);
-  const health = insights?.health;
-  const cards = health ? [
-    { label: "Skridt", value: numbers.format(health.steps), unit: "skridt", time: "12:15" },
-    { label: "Aktiv energi", value: numbers.format(health.activeCalories), unit: "kcal", time: "14:28" },
-    { label: "Gå- og løbedistance", value: kilometers.format(health.distanceKm), unit: "km", time: "09:06" },
-  ] : [];
+  const currentUser = await getCurrentProfile();
+  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
+
+  if (!insights) {
+    return (
+      <StatusScreen
+        title="Ingen aktivitet endnu"
+        text="Vi har ikke nogen aktivitetsdata fra dit 2026 endnu. Prøv igen senere."
+      />
+    );
+  }
+
+  const health = insights.health;
+  const cards = [
+    { label: "Skridt", value: formatNumber(health.steps), unit: "skridt" },
+    { label: "Aktiv energi", value: formatNumber(health.activeCalories), unit: "kcal" },
+    { label: "Gå- og løbedistance", value: formatNumber(health.distanceKm, 1), unit: "km" },
+  ];
+  const summary = cards.map((card) => `${card.value} ${card.unit}`).join(", ");
 
   return (
     <main className={styles.screen}>
       <div className={`radial-pink ${styles.glow}`} />
-      <h1>Din aktivitet i<br />2026</h1>
-      {health ? (
-        <>
-          <dl className={styles.cards}>
-            {cards.map(({ label, value, unit, time }) => (
-              <div key={label} className={styles.card}>
-                <dt><Image src="/homescreen/widgets/flame.svg" alt="" width={17} height={23} />{label}
-                  <span aria-hidden="true">{time} ›</span>
-                </dt>
-                <dd>{value} <small>{unit}</small></dd>
-              </div>
-            ))}
-          </dl>
-          <h2>{health.title}</h2>
-          <p className={styles.caption}>{health.description}</p>
-          <ShareActivity text={`${health.title} · Min aktivitet i 2026: ${cards.map(card => card.value + " " + card.unit).join(", ")}.`} />
-        </>
-      ) : <p>Ingen aktivitetsdata for 2026 endnu.</p>}
+      <h1>
+        Din aktivitet i
+        <br />
+        2026
+      </h1>
+
+      <dl className={styles.cards}>
+        {cards.map((card) => (
+          <div key={card.label} className={styles.card}>
+            <dt>
+              <Image src="/homescreen/widgets/flame.svg" alt="" width={17} height={23} />
+              {card.label}
+              <span aria-hidden="true">›</span>
+            </dt>
+            <dd>
+              {card.value} <small>{card.unit}</small>
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2>{health.title}</h2>
+      <p className={styles.caption}>{health.description}</p>
+      <ShareButton text={`${health.title}. Min aktivitet i 2026: ${summary}.`} />
     </main>
   );
 }

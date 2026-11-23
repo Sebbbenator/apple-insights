@@ -20,22 +20,30 @@
   translate: -50% -50%;
 }
 
-.heading, .record {
+.heading,
+.record {
   margin: 0;
   font-weight: var(--font-weight-semibold);
   line-height: 1.2;
 }
+
 .heading {
   text-align: center;
   font-size: var(--app-health-title-size);
 }
-.heading strong, .record strong {
+
+.heading strong,
+.record strong {
   display: block;
   color: var(--muted);
   font-weight: inherit;
   font-variant-numeric: tabular-nums;
 }
-.heading strong { font-size: var(--app-health-number-size); }
+
+.heading strong {
+  font-size: var(--app-health-number-size);
+}
+
 .chart {
   display: flex;
   width: 100%;
@@ -44,18 +52,21 @@
   margin: 10.6cqh 0 0;
   padding: 0;
 }
+
 .chart li {
   flex: 1;
   min-width: 0;
   text-align: center;
   font-size: var(--app-health-month-size);
 }
+
 .track {
   height: 22.6cqh;
   display: flex;
   align-items: end;
   margin-bottom: 0.5cqh;
 }
+
 .bar {
   width: 100%;
   border-radius: var(--app-health-bar-radius);
@@ -64,11 +75,13 @@
   animation: grow var(--duration-slow) var(--ease-out) both;
   animation-delay: calc(var(--app-health-bar-delay) + var(--month) * var(--app-health-bar-stagger));
 }
+
 .bar[data-peak="true"] {
   background: var(--color-red);
   animation-timing-function: var(--ease-spring);
   animation-delay: calc(var(--app-health-bar-delay) + 12 * var(--app-health-bar-stagger));
 }
+
 .record {
   display: grid;
   margin-top: 2.8cqh;
@@ -77,13 +90,31 @@
   animation: rise var(--duration-slow) var(--ease-out) both;
   animation-delay: calc(var(--app-health-bar-delay) + 12 * var(--app-health-bar-stagger) + var(--duration-slow));
 }
-.record strong { font-size: var(--app-health-highlight-size); }
-.recordMonth { display: flex; align-items: center; gap: 0.2em; }
-.recordMonth img { width: 0.7em; height: auto; }
-.record span:last-child { text-align: right; text-transform: none; }
+
+.record strong {
+  font-size: var(--app-health-highlight-size);
+}
+
+.recordMonth {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.recordMonth img {
+  width: 0.7em;
+  height: auto;
+}
+
+.record span:last-child {
+  text-align: right;
+  text-transform: none;
+}
 
 @keyframes grow {
-  from { scale: 1 0; }
+  from {
+    scale: 1 0;
+  }
 }
 
 @keyframes rise {
