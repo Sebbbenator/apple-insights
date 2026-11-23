@@ -31,6 +31,8 @@
   padding: var(--padding-xs);
   border-radius: var(--border-radius-xs);
   background-color: var(--surface);
+  animation: rise var(--duration-slow) var(--ease-out) both;
+  animation-delay: calc(var(--index) * var(--app-overview-stagger));
 }
 
 .stat dt,
@@ -53,4 +55,17 @@
   font: inherit;
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--app-overview-rise));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat {
+    animation: none;
+  }
 }

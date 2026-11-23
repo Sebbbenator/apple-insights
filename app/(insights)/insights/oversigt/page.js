@@ -41,8 +41,8 @@ export default async function InsightsPage() {
       <h1>{currentUser ? `Dit 2026, ${currentUser.name}` : "Et 2026 på en iPhone"}</h1>
 
       <dl className={styles.stats}>
-        {stats.map((stat) => (
-          <div key={stat.label} className={styles.stat}>
+        {stats.map((stat, index) => (
+          <div key={stat.label} className={styles.stat} style={{ "--index": index }}>
             <dt>{stat.label}</dt>
             <dd className="text-3xl semibold rounded">{stat.value}</dd>
           </div>
@@ -51,8 +51,8 @@ export default async function InsightsPage() {
 
       <h2>Awards</h2>
       <ul className={styles.stats}>
-        {insights.awards.map((award) => (
-          <li key={award.title} className={styles.stat}>
+        {insights.awards.map((award, index) => (
+          <li key={award.title} className={styles.stat} style={{ "--index": stats.length + index }}>
             <span>{award.title}</span>
             <strong className="text-xl semibold">{award.value}</strong>
             <span>{award.detail}</span>
