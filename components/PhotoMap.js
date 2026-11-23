@@ -81,7 +81,7 @@ export default function PhotoMap({ places, topPlace }) {
         fitBoundsOptions: { padding: 16 },
         attributionControl: { compact: true },
         locale: locale,
-        dragPan: false,
+        dragPan: window.matchMedia("(pointer: fine)").matches,
         dragRotate: false,
         scrollZoom: false,
         boxZoom: false,
