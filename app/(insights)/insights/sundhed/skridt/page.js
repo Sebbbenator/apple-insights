@@ -31,7 +31,7 @@ export default async function StepsPage() {
                 <li key={label}>
                   <span className={styles.track} aria-hidden="true">
                     <span className={styles.bar} data-peak={steps > 0 && steps === health.topMonth.steps}
-                      style={{ height: steps > 0 ? `${100 * steps / health.topMonth.steps}%` : 0 }} />
+                      style={{ height: steps > 0 ? `${100 * steps / health.topMonth.steps}%` : 0, "--month": index }} />
                   </span>
                   {label}<span className="sr-only">{steps == null ? ", ingen data" : `, ${numbers.format(steps)} skridt`}</span>
                 </li>

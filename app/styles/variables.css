@@ -307,6 +307,9 @@
   --app-photos-lens-description-size: calc(3.72 * var(--app-insights-unit));
   --app-health-glow-size: calc(167.44 * var(--app-insights-unit));
   --app-health-glow-opacity: 0.4;
+  --app-health-bar-delay: 300ms;
+  --app-health-bar-stagger: 60ms;
+  --app-health-rise: calc(4 * var(--app-insights-unit));
 
   --app-health-title-size: calc(11.16 * var(--app-insights-unit));
   --app-health-number-size: calc(19.53 * var(--app-insights-unit));
