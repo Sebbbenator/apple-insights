@@ -1,7 +1,6 @@
 import TopApps from "@/components/TopApps";
 import StatusScreen from "@/components/StatusScreen";
-import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, getInsights } from "@/lib/insights";
+import { getInsights } from "@/lib/insights";
 import { appGlows, rankColors, screenApps } from "@/lib/screenApps";
 
 export const metadata = {
@@ -9,8 +8,7 @@ export const metadata = {
 };
 
 export default async function TopAppsPage() {
-  const currentUser = await getCurrentProfile();
-  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
+  const insights = await getInsights();
   const apps = insights?.screenTime.apps.slice(0, 5) ?? [];
 
   if (apps.length < 5) {

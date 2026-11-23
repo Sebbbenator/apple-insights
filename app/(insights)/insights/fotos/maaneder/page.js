@@ -1,7 +1,7 @@
 import PhotoWheel from "@/components/PhotoWheel";
 import StatusScreen from "@/components/StatusScreen";
 import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, getInsights, monthNames } from "@/lib/insights";
+import { getInsights, monthNames } from "@/lib/insights";
 import { getPhotos } from "@/lib/photos";
 
 export const metadata = {
@@ -9,9 +9,9 @@ export const metadata = {
 };
 
 export default async function PhotoMonthsPage() {
-  const currentUser = await getCurrentProfile();
-  const [insights, photos] = await Promise.all([
-    getInsights(currentUser?.id ?? DEMO_USER_ID),
+  const [currentUser, insights, photos] = await Promise.all([
+    getCurrentProfile(),
+    getInsights(),
     getPhotos("month"),
   ]);
 

@@ -1,7 +1,6 @@
 import PhotoCount from "@/components/PhotoCount";
 import StatusScreen from "@/components/StatusScreen";
-import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, getInsights } from "@/lib/insights";
+import { getInsights } from "@/lib/insights";
 import { getPhotos } from "@/lib/photos";
 
 export const metadata = {
@@ -9,9 +8,8 @@ export const metadata = {
 };
 
 export default async function PhotoCountPage() {
-  const currentUser = await getCurrentProfile();
   const [insights, photos] = await Promise.all([
-    getInsights(currentUser?.id ?? DEMO_USER_ID),
+    getInsights(),
     getPhotos("month"),
   ]);
 

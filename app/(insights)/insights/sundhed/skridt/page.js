@@ -1,7 +1,6 @@
 import Image from "next/image";
 import StatusScreen from "@/components/StatusScreen";
-import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, getInsights } from "@/lib/insights";
+import { getInsights } from "@/lib/insights";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -15,8 +14,7 @@ function formatNumber(number) {
 }
 
 export default async function StepsPage() {
-  const currentUser = await getCurrentProfile();
-  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
+  const insights = await getInsights();
 
   if (!insights || insights.health.steps === 0) {
     return (

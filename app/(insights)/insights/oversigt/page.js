@@ -1,7 +1,7 @@
 import Link from "next/link";
 import StatusScreen from "@/components/StatusScreen";
 import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, getInsights } from "@/lib/insights";
+import { getInsights } from "@/lib/insights";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -17,8 +17,7 @@ function formatMinutes(minutes) {
 }
 
 export default async function InsightsPage() {
-  const currentUser = await getCurrentProfile();
-  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
+  const [currentUser, insights] = await Promise.all([getCurrentProfile(), getInsights()]);
 
   if (!insights) {
     return (

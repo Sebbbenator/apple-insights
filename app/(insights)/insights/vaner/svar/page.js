@@ -1,8 +1,7 @@
 import { redirect } from "next/navigation";
 import HabitsAnswer from "@/components/HabitsAnswer";
 import StatusScreen from "@/components/StatusScreen";
-import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, dayPeriods, getInsights } from "@/lib/insights";
+import { dayPeriods, getInsights } from "@/lib/insights";
 
 export const metadata = {
   title: "Din prime time",
@@ -20,8 +19,7 @@ export default async function HabitsAnswerPage({ searchParams }) {
     redirect("/insights/vaner");
   }
 
-  const currentUser = await getCurrentProfile();
-  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
+  const insights = await getInsights();
   const habits = insights?.screenTime.habits;
 
   if (!habits) {

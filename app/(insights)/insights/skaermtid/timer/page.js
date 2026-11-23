@@ -1,15 +1,13 @@
 import ScreenTimeScreen from "@/components/ScreenTimeScreen";
 import StatusScreen from "@/components/StatusScreen";
-import { getCurrentProfile } from "@/lib/auth";
-import { DEMO_USER_ID, getInsights } from "@/lib/insights";
+import { getInsights } from "@/lib/insights";
 
 export const metadata = {
   title: "Skærmtid",
 };
 
 export default async function ScreenTimePage() {
-  const currentUser = await getCurrentProfile();
-  const insights = await getInsights(currentUser?.id ?? DEMO_USER_ID);
+  const insights = await getInsights();
 
   if (!insights) {
     return (
