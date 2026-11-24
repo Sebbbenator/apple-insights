@@ -28,10 +28,11 @@ export default async function ActivityPage() {
   }
 
   const health = insights.health;
+  const stepsByMonth = new Map(insights.months.map((row) => [row.month, row.steps]));
   const cards = [
-    { label: "Skridt", value: formatNumber(health.steps), unit: "skridt" },
-    { label: "Aktiv energi", value: formatNumber(health.activeCalories), unit: "kcal" },
-    { label: "Gå- og løbedistance", value: formatNumber(health.distanceKm, 1), unit: "km" },
+    { label: "September", value: formatNumber(stepsByMonth.get(9) ?? 0), unit: "skridt" },
+    { label: "Oktober", value: formatNumber(stepsByMonth.get(10) ?? 0), unit: "skridt" },
+    { label: "November", value: formatNumber(stepsByMonth.get(11) ?? 0), unit: "skridt" },
   ];
   const summary = cards.map((card) => `${card.value} ${card.unit}`).join(", ");
 
