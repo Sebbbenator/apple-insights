@@ -12,6 +12,7 @@
 
 body {
   min-height: 100dvh;
+  display: flow-root;
   color: var(--foreground);
   background: var(--backdrop);
   font-family: var(--font-family-primary);

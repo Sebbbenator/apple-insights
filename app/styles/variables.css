@@ -134,7 +134,7 @@
 
   --app-profile-avatar-size: 6rem;
 
-  --app-insights-unit: min(1cqw, 0.7cqh);
+  --app-insights-unit: min(1cqw, 0.46cqh);
   --app-insights-content-width: calc(71.4 * var(--app-insights-unit));
   --app-insights-apple-size: calc(14.9 * var(--app-insights-unit));
   --app-insights-title-size: calc(19.5 * var(--app-insights-unit));
