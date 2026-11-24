@@ -38,6 +38,7 @@
   font-weight: var(--font-weight-bold);
   line-height: normal;
   text-align: center;
+  text-wrap: balance;
   translate: -50% 0;
   animation: rise var(--duration-slow) var(--ease-out) both;
 }

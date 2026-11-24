@@ -217,7 +217,7 @@
   --app-vaner-bar-delay: 600ms;
   --app-vaner-bar-stagger: 30ms;
 
-  --app-apps-title-width: calc(61.86 * var(--app-insights-unit));
+  --app-apps-title-width: calc(82.05 * var(--app-insights-unit));
   --app-apps-title-size: calc(11.16 * var(--app-insights-unit));
   --app-apps-list-width: calc(82.05 * var(--app-insights-unit));
   --app-apps-row-gap: calc(3.14 * var(--app-insights-unit));
